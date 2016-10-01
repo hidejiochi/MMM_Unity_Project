@@ -73,14 +73,17 @@ public class MyoController : MonoBehaviour
                     _moveTween = transform.DOLocalMove(targetPos, 1.0f).SetEase(Ease.Linear);
                     _currentSquare += new Vector2(0, (float)num);
                 }
+                //1つ前がnullじゃない または 1つ前が壁
                 else if (sqInfoUp_1.hasGameObject != null || sqInfoUp_1.hasGameObject.tag == "Wall")
                 {                    
                                       
                 }
+                //1つ前がGem　かつ、２つ前がGem
                 else if (sqInfoUp_1.hasGameObject.tag == "Gem" && sqInfoUp_2.hasGameObject.tag == "Gem")
                 {
 
                 }
+                //1つ前がGem　かつ、２つ前が壁
                 else if (sqInfoUp_1.hasGameObject.tag == "Gem" && sqInfoUp_2.hasGameObject.tag == "Wall")
                 {
 
