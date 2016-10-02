@@ -8,16 +8,20 @@ public class MyoController : MonoBehaviour
 {
     private Animator myAnimator;
     private Tween _moveTween;
-    Vector3 targetPos = Vector3.zero;
+    Vector3 targetPos = Vector3.zero;    
     Vector2 targetSquare=Vector2. zero;
     public float _Length = 1f;
     [SerializeField]
     private Vector2 _currentSquare;
 
+    private GameObject gem;
+    Vector3 gemPos = Vector3.zero;
+
     // Use this for initialization
     void Start()
     {
-        this.myAnimator = GetComponent<Animator>();        
+        this.myAnimator = GetComponent<Animator>();
+        gem = GameObject.FindWithTag("Gem");          
     }
 
     // Update is called once per frame
@@ -57,7 +61,7 @@ public class MyoController : MonoBehaviour
         }        
         switch (direction)
         {
-            case MoveDirection.Up:
+            case MoveDirection.Up:                
                 targetPos = transform.localPosition + new Vector3(0, 0, _Length * num);
                 //1つ上のマス目
                 Vector2 targetSquareUp_1 = _currentSquare + new Vector2(0, 1);
@@ -67,27 +71,19 @@ public class MyoController : MonoBehaviour
                 SquareInfo sqInfoUp_1 = SquareManager.Instance.GetSquareInfomation(targetSquareUp_1);
                 //2つ上のマス目の情報を取得
                 SquareInfo sqInfoUp_2 = SquareManager.Instance.GetSquareInfomation(targetSquareUp_2);
-                //1つ前に何もない または 1つ前が壁じゃなければ
-                if (sqInfoUp_1.hasGameObject == null || sqInfoUp_1.hasGameObject.tag != "Wall")                    
+                //（動く）1つ前に何もない または 1つ前が壁じゃなければ
+                if (sqInfoUp_1.hasGameObject == null || sqInfoUp_1.hasGameObject.tag != "Wall" )                    
                 {                    
                     _moveTween = transform.DOLocalMove(targetPos, 1.0f).SetEase(Ease.Linear);
-                    _currentSquare += new Vector2(0, (float)num);
+                    _currentSquare += new Vector2(0, (float)num);                    
                 }
-                //1つ前がnullじゃない または 1つ前が壁
-                else if (sqInfoUp_1.hasGameObject != null || sqInfoUp_1.hasGameObject.tag == "Wall")
+                
+                //（止まる）1つ前がnullじゃない または 1つ前が壁
+                else if (sqInfoUp_1.hasGameObject.tag == null || sqInfoUp_1.hasGameObject.tag == "Wall")
                 {                    
                                       
                 }
-                //1つ前がGem　かつ、２つ前がGem
-                else if (sqInfoUp_1.hasGameObject.tag == "Gem" && sqInfoUp_2.hasGameObject.tag == "Gem")
-                {
-
-                }
-                //1つ前がGem　かつ、２つ前が壁
-                else if (sqInfoUp_1.hasGameObject.tag == "Gem" && sqInfoUp_2.hasGameObject.tag == "Wall")
-                {
-
-                }
+                
                 transform.DORotate(new Vector3(0, 0, 0), 0.5f);                  
                 break;
 
