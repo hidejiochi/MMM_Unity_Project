@@ -83,7 +83,17 @@ public class MyoController : MonoBehaviour
                 {                    
                                       
                 }
-                
+                //（止まる）1つ前がGem　かつ、２つ前がGem
+                else if (sqInfoUp_1.hasGameObject.tag == "Gem" && sqInfoUp_2.hasGameObject.tag == "Gem")
+                {
+
+                }
+                //（止まる）1つ前がGem　かつ、２つ前が壁
+                else if (sqInfoUp_1.hasGameObject.tag == "Gem" && sqInfoUp_2.hasGameObject.tag == "Wall")
+                {
+
+                }
+
                 transform.DORotate(new Vector3(0, 0, 0), 0.5f);                  
                 break;
 
