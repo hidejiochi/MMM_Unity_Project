@@ -71,8 +71,8 @@ public class MyoController : MonoBehaviour
                 SquareInfo sqInfoUp_1 = SquareManager.Instance.GetSquareInfomation(targetSquareUp_1);
                 //2つ上のマス目の情報を取得
                 SquareInfo sqInfoUp_2 = SquareManager.Instance.GetSquareInfomation(targetSquareUp_2);
-                //（動く）1つ前に何もない または 1つ前が壁じゃなければ
-                if (sqInfoUp_1.hasGameObject == null || sqInfoUp_1.hasGameObject.tag != "Wall" )                    
+                //（動く）1つ前に何もない または 1つ前が壁じゃい　かつ　1つ前がGemじゃない
+                if (sqInfoUp_1.hasGameObject == null || sqInfoUp_1.hasGameObject.tag != "Wall" && sqInfoUp_1.hasGameObject.tag != "Gem")                    
                 {                    
                     _moveTween = transform.DOLocalMove(targetPos, 1.0f).SetEase(Ease.Linear);
                     _currentSquare += new Vector2(0, (float)num);                    
