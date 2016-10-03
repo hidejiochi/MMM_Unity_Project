@@ -48,7 +48,11 @@ public class SquareManager
 	/// <param name="square">Square.</param>
 	public SquareInfo GetSquareInfomation (Vector2 square)
 	{
-		return _squareDictionary [square];	
+		SquareInfo info = null;
+		if (_squareDictionary.TryGetValue (square, out info) == false) {
+			Debug.LogWarningFormat ("マス目の情報を取得できませんでした square:{0}", square);
+		}
+		return info;
 	}
 
 	/// <summary>
@@ -58,7 +62,10 @@ public class SquareManager
 	/// <param name="obj">Object.</param>
 	public void AddGameObject (Vector2 square, GameObject obj)
 	{
-		_squareDictionary [square].hasGameObject = obj;
+		SquareInfo info = null;
+		if (_squareDictionary.TryGetValue (square, out info)) {
+			info.SetGameObject (obj);
+		}
 	}
 
 	/// <summary>
@@ -68,7 +75,10 @@ public class SquareManager
 	/// <param name="obj">Object.</param>
 	public void RemoveGameObject (Vector2 square)
 	{
-		_squareDictionary [square].hasGameObject = null;
+		SquareInfo info = null;
+		if (_squareDictionary.TryGetValue (square, out info)) {
+			info.SetGameObject (null);
+		}
 	}
 
 	/// <summary>

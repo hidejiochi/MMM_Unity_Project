@@ -496,7 +496,6 @@ MonoBehaviour:
   - {x: 7, y: 0, z: 9}
   - {x: 5, y: 0, z: -3}
   - {x: 7, y: 0, z: -7}
-  - {x: -1, y: 0, z: 1}
 --- !u!4 &1124033411
 Transform:
   m_ObjectHideFlags: 0
