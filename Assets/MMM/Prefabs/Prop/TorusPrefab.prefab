@@ -11,6 +11,7 @@ GameObject:
   - 33: {fileID: 3397568}
   - 23: {fileID: 2306870}
   - 65: {fileID: 6553682}
+  - 114: {fileID: 11460212}
   m_Layer: 0
   m_Name: TorusPrefab
   m_TagString: Gem
@@ -75,6 +76,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &11460212
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 180326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df4d10addc03be94eb1ff13cee14e45e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _type: 4
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
