@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.EventSystems;
 using DG.Tweening;
+using System;
 
 
 public class MyoController : MonoBehaviour
@@ -35,7 +36,15 @@ public class MyoController : MonoBehaviour
     private bool isUpButtonDown = false;
     private bool isDownButtonDown = false;
     private bool isRightButtonDown = false;
-    private bool isLeftButtonDown = false; 
+    private bool isLeftButtonDown = false;
+
+    private IEnumerator LateAction(float second, Action action)
+    {
+        yield return new WaitForSeconds(second);
+        action();
+    }
+
+
 
     // Use this for initialization
     void Start ()
@@ -237,19 +246,26 @@ public class MyoController : MonoBehaviour
                         Gem g_up2 = GEMsqInfoUp_2.HasGameObject.GetComponent<Gem>();
                         //動かしたGemと1つ上のGem、2つ上のGemのタイプが同じなら
                         if (g.Type == g_up1.Type && g.Type == g_up2.Type)
-                        {                     
-                            //動かしたGemのマス目の情報を消去する
-                            SquareManager.Instance.RemoveGameObject(sqInfo_2.MySquare);
-                            //Gem_1の1マス上のマス目の情報を消去する
-                            SquareManager.Instance.RemoveGameObject(gemSquareUp_1);
-                            //Gem_1の2マス上のマス目の情報を消去する
-                            SquareManager.Instance.RemoveGameObject(gemSquareUp_2);
-                            //動かしたGemのGameObjectを消去する
-                            Destroy(g.gameObject,1f);
-                            //1マス上のGemのGameObjectを消去する
-                            Destroy(g_up1.gameObject);
-                            //2マス上のGemのGameObjectを消去する
-                            Destroy(g_up2.gameObject);
+                        {
+                            g.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
+                            g_up1.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
+                            g_up2.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
+
+                            StartCoroutine(LateAction(0.5f, () => {
+                                //0.5秒後に処理が行われる
+                                //動かしたGemのマス目の情報を消去する
+                                SquareManager.Instance.RemoveGameObject(sqInfo_2.MySquare);
+                                //Gem_1の1マス上のマス目の情報を消去する
+                                SquareManager.Instance.RemoveGameObject(gemSquareUp_1);
+                                //Gem_1の2マス上のマス目の情報を消去する
+                                SquareManager.Instance.RemoveGameObject(gemSquareUp_2);
+                                //動かしたGemのGameObjectを消去する
+                                Destroy(g.gameObject);
+                                //1マス上のGemのGameObjectを消去する
+                                Destroy(g_up1.gameObject);
+                                //2マス上のGemのGameObjectを消去する
+                                Destroy(g_up2.gameObject);
+                            }));
                         }                        
                     }
                     //Gem_1の1マス上かつ１マス下がGEMのとき
@@ -264,18 +280,25 @@ public class MyoController : MonoBehaviour
                         //動かしたGemと1つ上のGem、1つ下のGemのタイプが同じなら
                         if (g.Type == g_up1.Type && g.Type == g_Down1.Type)
                         {
-                            //動かしたGemのマス目の情報を消去する
-                            SquareManager.Instance.RemoveGameObject(sqInfo_2.MySquare);
-                            //Gem_1の1マス上のマス目の情報を消去する
-                            SquareManager.Instance.RemoveGameObject(gemSquareUp_1);
-                            //Gem_1の1マス下のマス目の情報を消去する
-                            SquareManager.Instance.RemoveGameObject(gemSquareDown_1);
-                            //動かしたGemのGameObjectを消去する
-                            Destroy(g.gameObject);
-                            //1マス上のGemのGameObjectを消去する
-                            Destroy(g_up1.gameObject);
-                            //1マス下のGemのGameObjectを消去する
-                            Destroy(g_Down1.gameObject);
+                            g.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
+                            g_up1.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
+                            g_Down1.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
+
+                            StartCoroutine(LateAction(0.5f, () => {
+                                //0.5秒後に処理が行われる
+                                //動かしたGemのマス目の情報を消去する
+                                SquareManager.Instance.RemoveGameObject(sqInfo_2.MySquare);
+                                //Gem_1の1マス上のマス目の情報を消去する
+                                SquareManager.Instance.RemoveGameObject(gemSquareUp_1);
+                                //Gem_1の1マス下のマス目の情報を消去する
+                                SquareManager.Instance.RemoveGameObject(gemSquareDown_1);
+                                //動かしたGemのGameObjectを消去する
+                                Destroy(g.gameObject);
+                                //1マス上のGemのGameObjectを消去する
+                                Destroy(g_up1.gameObject);
+                                //1マス下のGemのGameObjectを消去する
+                                Destroy(g_Down1.gameObject);
+                            }));
                         }
                     }
                     //Gem_1の1マス下かつ2マス下がGEMのとき
@@ -290,12 +313,19 @@ public class MyoController : MonoBehaviour
                         //動かしたGemと1つ下のGem、2つ下のGemのタイプが同じなら
                         if (g.Type == g_Down1.Type && g.Type == g_Down2.Type)
                         {
-                            SquareManager.Instance.RemoveGameObject(sqInfo_2.MySquare);
-                            SquareManager.Instance.RemoveGameObject(gemSquareDown_1);
-                            SquareManager.Instance.RemoveGameObject(gemSquareDown_2);
-                            Destroy(g.gameObject);
-                            Destroy(g_Down1.gameObject);
-                            Destroy(g_Down2.gameObject);
+                            g.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
+                            g_Down1.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
+                            g_Down2.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
+
+                            StartCoroutine(LateAction(0.5f, () => {
+                                //0.5秒後に処理が行われる
+                                SquareManager.Instance.RemoveGameObject(sqInfo_2.MySquare);
+                                SquareManager.Instance.RemoveGameObject(gemSquareDown_1);
+                                SquareManager.Instance.RemoveGameObject(gemSquareDown_2);
+                                Destroy(g.gameObject);
+                                Destroy(g_Down1.gameObject);
+                                Destroy(g_Down2.gameObject);
+                            }));
                         }
                     }
                     //Gem_1の1マス右の位置
@@ -326,18 +356,25 @@ public class MyoController : MonoBehaviour
                         //動かしたGemと1つ右のGem、2つ右のGemのタイプが同じなら
                         if (g.Type == g_Right1.Type && g.Type == g_Right2.Type)
                         {
-                            //動かしたGemのマス目の情報を消去する
-                            SquareManager.Instance.RemoveGameObject(sqInfo_2.MySquare);
-                            //Gem_1の1マス右のマス目の情報を消去する
-                            SquareManager.Instance.RemoveGameObject(gemSquareRight_1);
-                            //Gem_1の2マス右のマス目の情報を消去する
-                            SquareManager.Instance.RemoveGameObject(gemSquareRight_2);
-                            //動かしたGemのGameObjectを消去する
-                            Destroy(g.gameObject);
-                            //1マス右のGemのGameObjectを消去する
-                            Destroy(g_Right1.gameObject);
-                            //2マス右のGemのGameObjectを消去する
-                            Destroy(g_Right2.gameObject);
+                            g.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
+                            g_Right1.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
+                            g_Right2.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
+
+                            StartCoroutine(LateAction(0.5f, () => {
+                                //0.5秒後に処理が行われる
+                                //動かしたGemのマス目の情報を消去する
+                                SquareManager.Instance.RemoveGameObject(sqInfo_2.MySquare);
+                                //Gem_1の1マス右のマス目の情報を消去する
+                                SquareManager.Instance.RemoveGameObject(gemSquareRight_1);
+                                //Gem_1の2マス右のマス目の情報を消去する
+                                SquareManager.Instance.RemoveGameObject(gemSquareRight_2);
+                                //動かしたGemのGameObjectを消去する
+                                Destroy(g.gameObject);
+                                //1マス右のGemのGameObjectを消去する
+                                Destroy(g_Right1.gameObject);
+                                //2マス右のGemのGameObjectを消去する
+                                Destroy(g_Right2.gameObject);
+                            }));
                         }
                     }
                     //Gem_1の1マス右かつ１マス左がGEMのとき
@@ -352,18 +389,25 @@ public class MyoController : MonoBehaviour
                         //動かしたGemと1つ右のGem、1つ左のGemのタイプが同じなら
                         if (g.Type == g_Right1.Type && g.Type == g_Left1.Type)
                         {
-                            //動かしたGemのマス目の情報を消去する
-                            SquareManager.Instance.RemoveGameObject(sqInfo_2.MySquare);
-                            //Gem_1の1マス右のマス目の情報を消去する
-                            SquareManager.Instance.RemoveGameObject(gemSquareRight_1);
-                            //Gem_1の1マス左のマス目の情報を消去する
-                            SquareManager.Instance.RemoveGameObject(gemSquareLeft_1);
-                            //動かしたGemのGameObjectを消去する
-                            Destroy(g.gameObject);
-                            //1マス右のGemのGameObjectを消去する
-                            Destroy(g_Right1.gameObject);
-                            //1マス左のGemのGameObjectを消去する
-                            Destroy(g_Left1.gameObject);
+                            g.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
+                            g_Right1.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
+                            g_Left1.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
+
+                            StartCoroutine(LateAction(0.5f, () => {
+                                //0.5秒後に処理が行われる
+                                //動かしたGemのマス目の情報を消去する
+                                SquareManager.Instance.RemoveGameObject(sqInfo_2.MySquare);
+                                //Gem_1の1マス右のマス目の情報を消去する
+                                SquareManager.Instance.RemoveGameObject(gemSquareRight_1);
+                                //Gem_1の1マス左のマス目の情報を消去する
+                                SquareManager.Instance.RemoveGameObject(gemSquareLeft_1);
+                                //動かしたGemのGameObjectを消去する
+                                Destroy(g.gameObject);
+                                //1マス右のGemのGameObjectを消去する
+                                Destroy(g_Right1.gameObject);
+                                //1マス左のGemのGameObjectを消去する
+                                Destroy(g_Left1.gameObject);
+                            }));
                         }
                     }
                     //Gem_1の1マス左かつ2マス左がGEMのとき
@@ -378,12 +422,19 @@ public class MyoController : MonoBehaviour
                         //動かしたGemと1つ左のGem、2つ左のGemのタイプが同じなら
                         if (g.Type == g_Left1.Type && g.Type == g_Left2.Type)
                         {
-                            SquareManager.Instance.RemoveGameObject(sqInfo_2.MySquare);
-                            SquareManager.Instance.RemoveGameObject(gemSquareLeft_1);
-                            SquareManager.Instance.RemoveGameObject(gemSquareLeft_2);
-                            Destroy(g.gameObject);
-                            Destroy(g_Left1.gameObject);
-                            Destroy(g_Left2.gameObject);
+                            g.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
+                            g_Left1.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
+                            g_Left2.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
+
+                            StartCoroutine(LateAction(0.5f, () => {
+                                //0.5秒後に処理が行われる
+                                SquareManager.Instance.RemoveGameObject(sqInfo_2.MySquare);
+                                SquareManager.Instance.RemoveGameObject(gemSquareLeft_1);
+                                SquareManager.Instance.RemoveGameObject(gemSquareLeft_2);
+                                Destroy(g.gameObject);
+                                Destroy(g_Left1.gameObject);
+                                Destroy(g_Left2.gameObject);
+                            }));
                         }
                     }
 
