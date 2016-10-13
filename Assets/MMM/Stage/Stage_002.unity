@@ -962,6 +962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e765d39b017ac4faa8eb2d5d9d109d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WallPrefab: {fileID: 161784, guid: f5f1ddb643d61c740bbc5e74ae20ceaf, type: 2}
   _Speed: 0.7
   _roSpeed: 0.4
   _Length: 2

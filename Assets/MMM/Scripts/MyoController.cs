@@ -7,7 +7,8 @@ using System;
 
 public class MyoController : MonoBehaviour
 {
-	private Animator myAnimator;
+    public GameObject WallPrefab;
+    private Animator myAnimator;
 	private Tween _moveTween;
 	Vector3 targetPos = Vector3.zero;
     public float _Speed = 1f;
@@ -32,6 +33,9 @@ public class MyoController : MonoBehaviour
     SquareInfo GEMsqInfoRight_2 = null; 
     SquareInfo GEMsqInfoLeft_1 = null;
     SquareInfo GEMsqInfoLeft_2 = null;
+    Vector2 gemSquareSide = default(Vector2);
+    SquareInfo GEMsqInfoSide = null; 
+
 
     private bool isUpButtonDown = false;
     private bool isDownButtonDown = false;
@@ -132,13 +136,17 @@ public class MyoController : MonoBehaviour
 		Vector2 targetSquare_1 = default(Vector2);
 		//2マス先の位置
 		Vector2 targetSquare_2 = default(Vector2);
-		//1マス先の情報
-		SquareInfo sqInfo_1 = null;
+        //3マス先の位置
+        Vector2 targetSquare_3 = default(Vector2);
+        //1マス先の情報
+        SquareInfo sqInfo_1 = null;
 		//2マス先の情報
 		SquareInfo sqInfo_2 = null;
+        //3マス先の情報
+        SquareInfo sqInfo_3 = null;
 
-		//動く方向による値の代入
-		switch (direction) {
+        //動く方向による値の代入
+        switch (direction) {
 		case MoveDirection.Up:                
 			//目標移動位置
 			targetPos = transform.localPosition + new Vector3 (0, 0, _Length * num);
@@ -146,19 +154,23 @@ public class MyoController : MonoBehaviour
 			targetSquare_1 = _currentSquare + new Vector2 (0, 1);
 			//2つ上のマス目
 			targetSquare_2 = _currentSquare + new Vector2 (0, 2);
-			//回転
-			transform.DORotate (new Vector3 (0, 0, 0), _roSpeed);                  
+            //3つ上のマス目
+            targetSquare_3 = _currentSquare + new Vector2 (0, 3);
+            //回転
+            transform.DORotate (new Vector3 (0, 0, 0), _roSpeed);                  
 			break;
 
 		case MoveDirection.Down:
 			//目標移動位置
-			targetPos = transform.localPosition + new Vector3 (0, 0, -_Length * num);                
-			//1つ上のマス目
-			targetSquare_1 = _currentSquare + new Vector2 (0, -1);
-			//2つ上のマス目
-			targetSquare_2 = _currentSquare + new Vector2 (0, -2);
-			//回転
-			transform.DORotate (new Vector3 (0, 180, 0), _roSpeed);
+			targetPos = transform.localPosition + new Vector3 (0, 0, -_Length * num);
+            //1つ下のマス目
+            targetSquare_1 = _currentSquare + new Vector2 (0, -1);
+            //2つ下のマス目
+            targetSquare_2 = _currentSquare + new Vector2 (0, -2);
+            //3つ下のマス目
+            targetSquare_3 = _currentSquare + new Vector2 (0, -3);
+            //回転
+            transform.DORotate (new Vector3 (0, 180, 0), _roSpeed);
 			break;
 
 		case MoveDirection.Right:
@@ -168,8 +180,10 @@ public class MyoController : MonoBehaviour
 			targetSquare_1 = _currentSquare + new Vector2 (1, 0);
 			//2つ右のマス目
 			targetSquare_2 = _currentSquare + new Vector2 (2, 0);
-			//回転
-			transform.DORotate (new Vector3 (0, 90f, 0), _roSpeed);
+            //3つ右のマス目
+            targetSquare_3 = _currentSquare + new Vector2 (3, 0);
+            //回転
+            transform.DORotate (new Vector3 (0, 90f, 0), _roSpeed);
 			break;
 
 		case MoveDirection.Left:
@@ -179,16 +193,20 @@ public class MyoController : MonoBehaviour
 			targetSquare_1 = _currentSquare + new Vector2 (-1, 0);
 			//2つ左のマス目
 			targetSquare_2 = _currentSquare + new Vector2 (-2, 0);
-			//回転
-			transform.DORotate (new Vector3 (0, -90f, 0), _roSpeed);
+            //3つ左のマス目
+            targetSquare_3 = _currentSquare + new Vector2 (-3, 0);
+            //回転
+            transform.DORotate (new Vector3 (0, -90f, 0), _roSpeed);
 			break;
 		}
 		//1つ先のマス目の情報を取得
 		sqInfo_1 = SquareManager.Instance.GetSquareInfomation (targetSquare_1);
 		//2つ先のマス目の情報を取得
 		sqInfo_2 = SquareManager.Instance.GetSquareInfomation (targetSquare_2);
-		//動けるかどうかを判定
-		if (CanMove (sqInfo_1, sqInfo_2)) {
+        //3つ先のマス目の情報を取得
+        sqInfo_3 = SquareManager.Instance.GetSquareInfomation (targetSquare_3);
+        //動けるかどうかを判定
+        if (CanMove (sqInfo_1, sqInfo_2, sqInfo_3)) {
 			//移動アニメーションの実行
 			_moveTween = transform.DOLocalMove (targetPos, _Speed).SetEase (Ease.Linear)
 			//移動が終了した時に走る処理
@@ -205,7 +223,7 @@ public class MyoController : MonoBehaviour
 	/// <returns><c>true</c> if this instance can move the specified sqr_1 sqr_2; otherwise, <c>false</c>.</returns>
 	/// <param name="sqr_1">Sqr 1.</param>
 	/// <param name="sqr_2">Sqr 2.</param>
-	private bool CanMove (SquareInfo sqInfo_1, SquareInfo sqInfo_2)
+	private bool CanMove (SquareInfo sqInfo_1, SquareInfo sqInfo_2, SquareInfo sqInfo_3) 
 	{
 		//進行方向の2つ先に何かオブジェクトが存在する時
 		if (sqInfo_2 != null) {
@@ -228,6 +246,8 @@ public class MyoController : MonoBehaviour
                     gemSquareDown_1 = sqInfo_2.MySquare + new Vector2(0, -1);
                     //Gem_1の2マス下の位置
                     gemSquareDown_2 = sqInfo_2.MySquare + new Vector2(0, -2);
+                    //キャラの２マス先の位置
+                    gemSquareSide = sqInfo_3.MySquare;
                     //Gem_1の1マス上の情報を取得
                     GEMsqInfoUp_1 = SquareManager.Instance.GetSquareInfomation(gemSquareUp_1);
                     //Gem_1の2マス上の情報を取得
@@ -236,6 +256,8 @@ public class MyoController : MonoBehaviour
                     GEMsqInfoDown_1 = SquareManager.Instance.GetSquareInfomation(gemSquareDown_1);
                     //Gem_1の2マス下の情報を取得
                     GEMsqInfoDown_2 = SquareManager.Instance.GetSquareInfomation(gemSquareDown_2);
+                    //キャラの２マス先の位置情報を取得
+                    GEMsqInfoSide = SquareManager.Instance.GetSquareInfomation(gemSquareSide); 
                     //Gem_1の1マス上かつ2マス上がGEMのとき
                     if (GEMsqInfoUp_1.State == GameDefine.SquareState.GEM && GEMsqInfoUp_2.State == GameDefine.SquareState.GEM)
                     {
@@ -248,18 +270,27 @@ public class MyoController : MonoBehaviour
                         //動かしたGemと1つ上のGem、2つ上のGemのタイプが同じなら
                         if (g.Type == g_up1.Type && g.Type == g_up2.Type)
                         {
+                            //キャラの2マス先がnullなら
+                            if (GEMsqInfoSide.State == GameDefine.SquareState.EMPTY)
+                            {
+                                //２マス先に壁を作成
+                                SquareManager.Instance.AddGameObject(gemSquareSide, WallPrefab);
+                            }
                             g.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
                             g_up1.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
                             g_up2.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
 
                             StartCoroutine(LateAction(0.5f, () => {
                                 //0.5秒後に処理が行われる
+
                                 //動かしたGemのマス目の情報を消去する
                                 SquareManager.Instance.RemoveGameObject(sqInfo_2.MySquare);
                                 //Gem_1の1マス上のマス目の情報を消去する
                                 SquareManager.Instance.RemoveGameObject(gemSquareUp_1);
                                 //Gem_1の2マス上のマス目の情報を消去する
                                 SquareManager.Instance.RemoveGameObject(gemSquareUp_2);
+                                //キャラの２マス先の壁を消去
+                                SquareManager.Instance.RemoveGameObject(gemSquareSide); 
                                 //動かしたGemのGameObjectを消去する
                                 Destroy(g.gameObject);
                                 //1マス上のGemのGameObjectを消去する
@@ -281,6 +312,12 @@ public class MyoController : MonoBehaviour
                         //動かしたGemと1つ上のGem、1つ下のGemのタイプが同じなら
                         if (g.Type == g_up1.Type && g.Type == g_Down1.Type)
                         {
+                            //キャラの2マス先がnullなら
+                            if (GEMsqInfoSide.State == GameDefine.SquareState.EMPTY)
+                            {
+                                //２マス先に壁を作成
+                                SquareManager.Instance.AddGameObject(gemSquareSide, WallPrefab);
+                            }
                             g.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
                             g_up1.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
                             g_Down1.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
@@ -293,6 +330,8 @@ public class MyoController : MonoBehaviour
                                 SquareManager.Instance.RemoveGameObject(gemSquareUp_1);
                                 //Gem_1の1マス下のマス目の情報を消去する
                                 SquareManager.Instance.RemoveGameObject(gemSquareDown_1);
+                                //キャラの２マス先の壁を消去
+                                SquareManager.Instance.RemoveGameObject(gemSquareSide);
                                 //動かしたGemのGameObjectを消去する
                                 Destroy(g.gameObject);
                                 //1マス上のGemのGameObjectを消去する
@@ -314,6 +353,12 @@ public class MyoController : MonoBehaviour
                         //動かしたGemと1つ下のGem、2つ下のGemのタイプが同じなら
                         if (g.Type == g_Down1.Type && g.Type == g_Down2.Type)
                         {
+                            //キャラの2マス先がnullなら
+                            if (GEMsqInfoSide.State == GameDefine.SquareState.EMPTY)
+                            {
+                                //２マス先に壁を作成
+                                SquareManager.Instance.AddGameObject(gemSquareSide, WallPrefab);
+                            }
                             g.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
                             g_Down1.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
                             g_Down2.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
@@ -323,6 +368,8 @@ public class MyoController : MonoBehaviour
                                 SquareManager.Instance.RemoveGameObject(sqInfo_2.MySquare);
                                 SquareManager.Instance.RemoveGameObject(gemSquareDown_1);
                                 SquareManager.Instance.RemoveGameObject(gemSquareDown_2);
+                                //キャラの２マス先の壁を消去
+                                SquareManager.Instance.RemoveGameObject(gemSquareSide);
                                 Destroy(g.gameObject);
                                 Destroy(g_Down1.gameObject);
                                 Destroy(g_Down2.gameObject);
@@ -336,7 +383,7 @@ public class MyoController : MonoBehaviour
                     //Gem_1の1マス左の位置
                     gemSquareLeft_1 = sqInfo_2.MySquare + new Vector2(-1, 0);
                     //Gem_1の2マス左の位置
-                    gemSquareLeft_2 = sqInfo_2.MySquare + new Vector2(-2, 0);
+                    gemSquareLeft_2 = sqInfo_2.MySquare + new Vector2(-2, 0);                    
                     //Gem_1の1マス右の情報を取得
                     GEMsqInfoRight_1 = SquareManager.Instance.GetSquareInfomation(gemSquareRight_1);
                     //Gem_1の2マス右の情報を取得
@@ -357,6 +404,12 @@ public class MyoController : MonoBehaviour
                         //動かしたGemと1つ右のGem、2つ右のGemのタイプが同じなら
                         if (g.Type == g_Right1.Type && g.Type == g_Right2.Type)
                         {
+                            //キャラの2マス先がnullなら
+                            if (GEMsqInfoSide.State == GameDefine.SquareState.EMPTY)
+                            {
+                                //２マス先に壁を作成
+                                SquareManager.Instance.AddGameObject(gemSquareSide, WallPrefab);
+                            }
                             g.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
                             g_Right1.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
                             g_Right2.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
@@ -369,6 +422,8 @@ public class MyoController : MonoBehaviour
                                 SquareManager.Instance.RemoveGameObject(gemSquareRight_1);
                                 //Gem_1の2マス右のマス目の情報を消去する
                                 SquareManager.Instance.RemoveGameObject(gemSquareRight_2);
+                                //キャラの２マス先の壁を消去
+                                SquareManager.Instance.RemoveGameObject(gemSquareSide);
                                 //動かしたGemのGameObjectを消去する
                                 Destroy(g.gameObject);
                                 //1マス右のGemのGameObjectを消去する
@@ -390,6 +445,12 @@ public class MyoController : MonoBehaviour
                         //動かしたGemと1つ右のGem、1つ左のGemのタイプが同じなら
                         if (g.Type == g_Right1.Type && g.Type == g_Left1.Type)
                         {
+                            //キャラの2マス先がnullなら
+                            if (GEMsqInfoSide.State == GameDefine.SquareState.EMPTY)
+                            {
+                                //２マス先に壁を作成
+                                SquareManager.Instance.AddGameObject(gemSquareSide, WallPrefab);
+                            }
                             g.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
                             g_Right1.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
                             g_Left1.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
@@ -402,6 +463,8 @@ public class MyoController : MonoBehaviour
                                 SquareManager.Instance.RemoveGameObject(gemSquareRight_1);
                                 //Gem_1の1マス左のマス目の情報を消去する
                                 SquareManager.Instance.RemoveGameObject(gemSquareLeft_1);
+                                //キャラの２マス先の壁を消去
+                                SquareManager.Instance.RemoveGameObject(gemSquareSide);
                                 //動かしたGemのGameObjectを消去する
                                 Destroy(g.gameObject);
                                 //1マス右のGemのGameObjectを消去する
@@ -423,6 +486,12 @@ public class MyoController : MonoBehaviour
                         //動かしたGemと1つ左のGem、2つ左のGemのタイプが同じなら
                         if (g.Type == g_Left1.Type && g.Type == g_Left2.Type)
                         {
+                            //キャラの2マス先がnullなら
+                            if (GEMsqInfoSide.State == GameDefine.SquareState.EMPTY)
+                            {
+                                //２マス先に壁を作成
+                                SquareManager.Instance.AddGameObject(gemSquareSide, WallPrefab);
+                            }
                             g.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
                             g_Left1.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
                             g_Left2.transform.DORotate(new Vector3(0, 180, 0), 0.5f);
@@ -432,6 +501,8 @@ public class MyoController : MonoBehaviour
                                 SquareManager.Instance.RemoveGameObject(sqInfo_2.MySquare);
                                 SquareManager.Instance.RemoveGameObject(gemSquareLeft_1);
                                 SquareManager.Instance.RemoveGameObject(gemSquareLeft_2);
+                                //キャラの２マス先の壁を消去
+                                SquareManager.Instance.RemoveGameObject(gemSquareSide);
                                 Destroy(g.gameObject);
                                 Destroy(g_Left1.gameObject);
                                 Destroy(g_Left2.gameObject);
