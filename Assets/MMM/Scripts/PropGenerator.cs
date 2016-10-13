@@ -14,10 +14,11 @@ public class PropGenerator : MonoBehaviour
 	public GameObject PipePrefab;
 	public GameObject SolidPrefab;
 	public GameObject TorusPrefab;
-	/// <summary>
-	/// (0,0)のマス目の位置 
-	/// </summary>
-	[SerializeField]
+        
+    /// <summary>
+    /// (0,0)のマス目の位置 
+    /// </summary>
+    [SerializeField]
 	private Vector3 _squareStartPosition = new Vector3 (-11f, 0, -11f);
 	/// <summary>
 	/// 11 x 11のマス目 
@@ -67,7 +68,7 @@ public class PropGenerator : MonoBehaviour
                 SquareManager.Instance.SquareDictionary.Add (square, squareInfo);
 
 				//壁を配置する条件
-				if ((y == 0 || y == 11) || x == 0 || x == 11) {
+				if ((y == 0 || y == _maxSquare.y) || x == 0 || x == _maxSquare.x) {
 					CreatePrefab (WallPrefab, pos, new Vector2 (x, y));
 				}
 				//Squareの配置
@@ -115,5 +116,7 @@ public class PropGenerator : MonoBehaviour
 	/// </summary>
 	private void Update ()
 	{
-	}
+        
+    }
+    
 }

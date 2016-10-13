@@ -855,56 +855,25 @@ MonoBehaviour:
   SolidPrefab: {fileID: 134650, guid: 281b95096160d104a9d4b0ca1643bca9, type: 2}
   TorusPrefab: {fileID: 180326, guid: 071aca5a8e8837746b98e5ba9100d1d3, type: 2}
   _squareStartPosition: {x: -11, y: 0, z: -11}
-  _maxSquare: {x: 11, y: 11}
+  _maxSquare: {x: 7, y: 6}
   _squareLength: 2
   _squarePositionList:
-  - {x: -9, y: 0, z: 9}
-  - {x: -7, y: 0, z: 9}
-  - {x: -3, y: 0, z: 9}
-  - {x: -1, y: 0, z: 9}
-  - {x: 3, y: 0, z: 9}
-  - {x: 5, y: 0, z: 9}
-  - {x: -9, y: 0, z: 7}
-  - {x: 5, y: 0, z: 7}
-  - {x: 9, y: 0, z: 5}
-  - {x: -1, y: 0, z: 3}
-  - {x: 9, y: 0, z: 3}
-  - {x: -5, y: 0, z: 1}
-  - {x: 1, y: 0, z: 1}
-  - {x: 7, y: 0, z: 1}
-  - {x: 9, y: 0, z: 1}
-  - {x: -7, y: 0, z: -1}
-  - {x: -5, y: 0, z: -1}
-  - {x: 3, y: 0, z: -1}
-  - {x: -5, y: 0, z: -3}
-  - {x: -9, y: 0, z: -5}
-  - {x: -5, y: 0, z: -5}
-  - {x: 5, y: 0, z: -5}
-  - {x: -1, y: 0, z: -7}
-  - {x: -1, y: 0, z: -7}
-  - {x: 1, y: 0, z: -7}
-  - {x: 3, y: 0, z: -7}
-  - {x: 9, y: 0, z: -9}
-  _cubePositionList:
-  - {x: 1, y: 0, z: 5}
-  - {x: 5, y: 0, z: 1}
-  - {x: 7, y: 0, z: -9}
-  _helixPositionList:
-  - {x: -5, y: 0, z: 5}
-  - {x: -3, y: 0, z: -3}
+  - {x: -7, y: 0, z: -9}
+  - {x: -9, y: 0, z: -7}
+  - {x: 1, y: 0, z: -9}
   - {x: -3, y: 0, z: -7}
-  _pipePositionList:
-  - {x: -7, y: 0, z: -7}
+  - {x: -1, y: 0, z: -1}
+  _cubePositionList:
+  - {x: 1, y: 0, z: -5}
+  - {x: -7, y: 0, z: -3}
   - {x: -5, y: 0, z: -7}
-  - {x: 5, y: 0, z: -9}
+  _helixPositionList: []
+  _pipePositionList: []
   _solidPositionList:
-  - {x: -9, y: 0, z: 1}
-  - {x: -7, y: 0, z: 3}
-  - {x: -5, y: 0, z: 3}
-  _torusPositionList:
-  - {x: 7, y: 0, z: 9}
-  - {x: 5, y: 0, z: -3}
-  - {x: 7, y: 0, z: -7}
+  - {x: -7, y: 0, z: -5}
+  - {x: -5, y: 0, z: -3}
+  - {x: -1, y: 0, z: -7}
+  _torusPositionList: []
 --- !u!4 &1124033411
 Transform:
   m_ObjectHideFlags: 0
@@ -996,7 +965,7 @@ MonoBehaviour:
   _Speed: 0.7
   _roSpeed: 0.4
   _Length: 2
-  _currentSquare: {x: 5, y: 5}
+  _currentSquare: {x: 3, y: 3}
 --- !u!1 &1580319446
 GameObject:
   m_ObjectHideFlags: 0
@@ -1296,7 +1265,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 420348, guid: 2f08e1388008de1449550ab18d325075, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 420348, guid: 2f08e1388008de1449550ab18d325075, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1304,7 +1273,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 420348, guid: 2f08e1388008de1449550ab18d325075, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -1
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 420348, guid: 2f08e1388008de1449550ab18d325075, type: 2}
       propertyPath: m_LocalRotation.x

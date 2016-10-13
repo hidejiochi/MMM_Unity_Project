@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEditorInternal;
+
 
 public class Gem : MonoBehaviour
 {

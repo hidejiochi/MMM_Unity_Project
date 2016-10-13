@@ -36,7 +36,7 @@ public class MyoController : MonoBehaviour
     private bool isUpButtonDown = false;
     private bool isDownButtonDown = false;
     private bool isRightButtonDown = false;
-    private bool isLeftButtonDown = false;
+    private bool isLeftButtonDown = false;     
 
     private IEnumerator LateAction(float second, Action action)
     {
@@ -75,8 +75,9 @@ public class MyoController : MonoBehaviour
 		}
 		if (Input.GetKey (KeyCode.LeftArrow) || this.isLeftButtonDown) {            
 			this.Move (MoveDirection.Left, 1);
-		}                                              
-	}
+		}
+        
+    }
     //上ボタンを押し続けた場合の処理（追加）
     public void GetMyUpButtonDown()
     {
@@ -118,7 +119,7 @@ public class MyoController : MonoBehaviour
     public void GetMyRightButtonUp()
     {
         this.isRightButtonDown = false;
-    }
+    }    
 
     public void Move (MoveDirection direction, int num)
 	{        
