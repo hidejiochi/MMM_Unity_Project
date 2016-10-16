@@ -38,20 +38,6 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _RefractTex
-        second:
-          m_Texture: {fileID: 8900000, guid: 51e3f49dbd110a7011005aba44295342, type: 2}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _AOTex
-        second:
-          m_Texture: {fileID: 2800000, guid: 1851fbbbedade3d43976dea9a24f9ec1, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
           name: _ParallaxMap
         second:
           m_Texture: {fileID: 0}
@@ -92,6 +78,20 @@ Material:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _RefractTex
+        second:
+          m_Texture: {fileID: 8900000, guid: 51e3f49dbd110a7011005aba44295342, type: 2}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _AOTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 1851fbbbedade3d43976dea9a24f9ec1, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -104,23 +104,7 @@ Material:
       data:
         first:
           name: _Cutoff
-        second: 0.8
-      data:
-        first:
-          name: _Emission
-        second: 0.5
-      data:
-        first:
-          name: _ReflectionStrength
-        second: 0.22
-      data:
-        first:
-          name: _EnvironmentLight
-        second: 0.1
-      data:
-        first:
-          name: _AOFac
-        second: 1.8
+        second: 0.9
       data:
         first:
           name: _Parallax
@@ -157,6 +141,22 @@ Material:
         first:
           name: _Metallic
         second: 0
+      data:
+        first:
+          name: _Emission
+        second: 0.5
+      data:
+        first:
+          name: _ReflectionStrength
+        second: 0.22
+      data:
+        first:
+          name: _EnvironmentLight
+        second: 0.1
+      data:
+        first:
+          name: _AOFac
+        second: 2
     m_Colors:
       data:
         first:
@@ -165,4 +165,4 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
+        second: {r: 1, g: 0.83823526, b: 0.83823526, a: 1}

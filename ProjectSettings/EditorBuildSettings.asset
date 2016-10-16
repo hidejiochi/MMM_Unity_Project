@@ -4,4 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/MMM/Stage/Stage_Select.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/Stage_001.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/Stage_002.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/Stage_003.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/Stage_004.unity

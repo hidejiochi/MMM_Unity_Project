@@ -9,8 +9,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 420348}
   - 95: {fileID: 9595818}
+  - 114: {fileID: 11458624}
   m_Layer: 0
-  m_Name: MYO
+  m_Name: MyoPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1975,7 +1976,7 @@ Animator:
   m_GameObject: {fileID: 100272}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 5a531ff71c824d54da9a5ab91cb24ebc, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 55c605c413e5330439ca7128902d63ce, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1983,6 +1984,22 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11458624
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e765d39b017ac4faa8eb2d5d9d109d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WallPrefab: {fileID: 161784, guid: f5f1ddb643d61c740bbc5e74ae20ceaf, type: 2}
+  _Speed: 0.7
+  _roSpeed: 0.4
+  _Length: 2
+  _currentSquare: {x: 0, y: 0}
 --- !u!137 &13720082
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

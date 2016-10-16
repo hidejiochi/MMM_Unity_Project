@@ -82,44 +82,44 @@ public class MyoController : MonoBehaviour
 		}
         
     }
-    //上ボタンを押し続けた場合の処理（追加）
+    //上ボタンを押し続けた場合の処理
     public void GetMyUpButtonDown()
     {
         this.isUpButtonDown = true;
     }
-    //上ボタンを離した場合の処理（追加）
+    //上ボタンを離した場合の処理
     public void GetMyUpButtonUp()
     {
         this.isUpButtonDown = false;
     }
 
-    //下ボタンを押し続けた場合の処理（追加）
+    //下ボタンを押し続けた場合の処理
     public void GetMyDownButtonDown()
     {
         this.isDownButtonDown = true;
     }
-    //下ボタンを離した場合の処理（追加）
+    //下ボタンを離した場合の処理
     public void GetMyDownButtonUp()
     {
         this.isDownButtonDown = false;
     }
-    //左ボタンを押し続けた場合の処理（追加）
+    //左ボタンを押し続けた場合の処理
     public void GetMyLeftButtonDown()
     {
         this.isLeftButtonDown = true;
     }
-    //左ボタンを離した場合の処理（追加）
+    //左ボタンを離した場合の処理
     public void GetMyLeftButtonUp()
     {
         this.isLeftButtonDown = false;
     }
 
-    //右ボタンを押し続けた場合の処理（追加）
+    //右ボタンを押し続けた場合の処理
     public void GetMyRightButtonDown()
     {
         this.isRightButtonDown = true;
     }
-    //右ボタンを離した場合の処理（追加）
+    //右ボタンを離した場合の処理
     public void GetMyRightButtonUp()
     {
         this.isRightButtonDown = false;

@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class PropGenerator : MonoBehaviour
 {
 
-	public GameObject WallPrefab;
+    public GameObject MyoPrefab; 
+    public GameObject WallPrefab;
 	public GameObject SquarePrefab;
 	public GameObject CubePrefab;
 	public GameObject HelixPrefab;
@@ -50,11 +51,11 @@ public class PropGenerator : MonoBehaviour
 
 	[SerializeField]
 	private List<Vector3> _torusPositionList;
-
-	/// <summary>
-	/// Start this instance.
-	/// </summary>
-	private void Start ()
+    
+    /// <summary>
+    /// Start this instance.
+    /// </summary>
+    private void Start ()
 	{
 		for (float y = 0; y <= _maxSquare.y; y++) {
 			for (float x = 0; x <= _maxSquare.x; x++) {
@@ -90,8 +91,8 @@ public class PropGenerator : MonoBehaviour
 				}
 				if (_torusPositionList.Contains (pos)) {
 					CreatePrefab (TorusPrefab, pos, new Vector2 (x, y));
-				}
-			}
+				}                
+            }
 		}
 	}
 
