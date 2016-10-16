@@ -15,7 +15,7 @@ public class UIController : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown(KeyCode.A) || this.isReloadButtonDown)
         {
-            SceneManager.LoadScene("Stage_004");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 

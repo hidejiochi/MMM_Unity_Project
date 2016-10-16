@@ -7,11 +7,12 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Wall
-  m_Shader: {fileID: 4800000, guid: 85da048b9f274b9449f3c23b6a11c463, type: 3}
-  m_ShaderKeywords: 
+  m_Shader: {fileID: 10751, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _ALPHABLEND_ON _NORMALMAP
   m_LightmapFlags: 5
   m_CustomRenderQueue: 2450
-  stringTagMap: {}
+  stringTagMap:
+    RenderType: Transparent
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
@@ -47,7 +48,7 @@ Material:
         first:
           name: _OcclusionMap
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: 1851fbbbedade3d43976dea9a24f9ec1, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -87,24 +88,38 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _MatCap
+        second:
+          m_Texture: {fileID: 2800000, guid: 2034f6656393e9a4a811b48a45f12ddc, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _AOTex
         second:
           m_Texture: {fileID: 2800000, guid: 1851fbbbedade3d43976dea9a24f9ec1, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _SpecGlossMap
+        second:
+          m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
           name: _SrcBlend
-        second: 1
+        second: 5
       data:
         first:
           name: _DstBlend
-        second: 0
+        second: 10
       data:
         first:
           name: _Cutoff
-        second: 0.9
+        second: 0.5
       data:
         first:
           name: _Parallax
@@ -112,11 +127,11 @@ Material:
       data:
         first:
           name: _ZWrite
-        second: 1
+        second: 0
       data:
         first:
           name: _Glossiness
-        second: 0.5
+        second: 0
       data:
         first:
           name: _BumpScale
@@ -136,7 +151,7 @@ Material:
       data:
         first:
           name: _Mode
-        second: 0
+        second: 2
       data:
         first:
           name: _Metallic
@@ -144,15 +159,15 @@ Material:
       data:
         first:
           name: _Emission
-        second: 0.5
+        second: 0.7
       data:
         first:
           name: _ReflectionStrength
-        second: 0.22
+        second: 0
       data:
         first:
           name: _EnvironmentLight
-        second: 0.1
+        second: 0
       data:
         first:
           name: _AOFac
@@ -165,4 +180,8 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: 1, g: 0.83823526, b: 0.83823526, a: 1}
+        second: {r: 0.94411767, g: 1, b: 0.78676474, a: 1}
+      data:
+        first:
+          name: _SpecColor
+        second: {r: 0.2, g: 0.2, b: 0.2, a: 1}
