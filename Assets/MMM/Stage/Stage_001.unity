@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SkyboxMaterial: {fileID: 2100000, guid: 9b5bbce29c63f4ab5a5b63354c67d6ca, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 0567f3b4c8673f04ebb588b1597c7954, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -847,7 +847,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyoPrefab: {fileID: 0}
-  WallPrefab: {fileID: 161784, guid: f5f1ddb643d61c740bbc5e74ae20ceaf, type: 2}
+  WallPrefab: {fileID: 100000, guid: 7b25bacc8376acb4ab491ba2629276d5, type: 2}
   SquarePrefab: {fileID: 181604, guid: 9d03416f1c2af764981dff0dbbcf7d4e, type: 2}
   CubePrefab: {fileID: 190786, guid: c432071c882f9624dad045bb39371ced, type: 2}
   HelixPrefab: {fileID: 126364, guid: 40a3448927d256242b64471d6feb1dee, type: 2}
@@ -1175,6 +1175,10 @@ Prefab:
       propertyPath: _currentSquare.y
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11458624, guid: 2f08e1388008de1449550ab18d325075, type: 2}
+      propertyPath: WallPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 7b25bacc8376acb4ab491ba2629276d5, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f08e1388008de1449550ab18d325075, type: 2}
   m_IsPrefabParent: 0

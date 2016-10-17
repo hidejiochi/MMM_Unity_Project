@@ -6,8 +6,7 @@ using System;
 
 
 public class MyoController : MonoBehaviour
-{
-    public GameObject WallPrefab;
+{    
     private Animator myAnimator;
 	private Tween _moveTween;
 	Vector3 targetPos = Vector3.zero;
@@ -40,6 +39,7 @@ public class MyoController : MonoBehaviour
     private bool isDownButtonDown = false;
     private bool isRightButtonDown = false;
     private bool isLeftButtonDown = false;
+    private bool isActionButtonDown = false; 
     private bool isGemRemoving = false;
 
     private IEnumerator LateAction(float second, Action action)
@@ -51,13 +51,21 @@ public class MyoController : MonoBehaviour
 
 
     // Use this for initialization
-    void Start ()
-	{
-		this.myAnimator = GetComponent<Animator> ();
-	}
+    void Awake()
+    {
+        this.myAnimator = GetComponent<Animator>();
+    }
 
-	// Update is called once per frame
-	void Update ()
+    /// <summary>
+    /// Sets the animation.
+    /// </summary>
+    public void SetAnimation(string animationName)
+    {
+        myAnimator.SetTrigger(animationName);
+    }
+
+    // Update is called once per frame
+    void Update ()
 	{
 		if (Input.GetKey (KeyCode.LeftArrow) ||
 		    Input.GetKey (KeyCode.RightArrow) ||
@@ -68,7 +76,17 @@ public class MyoController : MonoBehaviour
 		} else {
 			this.myAnimator.SetBool ("Walk", false);
 		}
-		if (Input.GetKey (KeyCode.UpArrow)||this.isUpButtonDown ) {
+
+        if (Input.GetKey (KeyCode.S)||this.isActionButtonDown)
+        {
+            this.myAnimator.SetBool("Box", true);
+        }
+        else
+        {
+            this.myAnimator.SetBool("Box", false);
+        }
+
+        if (Input.GetKey (KeyCode.UpArrow)||this.isUpButtonDown ) {
             if (isGemRemoving)
             {
                 return;
@@ -139,7 +157,18 @@ public class MyoController : MonoBehaviour
     public void GetMyRightButtonUp()
     {
         this.isRightButtonDown = false;
-    }    
+    }
+
+    //アクションボタンを押し続けた場合の処理
+    public void GetMyActionButtonDown()
+    {
+        this.isActionButtonDown = true;
+    }
+    //アクションボタンを離した場合の処理
+    public void GetMyActionButtonUp()
+    {
+        this.isActionButtonDown = false;
+    }
 
     public void Move (MoveDirection direction, int num)
 	{        
