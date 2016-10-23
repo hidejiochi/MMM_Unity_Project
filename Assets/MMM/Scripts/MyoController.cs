@@ -83,7 +83,7 @@ public class MyoController : MonoBehaviour
             string[] aniState = new string[] { "Box", "Wait", "Salute", "Wave", "Stretch",  "Stomp", "Jump" };
             //アニメーションの名前を取り出す
             string stateName = aniState[UnityEngine.Random.Range(0, aniState.Length)];
-            myAnimator.SetTrigger(stateName);
+            this.myAnimator.SetTrigger(stateName);
         }      
         
 
