@@ -51,7 +51,7 @@ public class MyoController : MonoBehaviour
 
 
     // Use this for initialization
-    void Awake()
+    void Awake() 
     {
         this.myAnimator = GetComponent<Animator>();
     }
@@ -77,14 +77,15 @@ public class MyoController : MonoBehaviour
 			this.myAnimator.SetBool ("Walk", false);
 		}
 
-        if (Input.GetKey (KeyCode.S)||this.isActionButtonDown)
+        if (Input.GetKeyDown (KeyCode.S)||this.isActionButtonDown)
         {
-            this.myAnimator.SetBool("Box", true);
-        }
-        else
-        {
-            this.myAnimator.SetBool("Box", false);
-        }
+            //配列
+            string[] aniState = new string[] { "Box", "Wait", "Salute", "Wave", "Stretch",  "Stomp", "Jump" };
+            //アニメーションの名前を取り出す
+            string stateName = aniState[UnityEngine.Random.Range(0, aniState.Length)];
+            myAnimator.SetTrigger(stateName);
+        }      
+        
 
         if (Input.GetKey (KeyCode.UpArrow)||this.isUpButtonDown ) {
             if (isGemRemoving)

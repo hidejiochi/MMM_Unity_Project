@@ -507,7 +507,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 49c3c02661a83fd42b33859cfbf9a17d, type: 2}
+  - {fileID: 2100000, guid: 5eaee087cbd566e4399a5039402570ae, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -1118,15 +1118,15 @@ MonoBehaviour:
   - {x: 3, y: 0, z: 3}
   - {x: 3, y: 0, z: -3}
   - {x: -5, y: 0, z: -9}
-  _pipePositionList: []
+  _pipePositionList:
+  - {x: -5, y: 0, z: -1}
+  - {x: -7, y: 0, z: -7}
+  - {x: 3, y: 0, z: -7}
   _solidPositionList:
   - {x: 3, y: 0, z: -1}
   - {x: 3, y: 0, z: -5}
   - {x: -9, y: 0, z: -7}
-  _torusPositionList:
-  - {x: -5, y: 0, z: -1}
-  - {x: -7, y: 0, z: -7}
-  - {x: 3, y: 0, z: -7}
+  _torusPositionList: []
 --- !u!4 &1124033411
 Transform:
   m_ObjectHideFlags: 0
