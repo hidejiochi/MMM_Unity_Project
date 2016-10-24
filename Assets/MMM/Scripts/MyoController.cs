@@ -84,6 +84,7 @@ public class MyoController : MonoBehaviour
             //アニメーションの名前を取り出す
             string stateName = aniState[UnityEngine.Random.Range(0, aniState.Length)];
             this.myAnimator.SetTrigger(stateName);
+            this.isActionButtonDown = false;
         }      
         
 
@@ -313,13 +314,11 @@ public class MyoController : MonoBehaviour
                                 //Gem_1の1マス上のマス目の情報を消去する
                                 SquareManager.Instance.RemoveGameObject(gemSquareUp_1);
                                 //Gem_1の2マス上のマス目の情報を消去する
-                                SquareManager.Instance.RemoveGameObject(gemSquareUp_2);                               
-                                //動かしたGemのGameObjectを消去する
-                                Destroy(g.gameObject);
-                                //1マス上のGemのGameObjectを消去する
-                                Destroy(g_up1.gameObject);
-                                //2マス上のGemのGameObjectを消去する
-                                Destroy(g_up2.gameObject);
+                                SquareManager.Instance.RemoveGameObject(gemSquareUp_2);
+                                //マネージャーから消す                               
+                                GemManager.Instance.Remove(g);
+                                GemManager.Instance.Remove(g_up1);
+                                GemManager.Instance.Remove(g_up2);
                                 //Gemを消している最中判定をfalse
                                 isGemRemoving = false;
                             }));
@@ -350,13 +349,11 @@ public class MyoController : MonoBehaviour
                                 //Gem_1の1マス上のマス目の情報を消去する
                                 SquareManager.Instance.RemoveGameObject(gemSquareUp_1);
                                 //Gem_1の1マス下のマス目の情報を消去する
-                                SquareManager.Instance.RemoveGameObject(gemSquareDown_1);                                
-                                //動かしたGemのGameObjectを消去する
-                                Destroy(g.gameObject);
-                                //1マス上のGemのGameObjectを消去する
-                                Destroy(g_up1.gameObject);
-                                //1マス下のGemのGameObjectを消去する
-                                Destroy(g_Down1.gameObject);
+                                SquareManager.Instance.RemoveGameObject(gemSquareDown_1);
+                                //マネージャーから消す                               
+                                GemManager.Instance.Remove(g);
+                                GemManager.Instance.Remove(g_up1);
+                                GemManager.Instance.Remove(g_Down1);
                                 //Gemを消している最中判定をfalse
                                 isGemRemoving = false;
                             }));
@@ -384,10 +381,11 @@ public class MyoController : MonoBehaviour
                                 //0.5秒後に処理が行われる
                                 SquareManager.Instance.RemoveGameObject(sqInfo_2.MySquare);
                                 SquareManager.Instance.RemoveGameObject(gemSquareDown_1);
-                                SquareManager.Instance.RemoveGameObject(gemSquareDown_2);                                
-                                Destroy(g.gameObject);
-                                Destroy(g_Down1.gameObject);
-                                Destroy(g_Down2.gameObject);
+                                SquareManager.Instance.RemoveGameObject(gemSquareDown_2);
+                                //マネージャーから消す                               
+                                GemManager.Instance.Remove(g);
+                                GemManager.Instance.Remove(g_Down1);
+                                GemManager.Instance.Remove(g_Down2);
                                 //Gemを消している最中判定をfalse
                                 isGemRemoving = false;
                             }));
@@ -434,13 +432,11 @@ public class MyoController : MonoBehaviour
                                 //Gem_1の1マス右のマス目の情報を消去する
                                 SquareManager.Instance.RemoveGameObject(gemSquareRight_1);
                                 //Gem_1の2マス右のマス目の情報を消去する
-                                SquareManager.Instance.RemoveGameObject(gemSquareRight_2);                               
-                                //動かしたGemのGameObjectを消去する
-                                Destroy(g.gameObject);
-                                //1マス右のGemのGameObjectを消去する
-                                Destroy(g_Right1.gameObject);
-                                //2マス右のGemのGameObjectを消去する
-                                Destroy(g_Right2.gameObject);
+                                SquareManager.Instance.RemoveGameObject(gemSquareRight_2);
+                                //マネージャーから消す                               
+                                GemManager.Instance.Remove(g);
+                                GemManager.Instance.Remove(g_Right1);
+                                GemManager.Instance.Remove(g_Right2);
                                 //Gemを消している最中判定をfalse
                                 isGemRemoving = false;
                             }));
@@ -471,13 +467,11 @@ public class MyoController : MonoBehaviour
                                 //Gem_1の1マス右のマス目の情報を消去する
                                 SquareManager.Instance.RemoveGameObject(gemSquareRight_1);
                                 //Gem_1の1マス左のマス目の情報を消去する
-                                SquareManager.Instance.RemoveGameObject(gemSquareLeft_1);                                
-                                //動かしたGemのGameObjectを消去する
-                                Destroy(g.gameObject);
-                                //1マス右のGemのGameObjectを消去する
-                                Destroy(g_Right1.gameObject);
-                                //1マス左のGemのGameObjectを消去する
-                                Destroy(g_Left1.gameObject);
+                                SquareManager.Instance.RemoveGameObject(gemSquareLeft_1);
+                                //マネージャーから消す                               
+                                GemManager.Instance.Remove(g);
+                                GemManager.Instance.Remove(g_Right1);
+                                GemManager.Instance.Remove(g_Left1);
                                 //Gemを消している最中判定をfalse
                                 isGemRemoving = false;
                             }));
@@ -505,10 +499,11 @@ public class MyoController : MonoBehaviour
                                 //0.5秒後に処理が行われる
                                 SquareManager.Instance.RemoveGameObject(sqInfo_2.MySquare);
                                 SquareManager.Instance.RemoveGameObject(gemSquareLeft_1);
-                                SquareManager.Instance.RemoveGameObject(gemSquareLeft_2);                                
-                                Destroy(g.gameObject);
-                                Destroy(g_Left1.gameObject);
-                                Destroy(g_Left2.gameObject);
+                                SquareManager.Instance.RemoveGameObject(gemSquareLeft_2);
+                                //マネージャーから消す                               
+                                GemManager.Instance.Remove(g);
+                                GemManager.Instance.Remove(g_Left1);
+                                GemManager.Instance.Remove(g_Left2);
                                 //Gemを消している最中判定をfalse
                                 isGemRemoving = false;
                             }));

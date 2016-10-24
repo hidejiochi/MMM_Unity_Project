@@ -1,15 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIController : MonoBehaviour {
 
-    private bool isReloadButtonDown = false; 
+    private bool isReloadButtonDown = false;
+    private GameObject clearText;
+    public bool IsClear = false;
 
     // Use this for initialization
     void Start () {
-	
-	}
+
+        this.clearText = GameObject.Find("ClearText");
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -17,14 +22,18 @@ public class UIController : MonoBehaviour {
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+        if(GemManager.Instance.IsClear())
+        {            
+            this.clearText.GetComponent<Text>().text = "Clear";
+        }
     }
 
-    //スペースボタンを押し続けた場合の処理
+    //Aボタンを押し続けた場合の処理
     public void GetMyReloadButtonDown() 
     {
         this.isReloadButtonDown = true;
     }
-    //スペースボタンを離した場合の処理
+    //Aボタンを離した場合の処理
     public void GetMyReloadButtonUp()
     { 
         this.isReloadButtonDown = false;

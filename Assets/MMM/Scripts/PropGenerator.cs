@@ -72,50 +72,77 @@ public class PropGenerator : MonoBehaviour
 				if ((y == 0 || y == _maxSquare.y) || x == 0 || x == _maxSquare.x) {
 					CreatePrefab (WallPrefab, pos, new Vector2 (x, y));
 				}
-				//Squareの配置
-				//指定した位置がリスト内に含まれていれば
-				if (_squarePositionList.Contains (pos)) {
-					CreatePrefab (SquarePrefab, pos, new Vector2 (x, y));
-				}
-				if (_cubePositionList.Contains (pos)) {
-					CreatePrefab (CubePrefab, pos, new Vector2 (x, y));
-				}
-				if (_helixPositionList.Contains (pos)) {
-					CreatePrefab (HelixPrefab, pos, new Vector2 (x, y));
-				}
-				if (_pipePositionList.Contains (pos)) {
-					CreatePrefab (PipePrefab, pos, new Vector2 (x, y));
-				}
-				if (_solidPositionList.Contains (pos)) {
-					CreatePrefab (SolidPrefab, pos, new Vector2 (x, y));
-				}
-				if (_torusPositionList.Contains (pos)) {
-					CreatePrefab (TorusPrefab, pos, new Vector2 (x, y));
-				}                
+                //Squareの配置
+                //指定した位置がリスト内に含まれていれば
+                if (_squarePositionList.Contains(pos))
+                {
+                    GameObject obj = CreatePrefab(SquarePrefab, pos, new Vector2(x, y));
+                    
+                }
+                if (_cubePositionList.Contains(pos))
+                {
+                    GameObject obj = CreatePrefab(CubePrefab, pos, new Vector2(x, y));
+                    Gem gem = obj.GetComponent<Gem>();
+                    //マネージャーに加える
+                    GemManager.Instance.Add(gem);
+                }
+                if (_helixPositionList.Contains(pos))
+                {
+                    GameObject obj = CreatePrefab(HelixPrefab, pos, new Vector2(x, y));
+                    Gem gem = obj.GetComponent<Gem>();
+                    //マネージャーに加える
+                    GemManager.Instance.Add(gem);
+                }
+                if (_pipePositionList.Contains(pos))
+                {
+                    GameObject obj = CreatePrefab(PipePrefab, pos, new Vector2(x, y));
+                    Gem gem = obj.GetComponent<Gem>();
+                    //マネージャーに加える
+                    GemManager.Instance.Add(gem);
+                }
+                if (_solidPositionList.Contains(pos))
+                {
+                    GameObject obj = CreatePrefab(SolidPrefab, pos, new Vector2(x, y));
+                    Gem gem = obj.GetComponent<Gem>();
+                    //マネージャーに加える
+                    GemManager.Instance.Add(gem);
+                }
+                if (_torusPositionList.Contains(pos))
+                {
+                    GameObject obj = CreatePrefab(TorusPrefab, pos, new Vector2(x, y));
+                    Gem gem = obj.GetComponent<Gem>();
+                    //マネージャーに加える
+                    GemManager.Instance.Add(gem);
+                }
             }
 		}
 	}
 
-	/// <summary>
-	/// プレハブを生成する関数 
-	/// </summary>
-	/// <param name="obj">Object.</param>
-	/// <param name="pos">Position.</param>
-	/// <param name="square">Square.</param>
-	private void CreatePrefab (GameObject prefab, Vector3 pos, Vector2 square)
-	{
-		//生成
-		GameObject obj = Instantiate (prefab) as GameObject;
-		//位置を設定
-		obj.transform.position = pos;
-		//マネージャーに情報を加える
-		SquareManager.Instance.AddGameObject (square, obj);
-	}
+    /// <summary>
+    /// プレハブを生成する関数 
+    /// </summary>
+    /// <param name="obj">Object.</param>
+    /// <param name="pos">Position.</param>
+    /// <param name="square">Square.</param>
+    private GameObject CreatePrefab(GameObject prefab, Vector3 pos, Vector2 square)
+    {
+        //生成
+        GameObject obj = Instantiate(prefab) as GameObject;
+        //位置を設
+        obj.transform.position = pos;
+        //マネージャーに情報を加える
+        SquareManager.Instance.AddGameObject(square, obj);
+        //生成したゲームオブジェクトを返す
+        return obj;
 
-	/// <summary>
-	/// Update this instance.
-	/// </summary>
-	private void Update ()
+
+    }
+
+
+    /// <summary>
+    /// Update this instance.
+    /// </summary>
+    private void Update ()
 	{
         
     }
