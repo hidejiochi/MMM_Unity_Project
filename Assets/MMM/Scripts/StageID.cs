@@ -10,8 +10,8 @@ public class StageID : SingletonMonoBehaviour<StageID>
 
     // Use this for initialization
     void Start () {
-	
-	}
+        saveList = PlayerPrefsUtility.LoadList<string>("ListSaveKey");
+    }
 	
 	// Update is called once per frame
 	void Update () {
