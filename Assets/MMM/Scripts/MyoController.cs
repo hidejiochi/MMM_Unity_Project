@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.EventSystems;
 using DG.Tweening;
 using System;
+using UnityEngine.SceneManagement;
 
 
 public class MyoController : MonoBehaviour
@@ -15,6 +16,8 @@ public class MyoController : MonoBehaviour
     public float _Length = 1f;
 	[SerializeField]
 	private Vector2 _currentSquare;
+    
+    private string stageId;
 
     Vector2 gemSquareUp_1 = default(Vector2);
     Vector2 gemSquareUp_2 = default(Vector2);
@@ -54,6 +57,7 @@ public class MyoController : MonoBehaviour
     void Awake() 
     {
         this.myAnimator = GetComponent<Animator>();
+        string stageId = SceneManager.GetActiveScene().name;        
     }
 
     /// <summary>
@@ -246,8 +250,15 @@ public class MyoController : MonoBehaviour
 			//移動が終了した時に走る処理
 					.OnComplete (() => {
 				//自分のマス目位置を更新
-				_currentSquare = targetSquare_1;                 
-			});
+				_currentSquare = targetSquare_1;
+
+                        if (GemManager.Instance.IsClear())
+                        {                            
+                            StageID.Instance.StageClear(stageId);
+                            
+                            this.myAnimator.SetTrigger("Jump");
+                        }
+                    });
 		}
 	}
 
