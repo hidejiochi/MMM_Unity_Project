@@ -11,29 +11,49 @@ ModelImporter:
     100006: Pipe
     100008: Solid
     100010: Torus
+    100012: Cross
+    100014: Pyramid
+    100016: Star
+    100018: Heart
     400000: //RootNode
     400002: Cube
     400004: Helix
     400006: Pipe
     400008: Solid
     400010: Torus
+    400012: Cross
+    400014: Pyramid
+    400016: Star
+    400018: Heart
     2300000: //RootNode
     2300002: Cube
     2300004: Helix
     2300006: Pipe
     2300008: Solid
     2300010: Torus
+    2300012: Cross
+    2300014: Pyramid
+    2300016: Star
+    2300018: Heart
     3300000: //RootNode
     3300002: Cube
     3300004: Helix
     3300006: Pipe
     3300008: Solid
     3300010: Torus
+    3300012: Cross
+    3300014: Pyramid
+    3300016: Star
+    3300018: Heart
     4300000: Cube
     4300002: Torus
     4300004: Pipe
     4300006: Helix
     4300008: Solid
+    4300010: Pyramid
+    4300012: Star
+    4300014: Cross
+    4300016: Heart
     9500000: //RootNode
   materials:
     importMaterials: 1

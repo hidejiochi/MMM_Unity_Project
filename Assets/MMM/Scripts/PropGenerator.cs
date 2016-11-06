@@ -5,16 +5,17 @@ using System.Security.Cryptography;
 using UnityEngine.UI;
 
 public class PropGenerator : MonoBehaviour
-{
-
-    public GameObject MyoPrefab; 
+{    
     public GameObject WallPrefab;
 	public GameObject SquarePrefab;
-	public GameObject CubePrefab;
-	public GameObject HelixPrefab;
+    public GameObject CrossPrefab; 
+    public GameObject CubePrefab;
+    public GameObject HeartPrefab; 
+    public GameObject PyramidPrefab; 
 	public GameObject PipePrefab;
 	public GameObject SolidPrefab;
-	public GameObject TorusPrefab;
+    public GameObject StarPrefab; 
+    public GameObject TorusPrefab;
         
     /// <summary>
     /// (0,0)のマス目の位置 
@@ -38,10 +39,16 @@ public class PropGenerator : MonoBehaviour
 	private List<Vector3> _squarePositionList;
 
 	[SerializeField]
-	private List<Vector3> _cubePositionList;
+	private List<Vector3> _crossPositionList; 
 
-	[SerializeField]
-	private List<Vector3> _helixPositionList;
+    [SerializeField]
+    private List<Vector3> _cubePositionList;
+
+    [SerializeField]
+    private List<Vector3> _heartPositionList;
+
+    [SerializeField]
+	private List<Vector3> _pyramidPositionList; 
 
 	[SerializeField]
 	private List<Vector3> _pipePositionList;
@@ -49,7 +56,10 @@ public class PropGenerator : MonoBehaviour
 	[SerializeField]
 	private List<Vector3> _solidPositionList;
 
-	[SerializeField]
+    [SerializeField]
+    private List<Vector3> _starPositionList; 
+
+    [SerializeField]
 	private List<Vector3> _torusPositionList;
     
     /// <summary>
@@ -79,6 +89,13 @@ public class PropGenerator : MonoBehaviour
                     GameObject obj = CreatePrefab(SquarePrefab, pos, new Vector2(x, y));
                     
                 }
+                if (_crossPositionList.Contains(pos))
+                {
+                    GameObject obj = CreatePrefab(CrossPrefab, pos, new Vector2(x, y));
+                    Gem gem = obj.GetComponent<Gem>();
+                    //マネージャーに加える
+                    GemManager.Instance.Add(gem);
+                }
                 if (_cubePositionList.Contains(pos))
                 {
                     GameObject obj = CreatePrefab(CubePrefab, pos, new Vector2(x, y));
@@ -86,9 +103,16 @@ public class PropGenerator : MonoBehaviour
                     //マネージャーに加える
                     GemManager.Instance.Add(gem);
                 }
-                if (_helixPositionList.Contains(pos))
+                if (_heartPositionList.Contains(pos))
                 {
-                    GameObject obj = CreatePrefab(HelixPrefab, pos, new Vector2(x, y));
+                    GameObject obj = CreatePrefab(HeartPrefab, pos, new Vector2(x, y)); 
+                    Gem gem = obj.GetComponent<Gem>();
+                    //マネージャーに加える
+                    GemManager.Instance.Add(gem);
+                }
+                if (_pyramidPositionList.Contains(pos))
+                {
+                    GameObject obj = CreatePrefab(PyramidPrefab, pos, new Vector2(x, y));
                     Gem gem = obj.GetComponent<Gem>();
                     //マネージャーに加える
                     GemManager.Instance.Add(gem);
@@ -103,6 +127,13 @@ public class PropGenerator : MonoBehaviour
                 if (_solidPositionList.Contains(pos))
                 {
                     GameObject obj = CreatePrefab(SolidPrefab, pos, new Vector2(x, y));
+                    Gem gem = obj.GetComponent<Gem>();
+                    //マネージャーに加える
+                    GemManager.Instance.Add(gem);
+                }
+                if (_starPositionList.Contains(pos))
+                { 
+                    GameObject obj = CreatePrefab(StarPrefab, pos, new Vector2(x, y));
                     Gem gem = obj.GetComponent<Gem>();
                     //マネージャーに加える
                     GemManager.Instance.Add(gem);

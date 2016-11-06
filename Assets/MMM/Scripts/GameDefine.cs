@@ -8,10 +8,13 @@ public class GameDefine
     /// </summary>
     public enum GemType
     {
+        CROSS,
         CUBE,
-        HELIX,
+        HEART, 
         PIPE,
+        PYRAMID,
         SOLID,
+        STAR,
         TOURUS
     }
 

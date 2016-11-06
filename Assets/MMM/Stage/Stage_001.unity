@@ -118,7 +118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d8241a086490f640bcc80bbf1269f08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsClear: 0
 --- !u!4 &283534667
 Transform:
   m_ObjectHideFlags: 0
@@ -141,6 +140,7 @@ GameObject:
   - 224: {fileID: 285283698}
   - 222: {fileID: 285283700}
   - 114: {fileID: 285283699}
+  - 114: {fileID: 285283701}
   m_Layer: 5
   m_Name: ClearText
   m_TagString: Untagged
@@ -185,9 +185,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: f3171a835dc526844acd217577aab17c, type: 3}
+    m_Font: {fileID: 12800000, guid: 58b647c5b2ec4184e9a07a561cdf0644, type: 3}
     m_FontSize: 300
-    m_FontStyle: 1
+    m_FontStyle: 3
     m_BestFit: 1
     m_MinSize: 1
     m_MaxSize: 300
@@ -204,6 +204,177 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 285283697}
+--- !u!114 &285283701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 285283697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2ab1fc65b4d3469f958e3ea45eeb892, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeMode: 0
+  duration: 2.5
+  speed: 1
+  delay: 0
+  style: 0
+  playOnAwake: 0
+  m_progress: 0
+  usePosition: 1
+  useRotation: 0
+  useScale: 0
+  useAlpha: 1
+  useColor: 1
+  onStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  onComplete:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  characterNumber: 5
+  positionFrom: {x: -100, y: -200, z: 0}
+  positionTo: {x: 0, y: 0, z: 0}
+  positionAnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 0.45814437
+      value: 1.4754906
+      inSlope: -0.12214024
+      outSlope: -0.12214024
+      tangentMode: 0
+    - time: 0.6863351
+      value: 0.947994
+      inSlope: -0.76432616
+      outSlope: -0.76432616
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  positionSeparation: 0.5
+  rotationFrom: 90
+  rotationTo: 0
+  rotationPivot: {x: 0.5, y: 0.5}
+  rotationAnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 0.43588287
+      value: 0.9498636
+      inSlope: 1.5565803
+      outSlope: 1.5565803
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  rotationSeparation: 0
+  scaleSyncXY: 1
+  scaleFrom: 0
+  scaleTo: 1
+  scalePivot: {x: 0.5, y: 0.5}
+  scaleAnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 0.5162644
+      value: 0.64929855
+      inSlope: 1.4922023
+      outSlope: 1.4922023
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  scaleFromY: 0
+  scaleToY: 1
+  scalePivotY: {x: 0.5, y: 0.5}
+  scaleAnimationCurveY:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  scaleSeparation: 1
+  alphaFrom: 0
+  alphaTo: 1
+  alphaAnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  alphaSeparation: 0.5
+  colorFrom: {r: 0.21085638, g: 0.9558824, b: 0.67842436, a: 1}
+  colorTo: {r: 1, g: 0.6691177, b: 0.9361054, a: 1}
+  colorAnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 10
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 10
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  colorSeparation: 0
 --- !u!1 &294438634
 GameObject:
   m_ObjectHideFlags: 0
@@ -290,6 +461,45 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!1 &506900437
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 506900439}
+  - 114: {fileID: 506900438}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &506900438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 506900437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00231b78f5318e84da708b08e14982a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &506900439
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 506900437}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.42347214, y: -0.43826103, z: -2.939931}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
 --- !u!1 &597053244
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,7 +667,8 @@ Prefab:
       propertyPath: _sceneName
       value: Stage_Select
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11489390, guid: 63c8cbcb116f3ff49a181f6debb084ca, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 63c8cbcb116f3ff49a181f6debb084ca, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &693754036
@@ -921,13 +1132,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e793ef4b8ba9045aacd954f51712b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyoPrefab: {fileID: 0}
   WallPrefab: {fileID: 146994, guid: 87307b423459c7a409b5dc8b80c0785e, type: 2}
-  SquarePrefab: {fileID: 181604, guid: 9d03416f1c2af764981dff0dbbcf7d4e, type: 2}
+  SquarePrefab: {fileID: 100000, guid: 7b25bacc8376acb4ab491ba2629276d5, type: 2}
+  CrossPrefab: {fileID: 0}
   CubePrefab: {fileID: 190786, guid: c432071c882f9624dad045bb39371ced, type: 2}
-  HelixPrefab: {fileID: 126364, guid: 40a3448927d256242b64471d6feb1dee, type: 2}
+  HeartPrefab: {fileID: 0}
+  PyramidPrefab: {fileID: 0}
   PipePrefab: {fileID: 145088, guid: 2b4748502bcfdcc4b9608d49c1b66ab2, type: 2}
   SolidPrefab: {fileID: 134650, guid: 281b95096160d104a9d4b0ca1643bca9, type: 2}
+  StarPrefab: {fileID: 0}
   TorusPrefab: {fileID: 180326, guid: 071aca5a8e8837746b98e5ba9100d1d3, type: 2}
   _squareStartPosition: {x: -11, y: 0, z: -11}
   _maxSquare: {x: 6, y: 5}
@@ -937,13 +1150,16 @@ MonoBehaviour:
   - {x: -9, y: 0, z: -7}
   - {x: -3, y: 0, z: -9}
   - {x: -3, y: 0, z: -7}
+  _crossPositionList: []
   _cubePositionList:
   - {x: -7, y: 0, z: -5}
   - {x: -5, y: 0, z: -7}
   - {x: -1, y: 0, z: -9}
-  _helixPositionList: []
+  _heartPositionList: []
+  _pyramidPositionList: []
   _pipePositionList: []
   _solidPositionList: []
+  _starPositionList: []
   _torusPositionList: []
 --- !u!4 &1124033411
 Transform:
@@ -1024,6 +1240,23 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 625945719}
   m_Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+--- !u!1 &1558301324 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 106960, guid: 63c8cbcb116f3ff49a181f6debb084ca, type: 2}
+  m_PrefabInternal: {fileID: 625945719}
+--- !u!114 &1558301325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1558301324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 043294abef050a24eaf7bba829d4d026, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _button: {fileID: 1348004229}
+  _sceneName: Stage_Select
 --- !u!1 &1593419346
 GameObject:
   m_ObjectHideFlags: 0

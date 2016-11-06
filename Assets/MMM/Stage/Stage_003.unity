@@ -880,13 +880,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e793ef4b8ba9045aacd954f51712b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyoPrefab: {fileID: 100272, guid: 2f08e1388008de1449550ab18d325075, type: 2}
   WallPrefab: {fileID: 100000, guid: 6dd5f0b7e498197419fe12495aa0ac77, type: 2}
-  SquarePrefab: {fileID: 181604, guid: 9d03416f1c2af764981dff0dbbcf7d4e, type: 2}
+  SquarePrefab: {fileID: 100000, guid: 89aa927b24519460fbbdcaa54633e40a, type: 2}
+  CrossPrefab: {fileID: 153372, guid: 26043eae3b7793744a411d0c21e16004, type: 2}
   CubePrefab: {fileID: 190786, guid: c432071c882f9624dad045bb39371ced, type: 2}
-  HelixPrefab: {fileID: 126364, guid: 40a3448927d256242b64471d6feb1dee, type: 2}
+  HeartPrefab: {fileID: 186912, guid: 943b7c1f3fe19bb4da221e54404d0a60, type: 2}
+  PyramidPrefab: {fileID: 112408, guid: eac6739221733ea40982b4106470ffcd, type: 2}
   PipePrefab: {fileID: 145088, guid: 2b4748502bcfdcc4b9608d49c1b66ab2, type: 2}
   SolidPrefab: {fileID: 134650, guid: 281b95096160d104a9d4b0ca1643bca9, type: 2}
+  StarPrefab: {fileID: 190738, guid: ac83c74dfef921b44945dc737680dfcf, type: 2}
   TorusPrefab: {fileID: 180326, guid: 071aca5a8e8837746b98e5ba9100d1d3, type: 2}
   _squareStartPosition: {x: -11, y: 0, z: -11}
   _maxSquare: {x: 9, y: 7}
@@ -902,16 +904,19 @@ MonoBehaviour:
   - {x: -3, y: 0, z: -7}
   - {x: -5, y: 0, z: -9}
   - {x: 5, y: 0, z: -9}
+  _crossPositionList: []
   _cubePositionList:
   - {x: -7, y: 0, z: -3}
   - {x: 1, y: 0, z: -5}
   - {x: -3, y: 0, z: -9}
-  _helixPositionList: []
+  _heartPositionList: []
+  _pyramidPositionList: []
   _pipePositionList: []
   _solidPositionList:
   - {x: 3, y: 0, z: -1}
   - {x: 1, y: 0, z: -3}
   - {x: 3, y: 0, z: -9}
+  _starPositionList: []
   _torusPositionList:
   - {x: -5, y: 0, z: -1}
   - {x: -7, y: 0, z: -7}
@@ -1354,7 +1359,8 @@ Prefab:
       propertyPath: _sceneName
       value: Stage_Select
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11489390, guid: 63c8cbcb116f3ff49a181f6debb084ca, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 63c8cbcb116f3ff49a181f6debb084ca, type: 2}
   m_IsPrefabParent: 0
 --- !u!114 &2126025468 stripped
@@ -1363,3 +1369,20 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 2126025467}
   m_Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+--- !u!1 &2126025469 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 106960, guid: 63c8cbcb116f3ff49a181f6debb084ca, type: 2}
+  m_PrefabInternal: {fileID: 2126025467}
+--- !u!114 &2126025470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2126025469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 043294abef050a24eaf7bba829d4d026, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _button: {fileID: 2126025468}
+  _sceneName: Stage_Select

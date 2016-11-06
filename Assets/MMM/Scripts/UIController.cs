@@ -2,12 +2,15 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class UIController : MonoBehaviour {
 
     private bool isReloadButtonDown = false;
+    private bool playOnAwake = false;
+    private float preNum;
     private GameObject clearText;
-    public bool IsClear = false;
+    
 
     // Use this for initialization
     void Start () {
@@ -25,6 +28,10 @@ public class UIController : MonoBehaviour {
         if(GemManager.Instance.IsClear())
         {            
             this.clearText.GetComponent<Text>().text = "Clear";
+            this.clearText.GetComponent<TypefaceAnimator>().playOnAwake = true;
+            this.clearText.GetComponent<TypefaceAnimator>().progress = preNum;
+            DOTween.To(() => preNum, (x) => preNum = x, 1f, 2.5f);
+
         }
     }
 
@@ -37,5 +44,5 @@ public class UIController : MonoBehaviour {
     public void GetMyReloadButtonUp()
     { 
         this.isReloadButtonDown = false;
-    }
+    }   
 }

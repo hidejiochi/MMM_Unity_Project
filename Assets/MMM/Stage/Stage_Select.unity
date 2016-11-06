@@ -796,12 +796,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 614596158}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 539f8d69816e78f47ac0596b291e1cc7, type: 3}
+  m_Script: {fileID: 11500000, guid: 043294abef050a24eaf7bba829d4d026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _button: {fileID: 614596160}
   _sceneName: Custom
-  _text: {fileID: 0}
 --- !u!114 &614596160 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11486158, guid: e0b1eee3fa29422418a1c276d62e55e6,
