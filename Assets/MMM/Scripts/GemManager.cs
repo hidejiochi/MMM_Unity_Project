@@ -46,6 +46,7 @@ public class GemManager : SingletonMonoBehaviour<GemManager>
     public bool IsClear()
     {
         //配列の要素が０になったかどうか
-        return _gemList.Count == 0;
-    }
+        return _gemList.Count == 0;        
+    }        
+
 }

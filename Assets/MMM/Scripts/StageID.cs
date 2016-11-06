@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
-public class StageID : MonoBehaviour {
+public class StageID : SingletonMonoBehaviour<StageID>
+{
 
     [SerializeField]
     private List<string> saveList;  
@@ -13,6 +15,13 @@ public class StageID : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
+                      
+    }
+
+    public void StageClear(string stageId)
+    {
+        saveList.Add(stageId);
+        PlayerPrefsUtility.SaveList<string>("ListSaveKey", saveList);
+    }
+
 }
