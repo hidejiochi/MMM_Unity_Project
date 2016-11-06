@@ -485,9 +485,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 506900437}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00231b78f5318e84da708b08e14982a1, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c8cf65867277ca4ab0e21bd212c3372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  saveList: []
 --- !u!4 &506900439
 Transform:
   m_ObjectHideFlags: 0
