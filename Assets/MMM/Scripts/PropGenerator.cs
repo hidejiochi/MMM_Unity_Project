@@ -4,42 +4,46 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine.UI;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 public class PropGenerator : MonoBehaviour
-{    
+{
     public GameObject WallPrefab;
-	public GameObject SquarePrefab;
-    public GameObject CrossPrefab; 
+    public GameObject SquarePrefab;
+    public GameObject CrossPrefab;
     public GameObject CubePrefab;
-    public GameObject HeartPrefab; 
-    public GameObject PyramidPrefab; 
-	public GameObject PipePrefab;
-	public GameObject SolidPrefab;
-    public GameObject StarPrefab; 
+    public GameObject HeartPrefab;
+    public GameObject PyramidPrefab;
+    public GameObject PipePrefab;
+    public GameObject SolidPrefab;
+    public GameObject StarPrefab;
     public GameObject TorusPrefab;
-        
+
     /// <summary>
     /// (0,0)のマス目の位置 
     /// </summary>
     [SerializeField]
-	private Vector3 _squareStartPosition = new Vector3 (-11f, 0, -11f);
-	/// <summary>
-	/// 11 x 11のマス目 
-	/// </summary>
-	[SerializeField]
-	private Vector2 _maxSquare = new Vector2 (11, 11);
-	/// <summary>
-	/// １マスの長さ
-	/// </summary>
-	[SerializeField]
-	private float _squareLength = 2f;
-	/// <summary>
-	/// SquarePrefabを配置する位置のリスト 
-	/// </summary>
-	[SerializeField]
-	private List<Vector3> _squarePositionList;
+    private Vector3 _squareStartPosition = new Vector3(-11f, 0, -11f);
+    /// <summary>
+    /// 11 x 11のマス目 
+    /// </summary>
+    [SerializeField]
+    private Vector2 _maxSquare = new Vector2(11, 11);
+    /// <summary>
+    /// １マスの長さ
+    /// </summary>
+    [SerializeField]
+    private float _squareLength = 2f;
+    /// <summary>
+    /// SquarePrefabを配置する位置のリスト 
+    /// </summary>
+    [SerializeField]
+    private List<Vector3> _squarePositionList;
 
-	[SerializeField]
-	private List<Vector3> _crossPositionList; 
+    [SerializeField]
+    private List<Vector3> _crossPositionList;
 
     [SerializeField]
     private List<Vector3> _cubePositionList;
@@ -48,46 +52,49 @@ public class PropGenerator : MonoBehaviour
     private List<Vector3> _heartPositionList;
 
     [SerializeField]
-	private List<Vector3> _pyramidPositionList; 
-
-	[SerializeField]
-	private List<Vector3> _pipePositionList;
-
-	[SerializeField]
-	private List<Vector3> _solidPositionList;
+    private List<Vector3> _pyramidPositionList;
 
     [SerializeField]
-    private List<Vector3> _starPositionList; 
+    private List<Vector3> _pipePositionList;
 
     [SerializeField]
-	private List<Vector3> _torusPositionList;
-    
+    private List<Vector3> _solidPositionList;
+
+    [SerializeField]
+    private List<Vector3> _starPositionList;
+
+    [SerializeField]
+    private List<Vector3> _torusPositionList;
+
     /// <summary>
     /// Start this instance.
     /// </summary>
-    private void Start ()
-	{
-		for (float y = 0; y <= _maxSquare.y; y++) {
-			for (float x = 0; x <= _maxSquare.x; x++) {
-				//座標位置
-				Vector3 pos = _squareStartPosition + new Vector3 (x * _squareLength, 0, y * _squareLength);			
-				//マス目位置
-				Vector2 square = new Vector2 (x, y);
+    private void Start()
+    {
+        for (float y = 0; y <= _maxSquare.y; y++)
+        {
+            for (float x = 0; x <= _maxSquare.x; x++)
+            {
+                //座標位置
+                Vector3 pos = _squareStartPosition + new Vector3(x * _squareLength, 0, y * _squareLength);
+                //マス目位置
+                Vector2 square = new Vector2(x, y);
                 //マス目の情報クラスを生成
                 SquareInfo squareInfo = new SquareInfo(pos, square);
                 //ディクショナリーに要素を追加
-                SquareManager.Instance.SquareDictionary.Add (square, squareInfo);
+                SquareManager.Instance.SquareDictionary.Add(square, squareInfo);
 
-				//壁を配置する条件
-				if ((y == 0 || y == _maxSquare.y) || x == 0 || x == _maxSquare.x) {
-					CreatePrefab (WallPrefab, pos, new Vector2 (x, y));
-				}
+                //壁を配置する条件
+                if ((y == 0 || y == _maxSquare.y) || x == 0 || x == _maxSquare.x)
+                {
+                    CreatePrefab(WallPrefab, pos, new Vector2(x, y));
+                }
                 //Squareの配置
                 //指定した位置がリスト内に含まれていれば
                 if (_squarePositionList.Contains(pos))
                 {
                     GameObject obj = CreatePrefab(SquarePrefab, pos, new Vector2(x, y));
-                    
+
                 }
                 if (_crossPositionList.Contains(pos))
                 {
@@ -105,7 +112,7 @@ public class PropGenerator : MonoBehaviour
                 }
                 if (_heartPositionList.Contains(pos))
                 {
-                    GameObject obj = CreatePrefab(HeartPrefab, pos, new Vector2(x, y)); 
+                    GameObject obj = CreatePrefab(HeartPrefab, pos, new Vector2(x, y));
                     Gem gem = obj.GetComponent<Gem>();
                     //マネージャーに加える
                     GemManager.Instance.Add(gem);
@@ -132,7 +139,7 @@ public class PropGenerator : MonoBehaviour
                     GemManager.Instance.Add(gem);
                 }
                 if (_starPositionList.Contains(pos))
-                { 
+                {
                     GameObject obj = CreatePrefab(StarPrefab, pos, new Vector2(x, y));
                     Gem gem = obj.GetComponent<Gem>();
                     //マネージャーに加える
@@ -146,8 +153,8 @@ public class PropGenerator : MonoBehaviour
                     GemManager.Instance.Add(gem);
                 }
             }
-		}
-	}
+        }
+    }
 
     /// <summary>
     /// プレハブを生成する関数 
@@ -169,13 +176,154 @@ public class PropGenerator : MonoBehaviour
 
     }
 
+    //==============Inspector拡張の記述開始================//
 
-    /// <summary>
-    /// Update this instance.
-    /// </summary>
-    private void Update ()
-	{
-        
+#if UNITY_EDITOR
+    [SerializeField]
+    private Transform _editorParent;
+
+    [CustomEditor(typeof(PropGenerator))]               //!< 拡張するときのお決まりとして書いてね
+    public class PropGeneratorEditor : Editor           //!< Editorを継承するよ！
+    {
+        /// <summary>
+        /// この関数は１秒間に何回も呼ばれます 
+        /// </summary>
+        public override void OnInspectorGUI()
+        {
+            //インスペクタの表示を上書きしない
+            DrawDefaultInspector();
+            //PropGeneratorのインスタンスを取得
+            PropGenerator p = target as PropGenerator;
+            //EditorParentがnullなら作成する
+            if (p._editorParent == null)
+            {
+                GameObject parentObj = new GameObject();
+                parentObj.name = "【Editor Parent】";
+                p._editorParent = parentObj.transform;
+            }
+            //再生したら削除
+            if (EditorApplication.isPlaying)
+            {
+                return;
+            }
+            //シリアライズフィールドを更新
+            serializedObject.Update();
+            //EditorParent内のゲームオブジェクトを全部削除
+            foreach (Transform t in p._editorParent)
+            {
+                if (t.gameObject == null)
+                {
+                    continue;
+                }
+                GameObject.DestroyImmediate(t.gameObject);
+            }
+            //EditorParent以下にゲームオブジェクトを生成する
+            for (float y = 0; y <= p._maxSquare.y; y++)
+            {
+                for (float x = 0; x <= p._maxSquare.x; x++)
+                {
+                    //座標位置
+                    Vector3 pos = p._squareStartPosition + new Vector3(x * p._squareLength, 0, y * p._squareLength);
+                    //壁を配置する条件
+                    if ((y == 0 || y == p._maxSquare.y) || x == 0 || x == p._maxSquare.x)
+                    {
+                        //生成
+                        GameObject obj = UnityEditor.PrefabUtility.InstantiatePrefab(p.WallPrefab) as GameObject;
+                        //親に設定
+                        obj.transform.SetParent(p._editorParent);
+                        //位置を設
+                        obj.transform.position = pos;
+                    }
+                    //Gemの配置
+                    //指定した位置がリスト内に含まれていれば配置する
+                    if (p._squarePositionList.Contains(pos))
+                    {
+                        //生成
+                        GameObject obj = UnityEditor.PrefabUtility.InstantiatePrefab(p.SquarePrefab) as GameObject;
+                        //親に設定
+                        obj.transform.SetParent(p._editorParent);
+                        //位置を設
+                        obj.transform.position = pos;
+                    }
+                    if (p._crossPositionList.Contains(pos))
+                    {
+                        //生成
+                        GameObject obj = UnityEditor.PrefabUtility.InstantiatePrefab(p.CrossPrefab) as GameObject;
+                        //親に設定
+                        obj.transform.SetParent(p._editorParent);
+                        //位置を設
+                        obj.transform.position = pos;
+                    }
+                    if (p._cubePositionList.Contains(pos))
+                    {
+                        //生成
+                        GameObject obj = UnityEditor.PrefabUtility.InstantiatePrefab(p.CubePrefab) as GameObject;
+                        //親に設定
+                        obj.transform.SetParent(p._editorParent);
+                        //位置を設
+                        obj.transform.position = pos;
+                    }
+                    if (p._heartPositionList.Contains(pos))
+                    {
+                        //生成
+                        GameObject obj = UnityEditor.PrefabUtility.InstantiatePrefab(p.HeartPrefab) as GameObject;
+                        //親に設定
+                        obj.transform.SetParent(p._editorParent);
+                        //位置を設
+                        obj.transform.position = pos;
+                    }
+                    if (p._pyramidPositionList.Contains(pos))
+                    {
+                        //生成
+                        GameObject obj = UnityEditor.PrefabUtility.InstantiatePrefab(p.PyramidPrefab) as GameObject;
+                        //親に設定
+                        obj.transform.SetParent(p._editorParent);
+                        //位置を設
+                        obj.transform.position = pos;
+                    }
+                    if (p._pipePositionList.Contains(pos))
+                    {
+                        //生成
+                        GameObject obj = UnityEditor.PrefabUtility.InstantiatePrefab(p.PipePrefab) as GameObject;
+                        //親に設定
+                        obj.transform.SetParent(p._editorParent);
+                        //位置を設
+                        obj.transform.position = pos;
+                    }
+                    if (p._solidPositionList.Contains(pos))
+                    {
+                        //生成
+                        GameObject obj = UnityEditor.PrefabUtility.InstantiatePrefab(p.SolidPrefab) as GameObject;
+                        //親に設定
+                        obj.transform.SetParent(p._editorParent);
+                        //位置を設
+                        obj.transform.position = pos;
+                    }
+                    if (p._starPositionList.Contains(pos))
+                    {
+                        //生成
+                        GameObject obj = UnityEditor.PrefabUtility.InstantiatePrefab(p.StarPrefab) as GameObject;
+                        //親に設定
+                        obj.transform.SetParent(p._editorParent);
+                        //位置を設
+                        obj.transform.position = pos;
+                    }
+                    if (p._torusPositionList.Contains(pos))
+                    {
+                        //生成
+                        GameObject obj = UnityEditor.PrefabUtility.InstantiatePrefab(p.TorusPrefab) as GameObject;
+                        //親に設定
+                        obj.transform.SetParent(p._editorParent);
+                        //位置を設
+                        obj.transform.position = pos;
+                    }
+                }
+            }
+            /* -- カスタム表示 -- */
+            serializedObject.ApplyModifiedProperties();
+        }
     }
-    
+#endif
+    //==============Inspector拡張の記述終了================//
 }
+

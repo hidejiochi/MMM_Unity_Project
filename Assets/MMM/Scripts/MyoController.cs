@@ -251,13 +251,7 @@ public class MyoController : MonoBehaviour
 					.OnComplete (() => {
 				//自分のマス目位置を更新
 				_currentSquare = targetSquare_1;
-
-                        if (GemManager.Instance.IsClear())
-                        {                            
-                            StageID.Instance.StageClear(stageId);
-                            
-                            this.myAnimator.SetTrigger("Jump");
-                        }
+                        
                     });
 		}
 	}
@@ -332,6 +326,13 @@ public class MyoController : MonoBehaviour
                                 GemManager.Instance.Remove(g_up2);
                                 //Gemを消している最中判定をfalse
                                 isGemRemoving = false;
+                                //StageIDの処理
+                                if (GemManager.Instance.IsClear())
+                                {
+                                    StageID.Instance.StageClear(stageId);
+
+                                    this.myAnimator.SetTrigger("Jump");
+                                }
                             }));
                         }                        
                     }
@@ -367,6 +368,13 @@ public class MyoController : MonoBehaviour
                                 GemManager.Instance.Remove(g_Down1);
                                 //Gemを消している最中判定をfalse
                                 isGemRemoving = false;
+                                //StageIDの処理
+                                if (GemManager.Instance.IsClear())
+                                {
+                                    StageID.Instance.StageClear(stageId);
+
+                                    this.myAnimator.SetTrigger("Jump");
+                                }
                             }));
                         }
                     }
@@ -399,6 +407,13 @@ public class MyoController : MonoBehaviour
                                 GemManager.Instance.Remove(g_Down2);
                                 //Gemを消している最中判定をfalse
                                 isGemRemoving = false;
+                                //StageIDの処理
+                                if (GemManager.Instance.IsClear())
+                                {
+                                    StageID.Instance.StageClear(stageId);
+
+                                    this.myAnimator.SetTrigger("Jump");
+                                }
                             }));
                         }
                     }
@@ -450,6 +465,13 @@ public class MyoController : MonoBehaviour
                                 GemManager.Instance.Remove(g_Right2);
                                 //Gemを消している最中判定をfalse
                                 isGemRemoving = false;
+                                //StageIDの処理
+                                if (GemManager.Instance.IsClear())
+                                {
+                                    StageID.Instance.StageClear(stageId);
+
+                                    this.myAnimator.SetTrigger("Jump");
+                                }
                             }));
                         }
                     }
@@ -485,6 +507,13 @@ public class MyoController : MonoBehaviour
                                 GemManager.Instance.Remove(g_Left1);
                                 //Gemを消している最中判定をfalse
                                 isGemRemoving = false;
+                                //StageIDの処理
+                                if (GemManager.Instance.IsClear())
+                                {
+                                    StageID.Instance.StageClear(stageId);
+
+                                    this.myAnimator.SetTrigger("Jump");
+                                }
                             }));
                         }
                     }
@@ -517,6 +546,13 @@ public class MyoController : MonoBehaviour
                                 GemManager.Instance.Remove(g_Left2);
                                 //Gemを消している最中判定をfalse
                                 isGemRemoving = false;
+                                //StageIDの処理
+                                if (GemManager.Instance.IsClear())
+                                {
+                                    StageID.Instance.StageClear(stageId);
+
+                                    this.myAnimator.SetTrigger("Jump");
+                                }
                             }));
                         }
                     }

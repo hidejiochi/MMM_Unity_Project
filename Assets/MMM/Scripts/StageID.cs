@@ -20,8 +20,18 @@ public class StageID : SingletonMonoBehaviour<StageID>
 
     public void StageClear(string stageId)
     {
-        saveList.Add(stageId);
-        PlayerPrefsUtility.SaveList<string>("ListSaveKey", saveList);
+        //すでに含まれていなければ
+        if (saveList.Contains(stageId) == false)
+        {
+            saveList.Add(stageId);
+            PlayerPrefsUtility.SaveList<string>("ListSaveKey", saveList);
+        }
     }
+
+    public void IDdelete() 
+    {
+        PlayerPrefs.DeleteKey("ListSaveKey");
+    }
+
 
 }
