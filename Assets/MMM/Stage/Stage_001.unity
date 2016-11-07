@@ -231,7 +231,7 @@ GameObject:
   - 4: {fileID: 506900439}
   - 114: {fileID: 506900438}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: StageID
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
