@@ -16,7 +16,7 @@ public class MyoController : MonoBehaviour
     public float _Length = 1f;
 	[SerializeField]
 	private Vector2 _currentSquare;
-    
+    [SerializeField]
     private string stageId;
 
     Vector2 gemSquareUp_1 = default(Vector2);
@@ -57,7 +57,7 @@ public class MyoController : MonoBehaviour
     void Awake() 
     {
         this.myAnimator = GetComponent<Animator>();
-        string stageId = SceneManager.GetActiveScene().name;        
+        stageId = SceneManager.GetActiveScene().name;        
     }
 
     /// <summary>
