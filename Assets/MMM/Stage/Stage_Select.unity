@@ -643,7 +643,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: b9911c316577bcb4a9d51d0304cbe870, type: 2}
+  - {fileID: 2100000, guid: 9bd071f18f91dd741bdacc698e064776, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -1076,6 +1076,8 @@ MonoBehaviour:
   - Stage_004
   - Stage_005
   - Stage_006
+  - Stage_007
+  - Stage_008
 --- !u!4 &1119116136
 Transform:
   m_ObjectHideFlags: 0
@@ -1570,7 +1572,6 @@ MonoBehaviour:
   _button: {fileID: 0}
   _sceneName: 
   _text: {fileID: 0}
-  saveList: []
 --- !u!4 &2088464588
 Transform:
   m_ObjectHideFlags: 0
