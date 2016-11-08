@@ -4,18 +4,24 @@ using System.Collections.Generic;
 
 public class StageID : SingletonMonoBehaviour<StageID>
 {
-
     [SerializeField]
-    private List<string> saveList;  
+    private List<string> saveList;
 
-    // Use this for initialization
-    void Start () {
+    public List<string> SaveList
+    {
+        get { return saveList; }
+    }
+
+    protected override void OnAwake()
+    {
+        base.OnAwake();
         saveList = PlayerPrefsUtility.LoadList<string>("ListSaveKey");
     }
-	
-	// Update is called once per frame
-	void Update () {
-                      
+
+    // Update is called once per frame
+    void Update()
+    {
+
     }
 
     public void StageClear(string stageId)
@@ -28,10 +34,8 @@ public class StageID : SingletonMonoBehaviour<StageID>
         }
     }
 
-    public void IDdelete() 
+    public void IDdelete()
     {
         PlayerPrefs.DeleteKey("ListSaveKey");
     }
-
-
 }

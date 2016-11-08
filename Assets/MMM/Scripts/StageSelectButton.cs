@@ -12,15 +12,7 @@ public class StageSelectButton : MonoBehaviour
     private string _sceneName;
     [SerializeField]
     private Text _text;
-
-    [SerializeField]
-    private List<string> saveList;
-
-    public List<string> SaveList
-    {
-        get { return saveList; }
-    }
-
+        
     public void Initialize(string sceneName, string buttonText)
     {
         //飛ばすシーンを設定
@@ -32,10 +24,10 @@ public class StageSelectButton : MonoBehaviour
             SceneManager.LoadScene(_sceneName);
         });
         //_sceneNameがSaveListに含まれているか
-        if (SaveList.Contains(_sceneName) == true)
+        if (StageID.Instance.SaveList.Contains(_sceneName) == true)
         {
             //色を変更する
-            _button.image.color = Color.red;
+            _button.image.color = Color.green;
         }
     }
 }
