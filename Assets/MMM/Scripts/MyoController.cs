@@ -9,7 +9,8 @@ using UnityEngine.SceneManagement;
 public class MyoController : MonoBehaviour
 {    
     private Animator myAnimator;
-	private Tween _moveTween;
+    private GameObject nextStageButton;
+    private Tween _moveTween;
 	Vector3 targetPos = Vector3.zero;
     public float _Speed = 1f;
     public float _roSpeed = 1f; 
@@ -56,8 +57,9 @@ public class MyoController : MonoBehaviour
     // Use this for initialization
     void Awake() 
     {
-        this.myAnimator = GetComponent<Animator>();
-        stageId = SceneManager.GetActiveScene().name;        
+        this.myAnimator = GetComponent<Animator>();            
+        stageId = SceneManager.GetActiveScene().name;
+        this.nextStageButton = GameObject.Find("NextStageButton");
     }
 
     /// <summary>
@@ -330,7 +332,7 @@ public class MyoController : MonoBehaviour
                                 if (GemManager.Instance.IsClear())
                                 {
                                     StageID.Instance.StageClear(stageId);
-
+                                    nextStageButton.transform.DOLocalMove(new Vector3(0, 0, 0), 2f).SetEase(Ease.InOutQuart);
                                     this.myAnimator.SetTrigger("Jump");
                                 }
                             }));
@@ -372,7 +374,7 @@ public class MyoController : MonoBehaviour
                                 if (GemManager.Instance.IsClear())
                                 {
                                     StageID.Instance.StageClear(stageId);
-
+                                    nextStageButton.transform.DOLocalMove(new Vector3(0, 0, 0), 2f).SetEase(Ease.InOutQuart);
                                     this.myAnimator.SetTrigger("Jump");
                                 }
                             }));
@@ -411,7 +413,7 @@ public class MyoController : MonoBehaviour
                                 if (GemManager.Instance.IsClear())
                                 {
                                     StageID.Instance.StageClear(stageId);
-
+                                    nextStageButton.transform.DOLocalMove(new Vector3(0, 0, 0), 2f).SetEase(Ease.InOutQuart);
                                     this.myAnimator.SetTrigger("Jump");
                                 }
                             }));
@@ -469,7 +471,7 @@ public class MyoController : MonoBehaviour
                                 if (GemManager.Instance.IsClear())
                                 {
                                     StageID.Instance.StageClear(stageId);
-
+                                    nextStageButton.transform.DOLocalMove(new Vector3(0, 0, 0), 2f).SetEase(Ease.InOutQuart);
                                     this.myAnimator.SetTrigger("Jump");
                                 }
                             }));
@@ -511,7 +513,7 @@ public class MyoController : MonoBehaviour
                                 if (GemManager.Instance.IsClear())
                                 {
                                     StageID.Instance.StageClear(stageId);
-
+                                    nextStageButton.transform.DOLocalMove(new Vector3(0, 0, 0), 2f).SetEase(Ease.InOutQuart);
                                     this.myAnimator.SetTrigger("Jump");
                                 }
                             }));
@@ -550,7 +552,7 @@ public class MyoController : MonoBehaviour
                                 if (GemManager.Instance.IsClear())
                                 {
                                     StageID.Instance.StageClear(stageId);
-
+                                    nextStageButton.transform.DOLocalMove(new Vector3(0, 0, 0), 2f).SetEase(Ease.InOutQuart);
                                     this.myAnimator.SetTrigger("Jump");
                                 }
                             }));
