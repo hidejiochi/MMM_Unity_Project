@@ -1343,7 +1343,7 @@ MonoBehaviour:
   SolidPrefab: {fileID: 134650, guid: 281b95096160d104a9d4b0ca1643bca9, type: 2}
   StarPrefab: {fileID: 190738, guid: ac83c74dfef921b44945dc737680dfcf, type: 2}
   TorusPrefab: {fileID: 180326, guid: 071aca5a8e8837746b98e5ba9100d1d3, type: 2}
-  MyoPrefab: {fileID: 186044, guid: 9aa63ab91c01b094d8afe39186259cc2, type: 2}
+  MyoPrefab: {fileID: 182542, guid: 9aa63ab91c01b094d8afe39186259cc2, type: 2}
   _myoInitialSquare: {x: 1, y: 2}
   _squareStartPosition: {x: -11, y: 0, z: -11}
   _maxSquare: {x: 5, y: 9}

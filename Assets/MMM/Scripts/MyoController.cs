@@ -80,6 +80,7 @@ public class MyoController : MonoBehaviour
         GameObject.Find("DownButton").GetComponent<MyoControlButton>().Initialize(GetMyDownButtonDown, GetMyDownButtonUp);
         GameObject.Find("RightButton").GetComponent<MyoControlButton>().Initialize(GetMyRightButtonDown, GetMyRightButtonUp);
         GameObject.Find("LeftButton").GetComponent<MyoControlButton>().Initialize(GetMyLeftButtonDown, GetMyLeftButtonUp);
+      
     }
 
     /// <summary>
