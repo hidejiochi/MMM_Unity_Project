@@ -20,6 +20,10 @@ public class PropGenerator : MonoBehaviour
     public GameObject SolidPrefab;
     public GameObject StarPrefab;
     public GameObject TorusPrefab;
+    public GameObject MyoPrefab;
+
+    [SerializeField]
+    private Vector2 _myoInitialSquare;
 
     /// <summary>
     /// (0,0)のマス目の位置 
@@ -71,6 +75,11 @@ public class PropGenerator : MonoBehaviour
     /// </summary>
     private void Start()
     {
+        //キャラの生成
+        GameObject myoObj = Instantiate(MyoPrefab);
+        myoObj.transform.position = SquareConvertToPosition(_myoInitialSquare);
+        myoObj.GetComponent<MyoController>().CurrentSquare = _myoInitialSquare;
+        //ブロックの生成
         for (float y = 0; y <= _maxSquare.y; y++)
         {
             for (float x = 0; x <= _maxSquare.x; x++)
@@ -176,6 +185,16 @@ public class PropGenerator : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Squares the convert to position.
+    /// </summary>
+    /// <returns>The convert to position.</returns>
+    /// <param name="square">Square.</param>
+    private Vector3 SquareConvertToPosition(Vector2 square)
+    {
+        return _squareStartPosition + new Vector3(square.x * _squareLength, 0, square.y * _squareLength);
+    }
+
     //==============Inspector拡張の記述開始================//
 
 #if UNITY_EDITOR
@@ -204,6 +223,11 @@ public class PropGenerator : MonoBehaviour
             //再生したら削除
             if (EditorApplication.isPlaying)
             {
+                GameObject parentObj = GameObject.Find("【Editor Parent】");
+                if (parentObj != null)
+                {
+                    Destroy(parentObj);
+                }
                 return;
             }
             //シリアライズフィールドを更新
@@ -218,6 +242,11 @@ public class PropGenerator : MonoBehaviour
                 GameObject.DestroyImmediate(t.gameObject);
             }
             //EditorParent以下にゲームオブジェクトを生成する
+            //キャラの生成
+            GameObject myoObj = PrefabUtility.InstantiatePrefab(p.MyoPrefab) as GameObject;
+            myoObj.transform.SetParent(p._editorParent);
+            myoObj.transform.position = p.SquareConvertToPosition(p._myoInitialSquare);
+            //ブロックの生成
             for (float y = 0; y <= p._maxSquare.y; y++)
             {
                 for (float x = 0; x <= p._maxSquare.x; x++)
@@ -326,4 +355,3 @@ public class PropGenerator : MonoBehaviour
 #endif
     //==============Inspector拡張の記述終了================//
 }
-

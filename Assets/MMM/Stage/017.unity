@@ -168,11 +168,11 @@ Prefab:
     - target: {fileID: 11434782, guid: 710e1217abed54c4a926a4ecfd214af1, type: 2}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1107879555}
+      objectReference: {fileID: 0}
     - target: {fileID: 11434782, guid: 710e1217abed54c4a926a4ecfd214af1, type: 2}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1107879555}
+      objectReference: {fileID: 0}
     - target: {fileID: 11434782, guid: 710e1217abed54c4a926a4ecfd214af1, type: 2}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: GetMyRightButtonDown
@@ -759,6 +759,21 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ed3156b01f3ae445db79c0d2f46a2b48, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &681000753 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 170902, guid: cf4d079088f83a04da0a43dc2992cc36, type: 2}
+  m_PrefabInternal: {fileID: 1869910117}
+--- !u!114 &681000754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 681000753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c9f8327809bf044b8c628a673e39e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &749031327
 GameObject:
   m_ObjectHideFlags: 0
@@ -860,6 +875,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &864319159 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 145416, guid: b72f943a00eb7434db46f7296c48234b, type: 2}
+  m_PrefabInternal: {fileID: 1083107734}
+--- !u!114 &864319160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 864319159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c9f8327809bf044b8c628a673e39e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &878046949
 Prefab:
   m_ObjectHideFlags: 0
@@ -1054,11 +1084,11 @@ Prefab:
     - target: {fileID: 11481230, guid: b72f943a00eb7434db46f7296c48234b, type: 2}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1107879555}
+      objectReference: {fileID: 0}
     - target: {fileID: 11481230, guid: b72f943a00eb7434db46f7296c48234b, type: 2}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1107879555}
+      objectReference: {fileID: 0}
     - target: {fileID: 11481230, guid: b72f943a00eb7434db46f7296c48234b, type: 2}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: GetMyDownButtonDown
@@ -1070,62 +1100,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b72f943a00eb7434db46f7296c48234b, type: 2}
   m_IsPrefabParent: 0
---- !u!1001 &1107879554
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 415396, guid: 9aa63ab91c01b094d8afe39186259cc2, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 415396, guid: 9aa63ab91c01b094d8afe39186259cc2, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 415396, guid: 9aa63ab91c01b094d8afe39186259cc2, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -9
-      objectReference: {fileID: 0}
-    - target: {fileID: 415396, guid: 9aa63ab91c01b094d8afe39186259cc2, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 415396, guid: 9aa63ab91c01b094d8afe39186259cc2, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 415396, guid: 9aa63ab91c01b094d8afe39186259cc2, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 415396, guid: 9aa63ab91c01b094d8afe39186259cc2, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 415396, guid: 9aa63ab91c01b094d8afe39186259cc2, type: 2}
-      propertyPath: m_RootOrder
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 11406568, guid: 9aa63ab91c01b094d8afe39186259cc2, type: 2}
-      propertyPath: _currentSquare.x
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 11406568, guid: 9aa63ab91c01b094d8afe39186259cc2, type: 2}
-      propertyPath: _currentSquare.y
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 9aa63ab91c01b094d8afe39186259cc2, type: 2}
-  m_IsPrefabParent: 0
---- !u!114 &1107879555 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11406568, guid: 9aa63ab91c01b094d8afe39186259cc2,
-    type: 2}
-  m_PrefabInternal: {fileID: 1107879554}
-  m_Script: {fileID: 11500000, guid: b5e765d39b017ac4faa8eb2d5d9d109d, type: 3}
 --- !u!224 &1114046305 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 22469844, guid: b72f943a00eb7434db46f7296c48234b,
@@ -1214,6 +1188,8 @@ MonoBehaviour:
   SolidPrefab: {fileID: 134650, guid: 281b95096160d104a9d4b0ca1643bca9, type: 2}
   StarPrefab: {fileID: 190738, guid: ac83c74dfef921b44945dc737680dfcf, type: 2}
   TorusPrefab: {fileID: 180326, guid: 071aca5a8e8837746b98e5ba9100d1d3, type: 2}
+  MyoPrefab: {fileID: 186044, guid: 9aa63ab91c01b094d8afe39186259cc2, type: 2}
+  _myoInitialSquare: {x: 6, y: 1}
   _squareStartPosition: {x: -11, y: 0, z: -11}
   _maxSquare: {x: 9, y: 5}
   _squareLength: 2
@@ -1474,6 +1450,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
+--- !u!1 &1310970829 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 197042, guid: 710e1217abed54c4a926a4ecfd214af1, type: 2}
+  m_PrefabInternal: {fileID: 3827501}
+--- !u!114 &1310970830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1310970829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c9f8327809bf044b8c628a673e39e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1321867459
 GameObject:
   m_ObjectHideFlags: 0
@@ -1622,11 +1613,11 @@ Prefab:
     - target: {fileID: 11484328, guid: 146b98b3137e08b4b93bee79c6acf4b1, type: 2}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1107879555}
+      objectReference: {fileID: 0}
     - target: {fileID: 11484328, guid: 146b98b3137e08b4b93bee79c6acf4b1, type: 2}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1107879555}
+      objectReference: {fileID: 0}
     - target: {fileID: 11484328, guid: 146b98b3137e08b4b93bee79c6acf4b1, type: 2}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: GetMyUpButtonDown
@@ -2112,11 +2103,11 @@ Prefab:
     - target: {fileID: 11408240, guid: cf4d079088f83a04da0a43dc2992cc36, type: 2}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1107879555}
+      objectReference: {fileID: 0}
     - target: {fileID: 11408240, guid: cf4d079088f83a04da0a43dc2992cc36, type: 2}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1107879555}
+      objectReference: {fileID: 0}
     - target: {fileID: 11408240, guid: cf4d079088f83a04da0a43dc2992cc36, type: 2}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: GetMyLeftButtonDown
@@ -2128,6 +2119,21 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf4d079088f83a04da0a43dc2992cc36, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2011764693 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 165134, guid: 146b98b3137e08b4b93bee79c6acf4b1, type: 2}
+  m_PrefabInternal: {fileID: 1396954087}
+--- !u!114 &2011764694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2011764693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c9f8327809bf044b8c628a673e39e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &2109395674 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 22491844, guid: 710e1217abed54c4a926a4ecfd214af1,
