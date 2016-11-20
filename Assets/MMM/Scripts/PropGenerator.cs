@@ -78,7 +78,9 @@ public class PropGenerator : MonoBehaviour
         //キャラの生成
         GameObject myoObj = Instantiate(MyoPrefab);
         myoObj.transform.position = SquareConvertToPosition(_myoInitialSquare);
-        myoObj.GetComponent<MyoController>().CurrentSquare = _myoInitialSquare;
+        MyoController myoController = myoObj.GetComponent<MyoController>();
+        myoController.CurrentSquare = _myoInitialSquare;
+        myoController.GameButtonInitialize();
         //ブロックの生成
         for (float y = 0; y <= _maxSquare.y; y++)
         {

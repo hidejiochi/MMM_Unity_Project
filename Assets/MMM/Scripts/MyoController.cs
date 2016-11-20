@@ -70,17 +70,24 @@ public class MyoController : MonoBehaviour
 
 
     // Use this for initialization
-    void Awake()
+    
+     void Awake()
     {
         this.myAnimator = GetComponent<Animator>();
         stageId = SceneManager.GetActiveScene().name;
         this.nextStageButton = GameObject.Find("NextStageButton");
+    }
+
+    /// <summary>
+    /// Games the button initialize.
+    /// </summary>
+    public void GameButtonInitialize()
+    {
         //ボタンの初期化
         GameObject.Find("UpButton").GetComponent<MyoControlButton>().Initialize(GetMyUpButtonDown, GetMyUpButtonUp);
         GameObject.Find("DownButton").GetComponent<MyoControlButton>().Initialize(GetMyDownButtonDown, GetMyDownButtonUp);
         GameObject.Find("RightButton").GetComponent<MyoControlButton>().Initialize(GetMyRightButtonDown, GetMyRightButtonUp);
         GameObject.Find("LeftButton").GetComponent<MyoControlButton>().Initialize(GetMyLeftButtonDown, GetMyLeftButtonUp);
-      
     }
 
     /// <summary>
