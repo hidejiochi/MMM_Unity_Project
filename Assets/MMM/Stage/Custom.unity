@@ -4891,6 +4891,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 13758074, guid: 9aa63ab91c01b094d8afe39186259cc2, type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300032, guid: 5a531ff71c824d54da9a5ab91cb24ebc, type: 3}
+    - target: {fileID: 13758074, guid: 9aa63ab91c01b094d8afe39186259cc2, type: 2}
+      propertyPath: m_UpdateWhenOffscreen
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9aa63ab91c01b094d8afe39186259cc2, type: 2}
   m_IsPrefabParent: 0
