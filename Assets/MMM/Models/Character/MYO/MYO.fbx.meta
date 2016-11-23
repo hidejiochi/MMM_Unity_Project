@@ -686,6 +686,13 @@ ModelImporter:
     4300076: Leg_08
     4300078: Leg_09
     4300080: Leg_010
+    4300082: Top_00
+    4300084: Ear_00
+    4300086: Glasses_00
+    4300088: Tail_00
+    4300090: Top_01
+    4300092: Ear_01
+    4300094: Tail_01
     9500000: //RootNode
     13700000: BODY
     13700002: FACE
@@ -699,6 +706,13 @@ ModelImporter:
     13700018: Face_00
     13700020: Hand_00
     13700022: Leg_00
+    13700024: Ear_00
+    13700026: Glasses_00
+    13700028: Tail_00
+    13700030: Top_00
+    13700032: Ear_01
+    13700034: Tail_01
+    13700036: Top_01
   materials:
     importMaterials: 1
     materialName: 0
@@ -707,7 +721,7 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleRotations: 1
-    optimizeGameObjects: 0
+    optimizeGameObjects: 1
     motionNodeName: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -754,7 +768,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    rootMotionBoneName: 
+    rootMotionBoneName: Hips
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
