@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Speed: 0.65
-  _roSpeed: 0.3
+  _roSpeed: 0.35
   _Length: 2
   _currentSquare: {x: 0, y: 0}
   stageId: 
@@ -296,7 +296,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   serializedVersion: 2
-  m_Quality: 0
+  m_Quality: 4
   m_UpdateWhenOffscreen: 0
   m_Mesh: {fileID: 4300038, guid: 5a531ff71c824d54da9a5ab91cb24ebc, type: 3}
   m_Bones: []
@@ -333,7 +333,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   serializedVersion: 2
-  m_Quality: 0
+  m_Quality: 4
   m_UpdateWhenOffscreen: 0
   m_Mesh: {fileID: 4300082, guid: 5a531ff71c824d54da9a5ab91cb24ebc, type: 3}
   m_Bones: []
@@ -370,7 +370,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   serializedVersion: 2
-  m_Quality: 0
+  m_Quality: 4
   m_UpdateWhenOffscreen: 0
   m_Mesh: {fileID: 4300088, guid: 5a531ff71c824d54da9a5ab91cb24ebc, type: 3}
   m_Bones: []
@@ -407,7 +407,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   serializedVersion: 2
-  m_Quality: 0
+  m_Quality: 4
   m_UpdateWhenOffscreen: 0
   m_Mesh: {fileID: 4300084, guid: 5a531ff71c824d54da9a5ab91cb24ebc, type: 3}
   m_Bones: []
@@ -445,7 +445,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   serializedVersion: 2
-  m_Quality: 0
+  m_Quality: 4
   m_UpdateWhenOffscreen: 0
   m_Mesh: {fileID: 4300012, guid: 5a531ff71c824d54da9a5ab91cb24ebc, type: 3}
   m_Bones: []
@@ -482,7 +482,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   serializedVersion: 2
-  m_Quality: 0
+  m_Quality: 4
   m_UpdateWhenOffscreen: 0
   m_Mesh: {fileID: 4300060, guid: 5a531ff71c824d54da9a5ab91cb24ebc, type: 3}
   m_Bones: []
@@ -519,7 +519,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   serializedVersion: 2
-  m_Quality: 0
+  m_Quality: 4
   m_UpdateWhenOffscreen: 0
   m_Mesh: {fileID: 4300032, guid: 5a531ff71c824d54da9a5ab91cb24ebc, type: 3}
   m_Bones: []

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class MyoCustom : MonoBehaviour {
 
@@ -15,9 +16,11 @@ public class MyoCustom : MonoBehaviour {
                 return mesh;
             }
         }
-        Debug.LogError("指定したidのMeshが存在しません");
+        Debug.LogError("指    定したidのMeshが存在しません");
         return null;
     }
+
+
 
     // Use this for initialization
     void Start () {
