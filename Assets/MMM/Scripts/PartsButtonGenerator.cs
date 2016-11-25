@@ -11,13 +11,12 @@ public class PartsButtonGenerator : MonoBehaviour {
     private Transform _topContentTransform;
     [SerializeField]
     private Transform _bodyContentTransform;
-    //クリアした数
-    int clearNum = StageID.Instance.SaveList.Count;
-   
+    
 
     // Use this for initialization
     void Start () {
-
+        //クリアした数
+        int clearNum = StageID.Instance.SaveList.Count;    
         //クリアした数を10で割った余りの数
         int remainderNum = clearNum % 10;
         //クリア数を10で割った商
