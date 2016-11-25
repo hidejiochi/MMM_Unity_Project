@@ -35,7 +35,7 @@ public class PartsButtonGenerator : MonoBehaviour {
                 topPartsButton.transform.SetParent(_topContentTransform, false);
                 //初期化
                 string topPartsNum = (quotientNum  / 2).ToString();
-                topPartsButton.Initialize("Top." + topPartsNum);
+                topPartsButton.Initialize("Top00", "Top." + topPartsNum);
             }
             //商が奇数なら
             else
@@ -46,7 +46,7 @@ public class PartsButtonGenerator : MonoBehaviour {
                 bodyPartsButton.transform.SetParent(_bodyContentTransform, false);
                 //初期化
                 string bodyPartsNum = ((quotientNum + 1)/2).ToString();
-                bodyPartsButton.Initialize("Body."+bodyPartsNum);
+                bodyPartsButton.Initialize("Body00", "Body."+bodyPartsNum);
             }
         }
                        
