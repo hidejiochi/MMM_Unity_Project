@@ -7,6 +7,9 @@ public class MyoCustom : MonoBehaviour {
     [SerializeField]
     private List<Mesh> _meshList;
 
+    [SerializeField]
+    private List<Material> _materialList; 
+
     public Mesh GetMesh(string id)
     {
         foreach (Mesh mesh in _meshList)
@@ -16,7 +19,22 @@ public class MyoCustom : MonoBehaviour {
                 return mesh;
             }
         }
+
         Debug.LogError("指    定したidのMeshが存在しません");
+        return null;
+    }
+
+    public Material GetMaterial(string id)
+    {
+        foreach (Material material in _materialList)
+        {
+            if (material.name == id)
+            {
+                return material;
+            }
+        }
+
+        Debug.LogError("指    定したidのMaterialが存在しません");
         return null;
     }
 
