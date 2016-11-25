@@ -20,7 +20,7 @@ public class MyoCustom : MonoBehaviour {
             }
         }
 
-        Debug.LogError("指    定したidのMeshが存在しません");
+        Debug.LogError("指定したidのMeshが存在しません");
         return null;
     }
 
@@ -34,7 +34,7 @@ public class MyoCustom : MonoBehaviour {
             }
         }
 
-        Debug.LogError("指    定したidのMaterialが存在しません");
+        Debug.LogError("指定したidのMaterialが存在しません");
         return null;
     }
 

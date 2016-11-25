@@ -74,6 +74,7 @@ GameObject:
   - 4: {fileID: 443888}
   - 95: {fileID: 9537642}
   - 114: {fileID: 11437982}
+  - 114: {fileID: 11465076}
   m_Layer: 0
   m_Name: Myo
   m_TagString: Untagged
@@ -269,6 +270,19 @@ MonoBehaviour:
   _downButton: {fileID: 0}
   _rightButton: {fileID: 0}
   _leftButton: {fileID: 0}
+--- !u!114 &11465076
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 128618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cb1b8f45488ef44eab94e5a4a8e5ebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _meshList: []
+  _materialList: []
 --- !u!137 &13701024
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
