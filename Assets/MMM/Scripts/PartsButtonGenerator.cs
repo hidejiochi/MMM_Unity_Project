@@ -4,8 +4,8 @@ using System.Collections.Generic;
 
 public class PartsButtonGenerator : MonoBehaviour {
 
-    public GameObject TopButtonPrefab;
-    public GameObject BodyButtonPrefab;
+    public TopPartsButton TopButtonPrefab;
+    public BodyPartsButton BodyButtonPrefab;
 
     [SerializeField]
     private Transform _topContentTransform;
@@ -30,17 +30,23 @@ public class PartsButtonGenerator : MonoBehaviour {
             if ((quotientNum % 2) == 0)
             {
                 //この中でTOPパーツボタンを生成する
-                GameObject TopButton = Instantiate(TopButtonPrefab);
+                TopPartsButton topPartsButton = Instantiate(TopButtonPrefab);
                 //Scroll ViewのContentを親にする
-                TopButton.transform.SetParent(_topContentTransform, false);
+                topPartsButton.transform.SetParent(_topContentTransform, false);
+                //初期化
+                string topPartsNum = (quotientNum  / 2).ToString();
+                topPartsButton.Initialize("Top." + topPartsNum);
             }
             //商が奇数なら
             else
             {
                 //この中でBODYパーツボタンを生成する
-                GameObject BodyButton = Instantiate(BodyButtonPrefab);
+                BodyPartsButton bodyPartsButton = Instantiate(BodyButtonPrefab);
                 //Scroll ViewのContentを親にする
-                BodyButton.transform.SetParent(_bodyContentTransform, false);
+                bodyPartsButton.transform.SetParent(_bodyContentTransform, false);
+                //初期化
+                string bodyPartsNum = ((quotientNum + 1)/2).ToString();
+                bodyPartsButton.Initialize("Body."+bodyPartsNum);
             }
         }
                        
