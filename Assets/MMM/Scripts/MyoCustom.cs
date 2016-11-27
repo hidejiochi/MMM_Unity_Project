@@ -8,7 +8,13 @@ public class MyoCustom : MonoBehaviour {
     private List<Mesh> _meshList;
 
     [SerializeField]
-    private List<Material> _materialList; 
+    private List<Material> _materialList;
+
+    [SerializeField]
+    private SkinnedMeshRenderer _topMeshRenderer;
+
+    [SerializeField]
+    private SkinnedMeshRenderer _bodyMeshRenderer;
 
     public Mesh GetMesh(string id)
     {
@@ -38,15 +44,35 @@ public class MyoCustom : MonoBehaviour {
         return null;
     }
 
+    /// <summary>
+    /// Changes the parts.
+    /// </summary>
+    /// <param name="id">Identifier.</param>
+    public void ChangeParts(string id)
+    {
+        Mesh targetMesh = GetMesh(id);
+        if (id.Contains("Body"))
+        {
+            //差し替える処理        
+            _bodyMeshRenderer.sharedMesh = targetMesh;
+        }
+        else if (id.Contains("Top"))
+        {
+            //差し替える処理        
+        }
+    }
+
+
 
 
     // Use this for initialization
-    void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    public void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update () {
 	
 	}
 }

@@ -17,7 +17,7 @@ public class BodyPartsButton : MonoBehaviour {
         _text.text = buttonText;
         //ボタンを押した時
         _button.onClick.AddListener(() => {
-            
+            MyoCustom.ChangeParts("Body"+対応したID);
         });
          
     }
