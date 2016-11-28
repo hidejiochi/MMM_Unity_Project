@@ -5,17 +5,17 @@ using System.Collections.Generic;
 public class StageID : SingletonMonoBehaviour<StageID>
 {
     [SerializeField]
-    private List<string> saveList;
+    private List<string> clearList;
 
-    public List<string> SaveList
+    public List<string> ClearList 
     {
-        get { return saveList; }
+        get { return clearList; }
     }
 
     protected override void OnAwake()
     {
         base.OnAwake();
-        saveList = PlayerPrefsUtility.LoadList<string>("ListSaveKey");
+        clearList = PlayerPrefsUtility.LoadList<string>("ListSaveKey");
     }
 
     // Update is called once per frame
@@ -27,10 +27,10 @@ public class StageID : SingletonMonoBehaviour<StageID>
     public void StageClear(string stageId)
     {
         //すでに含まれていなければ
-        if (saveList.Contains(stageId) == false)
+        if (clearList.Contains(stageId) == false)
         {
-            saveList.Add(stageId);
-            PlayerPrefsUtility.SaveList<string>("ListSaveKey", saveList);
+            clearList.Add(stageId);
+            PlayerPrefsUtility.SaveList<string>("ListSaveKey", clearList);
         }
     }
 

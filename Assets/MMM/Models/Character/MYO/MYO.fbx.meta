@@ -296,6 +296,12 @@ ModelImporter:
     100576: Top_09
     100578: Top_GP
     100580: Face_010
+    100582: body_0
+    100584: face_0
+    100586: hand_0
+    100588: leg_0
+    100590: tail_0
+    100592: top_0
     400000: BODY
     400002: Character_Ctrl:ChestEndEffector
     400004: Character_Ctrl:ChestOriginEffector
@@ -587,6 +593,12 @@ ModelImporter:
     400576: Top_09
     400578: Top_GP
     400580: Face_010
+    400582: body_0
+    400584: face_0
+    400586: hand_0
+    400588: leg_0
+    400590: tail_0
+    400592: top_0
     2300000: Face_01
     2300002: Face_02
     2300004: Face_03
@@ -693,6 +705,12 @@ ModelImporter:
     4300090: Top_01
     4300092: Ear_01
     4300094: Tail_01
+    4300096: top_0
+    4300098: face_0
+    4300100: body_0
+    4300102: hand_0
+    4300104: leg_0
+    4300106: tail_0
     9500000: //RootNode
     13700000: BODY
     13700002: FACE
@@ -713,6 +731,12 @@ ModelImporter:
     13700032: Ear_01
     13700034: Tail_01
     13700036: Top_01
+    13700038: body_0
+    13700040: face_0
+    13700042: hand_0
+    13700044: leg_0
+    13700046: tail_0
+    13700048: top_0
   materials:
     importMaterials: 1
     materialName: 0

@@ -17,7 +17,7 @@ public class GameText : MonoBehaviour {
         //現在のシーン名を取得
          _stageName = SceneManager.GetActiveScene().name; 
         this.stageNameText = GameObject.Find("StageNameText");
-        this.stageNameText.GetComponent<Text>().text = _stageName; 
+        this.stageNameText.GetComponent<Text>().text = "Stage" +_stageName; 
 
         this.clearText = GameObject.Find("ClearText");
 

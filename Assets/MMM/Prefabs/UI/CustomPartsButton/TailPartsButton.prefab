@@ -11,6 +11,7 @@ GameObject:
   - 222: {fileID: 22202884}
   - 114: {fileID: 11431156}
   - 114: {fileID: 11466460}
+  - 114: {fileID: 11425940}
   m_Layer: 5
   m_Name: TailPartsButton
   m_TagString: Untagged
@@ -68,10 +69,23 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Tail00
+  m_Text: 'Tail.0
 
 
 '
+--- !u!114 &11425940
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab2924b7876121b4e8a130c2b86a8de1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _button: {fileID: 11466460}
+  _text: {fileID: 11404586}
 --- !u!114 &11431156
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -91,7 +105,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 864a7608096ebf5479fd98bcc4214af8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 380c69ba57380de428aa229a421a6eba, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

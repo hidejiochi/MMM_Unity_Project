@@ -24,7 +24,7 @@ public class StageSelectButton : MonoBehaviour
             SceneManager.LoadScene(_sceneName);
         });
         //_sceneNameがSaveListに含まれているか
-        if (StageID.Instance.SaveList.Contains(_sceneName) == true)
+        if (StageID.Instance.ClearList.Contains(_sceneName) == true)
         {
             //色を変更する
             _button.image.color = Color.green;

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 88dc348059dd09f4aa5699c197ca4b2e
-timeCreated: 1479884655
+guid: 89cfe256b6e350c4d87e0dbcdd16c312
+timeCreated: 1480267372
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -13,7 +13,7 @@ ModelImporter:
     100010: SpineExtra02
     100012: SpineExtra03
     100014: //RootNode
-    100016: Tail_01
+    100016: tail_1
     100018: Tail_GP
     400000: GEO_GP
     400002: Hips
@@ -23,11 +23,11 @@ ModelImporter:
     400010: SpineExtra02
     400012: SpineExtra03
     400014: //RootNode
-    400016: Tail_01
+    400016: tail_1
     400018: Tail_GP
-    4300000: Tail_01
+    4300000: tail_1
     9500000: //RootNode
-    13700000: Tail_01
+    13700000: tail_1
   materials:
     importMaterials: 1
     materialName: 0
@@ -36,7 +36,7 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleRotations: 1
-    optimizeGameObjects: 0
+    optimizeGameObjects: 1
     motionNodeName: 
     animationImportErrors: 
     animationImportWarnings: 

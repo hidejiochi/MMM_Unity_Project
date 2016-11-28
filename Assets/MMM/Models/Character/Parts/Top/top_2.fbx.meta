@@ -1,51 +1,49 @@
 fileFormatVersion: 2
-guid: 736aa67d0e54c124e91168adb3a97ed3
-timeCreated: 1479884655
+guid: a07c596fd3432c24988b2fd02705b090
+timeCreated: 1480267372
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Ear_01
-    100004: Ear_GP
-    100006: GEO_GP
-    100008: Hips
-    100010: LeftArm
-    100012: LeftShoulder
-    100014: LeftShoulderExtra01
-    100016: LeftShoulderExtra02
-    100018: LeftShoulderExtra03
-    100020: Reference
-    100022: RightArm
-    100024: RightShoulder
-    100026: RightShoulderExtra01
-    100028: RightShoulderExtra02
-    100030: RightShoulderExtra03
-    100032: Spine
-    100034: Spine1
-    100036: Spine1FrontExtra01
-    400000: //RootNode
-    400002: Ear_01
-    400004: Ear_GP
-    400006: GEO_GP
-    400008: Hips
-    400010: LeftArm
-    400012: LeftShoulder
-    400014: LeftShoulderExtra01
-    400016: LeftShoulderExtra02
-    400018: LeftShoulderExtra03
-    400020: Reference
-    400022: RightArm
-    400024: RightShoulder
-    400026: RightShoulderExtra01
-    400028: RightShoulderExtra02
-    400030: RightShoulderExtra03
-    400032: Spine
-    400034: Spine1
-    400036: Spine1FrontExtra01
-    4300000: Ear_01
+    100000: GEO_GP
+    100002: Hips
+    100004: LeftShoulder
+    100006: Reference
+    100008: RightShoulder
+    100010: Spine
+    100012: Spine1
+    100014: Spine1FrontExtra01
+    100016: Spine1FrontExtra02
+    100018: Spine1LeftExtra01
+    100020: Spine1LeftExtra02
+    100022: Spine1LeftExtra02 1
+    100024: Spine1LeftExtra03
+    100026: Spine1LeftExtra03 1
+    100028: Spine1LeftExtra07
+    100030: //RootNode
+    100032: top_2
+    100034: Top_GP
+    400000: GEO_GP
+    400002: Hips
+    400004: LeftShoulder
+    400006: Reference
+    400008: RightShoulder
+    400010: Spine
+    400012: Spine1
+    400014: Spine1FrontExtra01
+    400016: Spine1FrontExtra02
+    400018: Spine1LeftExtra01
+    400020: Spine1LeftExtra02
+    400022: Spine1LeftExtra02 1
+    400024: Spine1LeftExtra03
+    400026: Spine1LeftExtra03 1
+    400028: Spine1LeftExtra07
+    400030: //RootNode
+    400032: top_2
+    400034: Top_GP
+    4300000: top_2
     9500000: //RootNode
-    13700000: Ear_01
+    13700000: top_2
   materials:
     importMaterials: 1
     materialName: 0
@@ -54,7 +52,7 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleRotations: 1
-    optimizeGameObjects: 0
+    optimizeGameObjects: 1
     motionNodeName: 
     animationImportErrors: 
     animationImportWarnings: 

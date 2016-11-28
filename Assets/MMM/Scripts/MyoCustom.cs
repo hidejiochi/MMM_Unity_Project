@@ -16,6 +16,9 @@ public class MyoCustom : MonoBehaviour {
     [SerializeField]
     private SkinnedMeshRenderer _bodyMeshRenderer;
 
+    [SerializeField]
+    private SkinnedMeshRenderer _tailMeshRenderer; 
+
     public Mesh GetMesh(string id)
     {
         foreach (Mesh mesh in _meshList)
@@ -51,14 +54,25 @@ public class MyoCustom : MonoBehaviour {
     public void ChangeParts(string id)
     {
         Mesh targetMesh = GetMesh(id);
-        if (id.Contains("Body"))
+        Material targetMaterial = GetMaterial(id);
+
+        if (id.Contains("top"))
         {
             //差し替える処理        
-            _bodyMeshRenderer.sharedMesh = targetMesh;
+            _topMeshRenderer.sharedMesh = targetMesh;
+            _topMeshRenderer.sharedMaterial = targetMaterial;
         }
-        else if (id.Contains("Top"))
+        else if (id.Contains("body"))
         {
-            //差し替える処理        
+            //差し替える処理      
+            _bodyMeshRenderer.sharedMesh = targetMesh;
+            _bodyMeshRenderer.sharedMaterial = targetMaterial;
+        }
+        else if (id.Contains("tail"))
+        {
+            //差し替える処理      
+            _tailMeshRenderer.sharedMesh = targetMesh;
+            _tailMeshRenderer.sharedMaterial = targetMaterial;
         }
     }
 
