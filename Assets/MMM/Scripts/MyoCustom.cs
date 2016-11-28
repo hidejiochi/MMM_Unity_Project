@@ -91,7 +91,8 @@ public class MyoCustom : MonoBehaviour {
     // Use this for initialization
     public void Start()
     {
-        
+        string bodyId = PlayerPrefs.GetString("BODY_KEY");
+        ChangeParts(bodyId);
     }
 
     // Update is called once per frame
