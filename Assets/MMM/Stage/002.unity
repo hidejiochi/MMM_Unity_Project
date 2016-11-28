@@ -873,7 +873,7 @@ MonoBehaviour:
   SolidPrefab: {fileID: 134650, guid: 281b95096160d104a9d4b0ca1643bca9, type: 2}
   StarPrefab: {fileID: 190738, guid: ac83c74dfef921b44945dc737680dfcf, type: 2}
   TorusPrefab: {fileID: 180326, guid: 071aca5a8e8837746b98e5ba9100d1d3, type: 2}
-  MyoPrefab: {fileID: 146534, guid: 1448176860a57c4478189d2e3e3f1618, type: 2}
+  MyoPrefab: {fileID: 176698, guid: 1448176860a57c4478189d2e3e3f1618, type: 2}
   _myoInitialSquare: {x: 3, y: 3}
   _squareStartPosition: {x: -11, y: 0, z: -11}
   _maxSquare: {x: 5, y: 6}
@@ -1171,7 +1171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c8cf65867277ca4ab0e21bd212c3372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saveList: []
+  clearList: []
 --- !u!4 &1318125068
 Transform:
   m_ObjectHideFlags: 0

@@ -14,6 +14,9 @@ public class MyoCustom : MonoBehaviour {
     private SkinnedMeshRenderer _topMeshRenderer;
 
     [SerializeField]
+    private SkinnedMeshRenderer _clothesMeshRenderer; 
+
+    [SerializeField]
     private SkinnedMeshRenderer _bodyMeshRenderer;
 
     [SerializeField]
@@ -61,6 +64,12 @@ public class MyoCustom : MonoBehaviour {
             //差し替える処理        
             _topMeshRenderer.sharedMesh = targetMesh;
             _topMeshRenderer.sharedMaterial = targetMaterial;
+        }
+        else if (id.Contains("clothes"))
+        {
+            //差し替える処理      
+            _clothesMeshRenderer.sharedMesh = targetMesh;
+            _clothesMeshRenderer.sharedMaterial = targetMaterial;
         }
         else if (id.Contains("body"))
         {

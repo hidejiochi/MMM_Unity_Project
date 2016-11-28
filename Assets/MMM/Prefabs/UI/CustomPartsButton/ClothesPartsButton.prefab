@@ -11,8 +11,9 @@ GameObject:
   - 222: {fileID: 22202884}
   - 114: {fileID: 11431156}
   - 114: {fileID: 11466460}
+  - 114: {fileID: 11432394}
   m_Layer: 5
-  m_Name: GlassesButton
+  m_Name: ClothesPartsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +29,7 @@ GameObject:
   - 224: {fileID: 22471804}
   - 222: {fileID: 22288934}
   - 114: {fileID: 11404586}
-  - 114: {fileID: 11491738}
+  - 114: {fileID: 11496764}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -68,8 +69,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'GRASSES
-
+  m_Text: '
 
 '
 --- !u!114 &11431156
@@ -99,6 +99,19 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &11432394
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e5eb480d453619478f163822939726d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _button: {fileID: 11466460}
+  _text: {fileID: 11404586}
 --- !u!114 &11466460
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -140,7 +153,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &11491738
+--- !u!114 &11496764
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

@@ -302,6 +302,7 @@ ModelImporter:
     100588: leg_0
     100590: tail_0
     100592: top_0
+    100594: clothes_0
     400000: BODY
     400002: Character_Ctrl:ChestEndEffector
     400004: Character_Ctrl:ChestOriginEffector
@@ -599,6 +600,7 @@ ModelImporter:
     400588: leg_0
     400590: tail_0
     400592: top_0
+    400594: clothes_0
     2300000: Face_01
     2300002: Face_02
     2300004: Face_03
@@ -711,6 +713,7 @@ ModelImporter:
     4300102: hand_0
     4300104: leg_0
     4300106: tail_0
+    4300108: clothes_0
     9500000: //RootNode
     13700000: BODY
     13700002: FACE
@@ -737,6 +740,7 @@ ModelImporter:
     13700044: leg_0
     13700046: tail_0
     13700048: top_0
+    13700050: clothes_0
   materials:
     importMaterials: 1
     materialName: 0

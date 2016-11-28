@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 3a8de9fa4e5582d41a9cd45cd9d75ac9
-timeCreated: 1480316637
+guid: 06ea27be1754be847a98388ab24ddb79
+timeCreated: 1480316636
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: body_1
+    100000: clothes_1
     100002: //RootNode
-    100004: Body_GP
+    100004: Clothes_GP
     100006: Face
     100008: GEO_GP
     100010: Head
@@ -53,8 +53,8 @@ ModelImporter:
     100090: SpineExtra01
     100092: SpineExtra02
     400000: //RootNode
-    400002: body_1
-    400004: Body_GP
+    400002: clothes_1
+    400004: Clothes_GP
     400006: Face
     400008: GEO_GP
     400010: Head
@@ -99,9 +99,9 @@ ModelImporter:
     400088: Spine1FrontExtra03
     400090: SpineExtra01
     400092: SpineExtra02
-    4300000: body_1
+    4300000: clothes_1
     9500000: //RootNode
-    13700000: body_1
+    13700000: clothes_1
   materials:
     importMaterials: 1
     materialName: 0
@@ -110,7 +110,7 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleRotations: 1
-    optimizeGameObjects: 1
+    optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
     animationImportWarnings: 
