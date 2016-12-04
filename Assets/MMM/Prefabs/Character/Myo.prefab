@@ -194,11 +194,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cb1b8f45488ef44eab94e5a4a8e5ebd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _meshList: []
-  _materialList: []
+  _meshList:
+  - {fileID: 4300096, guid: 5a531ff71c824d54da9a5ab91cb24ebc, type: 3}
+  - {fileID: 4300108, guid: 5a531ff71c824d54da9a5ab91cb24ebc, type: 3}
+  - {fileID: 4300100, guid: 5a531ff71c824d54da9a5ab91cb24ebc, type: 3}
+  - {fileID: 4300106, guid: 5a531ff71c824d54da9a5ab91cb24ebc, type: 3}
+  - {fileID: 4300000, guid: 638b9f1eb2aef8e4ebaccfc38a6ce1f4, type: 3}
+  - {fileID: 4300000, guid: 06ea27be1754be847a98388ab24ddb79, type: 3}
+  - {fileID: 4300000, guid: 3a8de9fa4e5582d41a9cd45cd9d75ac9, type: 3}
+  - {fileID: 4300000, guid: 89cfe256b6e350c4d87e0dbcdd16c312, type: 3}
+  - {fileID: 4300000, guid: a07c596fd3432c24988b2fd02705b090, type: 3}
+  _materialList:
+  - {fileID: 2100000, guid: dba9180739b7bfa45806e2fe6f2a3909, type: 2}
+  - {fileID: 2100000, guid: 30d259e833b4f1a4787cd4be8d80d6d8, type: 2}
+  - {fileID: 2100000, guid: 5fba146f81c5d7e41b55535679132d69, type: 2}
+  - {fileID: 2100000, guid: f52f4acdb2aa9b04496247268f66ce84, type: 2}
+  - {fileID: 2100000, guid: 3a734804af55455458b7f1488cf83b84, type: 2}
+  - {fileID: 2100000, guid: fda0a1afd075f5d438b9c824475af39a, type: 2}
+  - {fileID: 2100000, guid: f54951d4e3b79fe4786e541a44921631, type: 2}
+  - {fileID: 2100000, guid: 3d69c9bf2b85e9047a70a9c06b63bc50, type: 2}
+  - {fileID: 2100000, guid: 8059c58058da931408a16eb994d2964c, type: 2}
   _topMeshRenderer: {fileID: 13790138}
   _clothesMeshRenderer: {fileID: 13777024}
-  _bodyMeshRenderer: {fileID: 13777024}
+  _bodyMeshRenderer: {fileID: 13763688}
   _tailMeshRenderer: {fileID: 13765718}
 --- !u!137 &13763688
 SkinnedMeshRenderer:
@@ -210,7 +228,7 @@ SkinnedMeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 5fba146f81c5d7e41b55535679132d69, type: 2}
+  - {fileID: 2100000, guid: 92cc477ca3e5ffb459f1d81633971bb9, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -227,7 +245,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   serializedVersion: 2
-  m_Quality: 0
+  m_Quality: 4
   m_UpdateWhenOffscreen: 0
   m_Mesh: {fileID: 4300100, guid: 5a531ff71c824d54da9a5ab91cb24ebc, type: 3}
   m_Bones: []
@@ -247,7 +265,7 @@ SkinnedMeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: dba9180739b7bfa45806e2fe6f2a3909, type: 2}
+  - {fileID: 2100000, guid: 7e7465036bd6eae47954c27c9d58c232, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -264,7 +282,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   serializedVersion: 2
-  m_Quality: 0
+  m_Quality: 4
   m_UpdateWhenOffscreen: 0
   m_Mesh: {fileID: 4300106, guid: 5a531ff71c824d54da9a5ab91cb24ebc, type: 3}
   m_Bones: []
@@ -284,7 +302,7 @@ SkinnedMeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 30d259e833b4f1a4787cd4be8d80d6d8, type: 2}
+  - {fileID: 2100000, guid: aee71ddd8ec6c37408830c44f347df81, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -301,7 +319,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   serializedVersion: 2
-  m_Quality: 0
+  m_Quality: 4
   m_UpdateWhenOffscreen: 0
   m_Mesh: {fileID: 4300108, guid: 5a531ff71c824d54da9a5ab91cb24ebc, type: 3}
   m_Bones: []
@@ -321,7 +339,7 @@ SkinnedMeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: f52f4acdb2aa9b04496247268f66ce84, type: 2}
+  - {fileID: 2100000, guid: dd4383396aa89d4449384901416f70c4, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -338,7 +356,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   serializedVersion: 2
-  m_Quality: 0
+  m_Quality: 4
   m_UpdateWhenOffscreen: 0
   m_Mesh: {fileID: 4300096, guid: 5a531ff71c824d54da9a5ab91cb24ebc, type: 3}
   m_Bones: []

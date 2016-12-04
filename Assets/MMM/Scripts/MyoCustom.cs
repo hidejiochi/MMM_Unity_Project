@@ -2,7 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class MyoCustom : MonoBehaviour {
+public class MyoCustom : SingletonMonoBehaviour<MyoCustom>
+{
 
     [SerializeField]
     private List<Mesh> _meshList;
@@ -12,6 +13,10 @@ public class MyoCustom : MonoBehaviour {
 
     [SerializeField]
     private SkinnedMeshRenderer _topMeshRenderer;
+    public SkinnedMeshRenderer TopMeshRenderer 
+    {
+        get { return _topMeshRenderer; }
+    }
 
     [SerializeField]
     private SkinnedMeshRenderer _clothesMeshRenderer; 
@@ -64,24 +69,32 @@ public class MyoCustom : MonoBehaviour {
             //差し替える処理        
             _topMeshRenderer.sharedMesh = targetMesh;
             _topMeshRenderer.sharedMaterial = targetMaterial;
+            //Idを保存
+            PlayerPrefs.SetString("TOP_KEY", id);
         }
         else if (id.Contains("clothes"))
         {
             //差し替える処理      
             _clothesMeshRenderer.sharedMesh = targetMesh;
             _clothesMeshRenderer.sharedMaterial = targetMaterial;
+            //Idを保存
+            PlayerPrefs.SetString("CLOTHES_KEY", id);
         }
         else if (id.Contains("body"))
         {
             //差し替える処理      
             _bodyMeshRenderer.sharedMesh = targetMesh;
             _bodyMeshRenderer.sharedMaterial = targetMaterial;
+            //Idを保存
+            PlayerPrefs.SetString("BODY_KEY", id);
         }
         else if (id.Contains("tail"))
         {
             //差し替える処理      
             _tailMeshRenderer.sharedMesh = targetMesh;
             _tailMeshRenderer.sharedMaterial = targetMaterial;
+            //Idを保存
+            PlayerPrefs.SetString("TAIL_KEY", id);
         }
     }
 
@@ -91,8 +104,17 @@ public class MyoCustom : MonoBehaviour {
     // Use this for initialization
     public void Start()
     {
+        string topId = PlayerPrefs.GetString("TOP_KEY");
+        ChangeParts(topId);
+
+        string clothesId = PlayerPrefs.GetString("CLOTHES_KEY");
+        ChangeParts(clothesId);
+
         string bodyId = PlayerPrefs.GetString("BODY_KEY");
         ChangeParts(bodyId);
+
+        string tailId = PlayerPrefs.GetString("TAIL_KEY");
+        ChangeParts(tailId);
     }
 
     // Update is called once per frame

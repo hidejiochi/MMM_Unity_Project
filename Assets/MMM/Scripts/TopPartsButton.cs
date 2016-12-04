@@ -17,7 +17,9 @@ public class TopPartsButton : MonoBehaviour {
         _text.text = buttonText;
         //ボタンを押した時
         _button.onClick.AddListener(() => {
-            GameObject.Find("Myo").GetComponent<MyoCustom>().ChangeParts(topPartsID);
+            GameObject.Find("Myo").GetComponent<MyoCustom>().ChangeParts(topPartsID);            
         });
+
+        
     }
 }
