@@ -27,31 +27,27 @@ public class MyoCustom : SingletonMonoBehaviour<MyoCustom>
     [SerializeField]
     private SkinnedMeshRenderer _tailMeshRenderer; 
 
-    public Mesh GetMesh(string id)
+    public Mesh GetMesh (string id)
     {
-        foreach (Mesh mesh in _meshList)
-        {
-            if (mesh.name == id)
-            {
+        foreach (Mesh mesh in _meshList) {
+            if (mesh.name == id) {
                 return mesh;
             }
         }
 
-        Debug.LogError("指定したidのMeshが存在しません");
+        Debug.LogErrorFormat ("指定したidのMeshが存在しません,Id:{0}", id);
         return null;
     }
 
-    public Material GetMaterial(string id)
+    public Material GetMaterial (string id)
     {
-        foreach (Material material in _materialList)
-        {
-            if (material.name == id)
-            {
+        foreach (Material material in _materialList) {
+            if (material.name == id) {
                 return material;
             }
         }
 
-        Debug.LogError("指定したidのMaterialが存在しません");
+        Debug.LogErrorFormat ("指定したidのMaterialが存在しません,Id:{0}", id);
         return null;
     }
 
@@ -102,7 +98,7 @@ public class MyoCustom : SingletonMonoBehaviour<MyoCustom>
 
 
     // Use this for initialization
-    public void Start()
+    protected override void OnAwake()
     {
         string topId = PlayerPrefs.GetString("TOP_KEY");
         ChangeParts(topId);
