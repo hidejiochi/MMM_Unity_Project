@@ -8,6 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MMM/Stage/Stage_Select.unity
   - enabled: 1
+    path: Assets/MMM/Stage/Custom.unity
+  - enabled: 1
     path: Assets/MMM/Stage/001.unity
   - enabled: 1
     path: Assets/MMM/Stage/002.unity
@@ -58,4 +60,72 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MMM/Stage/025.unity
   - enabled: 1
-    path: Assets/MMM/Stage/Custom.unity
+    path: Assets/MMM/Stage/026.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/027.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/028.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/029.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/030.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/031.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/032.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/033.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/034.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/035.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/036.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/037.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/038.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/039.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/040.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/041.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/042.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/043.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/044.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/045.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/046.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/047.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/048.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/049.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/050.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/051.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/052.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/053.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/054.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/055.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/056.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/057.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/058.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/059.unity
+  - enabled: 1
+    path: Assets/MMM/Stage/060.unity

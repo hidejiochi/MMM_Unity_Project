@@ -9,6 +9,14 @@ public class ClothesPartsButton : MonoBehaviour
     [SerializeField]
     private Button _button;
 
+    public Button Button
+    {
+        get
+        {
+            return _button;
+        }
+    }
+
     [SerializeField]
     private Text _text;
 
@@ -16,9 +24,6 @@ public class ClothesPartsButton : MonoBehaviour
     {
         //テキストの文字を変更
         _text.text = buttonText;
-        //ボタンを押した時
-        _button.onClick.AddListener(() => {
-            GameObject.Find("Myo").GetComponent<MyoCustom>().ChangeParts(clothesPartsID);
-        });
+        
     }
 }

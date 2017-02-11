@@ -24,6 +24,6 @@ public class TopPartsButton : MonoBehaviour
     {
         //テキストの文字を変更
         _text.text = buttonText;
-        GameObject.Find("Myo").GetComponent<MyoCustom>().ChangeParts(topPartsID);
+        
     }
 }

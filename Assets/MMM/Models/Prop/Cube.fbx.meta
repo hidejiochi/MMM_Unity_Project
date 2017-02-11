@@ -15,6 +15,12 @@ ModelImporter:
     100014: Pyramid
     100016: Star
     100018: Heart
+    100020: Wall_A_01
+    100022: Wall_A_02
+    100024: Wall_B_01
+    100026: Wall_B_02
+    100028: ffd1Base
+    100030: ffd1Lattice
     400000: //RootNode
     400002: Cube
     400004: Helix
@@ -25,6 +31,12 @@ ModelImporter:
     400014: Pyramid
     400016: Star
     400018: Heart
+    400020: Wall_A_01
+    400022: Wall_A_02
+    400024: Wall_B_01
+    400026: Wall_B_02
+    400028: ffd1Base
+    400030: ffd1Lattice
     2300000: //RootNode
     2300002: Cube
     2300004: Helix
@@ -35,6 +47,10 @@ ModelImporter:
     2300014: Pyramid
     2300016: Star
     2300018: Heart
+    2300020: Wall_A_01
+    2300022: Wall_A_02
+    2300024: Wall_B_01
+    2300026: Wall_B_02
     3300000: //RootNode
     3300002: Cube
     3300004: Helix
@@ -45,6 +61,10 @@ ModelImporter:
     3300014: Pyramid
     3300016: Star
     3300018: Heart
+    3300020: Wall_A_01
+    3300022: Wall_A_02
+    3300024: Wall_B_01
+    3300026: Wall_B_02
     4300000: Cube
     4300002: Torus
     4300004: Pipe
@@ -54,6 +74,11 @@ ModelImporter:
     4300012: Star
     4300014: Cross
     4300016: Heart
+    4300018: Wall_A_01
+    4300020: Wall_B_01
+    4300022: Wall_B_02
+    4300024: Wall_A_02
+    7400000: Take 001
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -62,7 +87,7 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleRotations: 1
+    resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
@@ -101,6 +126,7 @@ ModelImporter:
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -111,7 +137,10 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
   humanoidOversampling: 1

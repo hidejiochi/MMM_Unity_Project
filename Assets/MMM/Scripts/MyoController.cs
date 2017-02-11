@@ -117,7 +117,7 @@ public class MyoController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.S) || this.isActionButtonDown)
         {
             //配列
-            string[] aniState = new string[] { "Box", "Wait", "Salute", "Wave", "Stretch", "Stomp", "Jump" };
+            string[] aniState = new string[] { "Box", "Wait", "Salute", "Wave", "Stretch", "Stomp", "Jump", "Fall" };
             //アニメーションの名前を取り出す
             string stateName = aniState[UnityEngine.Random.Range(0, aniState.Length)];
             this.myAnimator.SetTrigger(stateName);
