@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 using DG.Tweening;
 using System;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class MyoController : MonoBehaviour
@@ -70,8 +71,8 @@ public class MyoController : MonoBehaviour
 
 
     // Use this for initialization
-    
-     void Awake()
+
+    void Awake()
     {
         this.myAnimator = GetComponent<Animator>();
         stageId = SceneManager.GetActiveScene().name;
@@ -296,6 +297,8 @@ public class MyoController : MonoBehaviour
         }
     }
 
+   
+
     /// <summary>
     /// キャラクターを動かせるかどうかの判定 
     /// </summary>
@@ -372,7 +375,7 @@ public class MyoController : MonoBehaviour
                                 //StageIDの処理
                                 if (GemManager.Instance.IsClear())
                                 {
-                                    StageID.Instance.StageClear(stageId);
+                                    StageID.Instance.StageClear(stageId);                                   
                                     nextStageButton.transform.DOLocalMove(new Vector3(0, 0, 0), 2f).SetEase(Ease.InOutQuart);
                                     this.myAnimator.SetTrigger("Jump");
                                 }
@@ -414,7 +417,7 @@ public class MyoController : MonoBehaviour
                                 //StageIDの処理
                                 if (GemManager.Instance.IsClear())
                                 {
-                                    StageID.Instance.StageClear(stageId);
+                                    StageID.Instance.StageClear(stageId);                                    
                                     nextStageButton.transform.DOLocalMove(new Vector3(0, 0, 0), 2f).SetEase(Ease.InOutQuart);
                                     this.myAnimator.SetTrigger("Jump");
                                 }
@@ -453,7 +456,7 @@ public class MyoController : MonoBehaviour
                                 //StageIDの処理
                                 if (GemManager.Instance.IsClear())
                                 {
-                                    StageID.Instance.StageClear(stageId);
+                                    StageID.Instance.StageClear(stageId);                                    
                                     nextStageButton.transform.DOLocalMove(new Vector3(0, 0, 0), 2f).SetEase(Ease.InOutQuart);
                                     this.myAnimator.SetTrigger("Jump");
                                 }
@@ -511,7 +514,7 @@ public class MyoController : MonoBehaviour
                                 //StageIDの処理
                                 if (GemManager.Instance.IsClear())
                                 {
-                                    StageID.Instance.StageClear(stageId);
+                                    StageID.Instance.StageClear(stageId);                                    
                                     nextStageButton.transform.DOLocalMove(new Vector3(0, 0, 0), 2f).SetEase(Ease.InOutQuart);
                                     this.myAnimator.SetTrigger("Jump");
                                 }
@@ -553,7 +556,7 @@ public class MyoController : MonoBehaviour
                                 //StageIDの処理
                                 if (GemManager.Instance.IsClear())
                                 {
-                                    StageID.Instance.StageClear(stageId);
+                                    StageID.Instance.StageClear(stageId);                                    
                                     nextStageButton.transform.DOLocalMove(new Vector3(0, 0, 0), 2f).SetEase(Ease.InOutQuart);
                                     this.myAnimator.SetTrigger("Jump");
                                 }
@@ -592,7 +595,7 @@ public class MyoController : MonoBehaviour
                                 //StageIDの処理
                                 if (GemManager.Instance.IsClear())
                                 {
-                                    StageID.Instance.StageClear(stageId);
+                                    StageID.Instance.StageClear(stageId);                                    
                                     nextStageButton.transform.DOLocalMove(new Vector3(0, 0, 0), 2f).SetEase(Ease.InOutQuart);
                                     this.myAnimator.SetTrigger("Jump");
                                 }

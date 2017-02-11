@@ -160,7 +160,7 @@ public class PartsButtonGenerator : MonoBehaviour
             //クリアした数
             int clearNum = i + 1;
 
-            //クリア回数が5 または -5の値が15で割り切れる時
+            //クリア回数が3 または -3の値が9で割り切れる時
             if (clearNum == 3 || ((clearNum - 3) % 9) == 0)
             {
                
@@ -209,7 +209,7 @@ public class PartsButtonGenerator : MonoBehaviour
                     }
                 });
             }
-            //クリア回数が10 または +5の値が15で割り切れる時
+            //クリア回数が6 または +3の値が9で割り切れる時
             if (clearNum == 6 || ((clearNum + 3) % 9) == 0)
             {
                 //この中でCLOTHESパーツボタンを生成する
@@ -256,7 +256,7 @@ public class PartsButtonGenerator : MonoBehaviour
                     }
                 });
             }            
-            //クリア回数が15で割り切れる時
+            //クリア回数が9で割り切れる時
             if ((clearNum % 9) == 0)
             {
                 //この中でTAILパーツボタンを生成する
