@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 /// <summary>
 /// Gemを管理するマネージャークラス 
@@ -11,6 +12,11 @@ public class GemManager : SingletonMonoBehaviour<GemManager>
     /// ジェムのリスト 
     /// </summary>
     private List<Gem> _gemList = new List<Gem>();
+
+    /// <summary>
+    /// クリアになった瞬間に走る関数を登録する変数 
+    /// </summary>
+    public event Action OnClearHandler;
 
     /// <summary>
     /// これはGemに要素を加える関数ですよ 
@@ -45,8 +51,15 @@ public class GemManager : SingletonMonoBehaviour<GemManager>
     /// <returns><c>true</c> if this instance is clear; otherwise, <c>false</c>.</returns>
     public bool IsClear()
     {
+        //nullチェック
+        if (OnClearHandler != null)
+        {
+            //登録された関数を実行
+            OnClearHandler.Invoke();
+        }
         //配列の要素が０になったかどうか
         return _gemList.Count == 0;
     }
+
 
 }

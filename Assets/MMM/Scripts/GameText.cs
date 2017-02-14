@@ -1,10 +1,9 @@
 ﻿using UnityEngine;
-
+using System.Collections;
 using UnityEngine.UI;
 using DG.Tweening;
 using UnityEngine.SceneManagement;
-
-
+using System.Collections.Generic;
 
 public class GameText : MonoBehaviour
 {
@@ -29,13 +28,14 @@ public class GameText : MonoBehaviour
         this.getItemText = GameObject.Find("GetItemText");
 
         //クリア時に呼ぶ関数を登録
-        MyoController.Instance.OnClearHandler += OnClear;
+        GemManager.Instance.OnClearHandler += OnClear;
 
     }
 
     void OnClear()
     {
-        
+        if (GemManager.Instance.IsClear())
+        {
             this.clearText.GetComponent<Text>().text = "Clear";
             this.clearText.GetComponent<TypefaceAnimator>().playOnAwake = true;
             this.clearText.GetComponent<TypefaceAnimator>().progress = proNum;
@@ -79,5 +79,12 @@ public class GameText : MonoBehaviour
         }
     }
 
-   
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+}
+
+
 
