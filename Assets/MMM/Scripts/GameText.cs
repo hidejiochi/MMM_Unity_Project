@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
-using System.Collections;
+
 using UnityEngine.UI;
 using DG.Tweening;
 using UnityEngine.SceneManagement;
-using System.Collections.Generic;
 
-public class GameText : MonoBehaviour {
+
+
+public class GameText : MonoBehaviour
+{
 
     private bool playOnAwake = false;
     private float proNum;
@@ -13,29 +15,27 @@ public class GameText : MonoBehaviour {
     private GameObject getItemText;
 
     private GameObject stageNameText;
-    private string _stageName; 
+    private string _stageName;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         //現在のシーン名を取得
-         _stageName = SceneManager.GetActiveScene().name; 
+        _stageName = SceneManager.GetActiveScene().name;
         this.stageNameText = GameObject.Find("StageNameText");
-        this.stageNameText.GetComponent<Text>().text = "Stage" +_stageName; 
+        this.stageNameText.GetComponent<Text>().text = "Stage" + _stageName;
 
         this.clearText = GameObject.Find("ClearText");
         this.getItemText = GameObject.Find("GetItemText");
 
-
+        //クリア時に呼ぶ関数を登録
+        MyoController.Instance.OnClearHandler += OnClear;
 
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnClear()
     {
-
-
-        if (GemManager.Instance.IsClear())
-        {
+        
             this.clearText.GetComponent<Text>().text = "Clear";
             this.clearText.GetComponent<TypefaceAnimator>().playOnAwake = true;
             this.clearText.GetComponent<TypefaceAnimator>().progress = proNum;
@@ -78,4 +78,6 @@ public class GameText : MonoBehaviour {
             }
         }
     }
-}
+
+   
+

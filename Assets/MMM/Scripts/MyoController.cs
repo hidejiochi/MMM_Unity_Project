@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 using DG.Tweening;
 using System;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 using UnityEngine.UI;
 
 
@@ -68,11 +69,16 @@ public class MyoController : MonoBehaviour
         action();
     }
 
+    /// <summary>
+    /// クリアになった瞬間に走る関数を登録する変数 
+    /// </summary>
+    public event Action OnClearHandler;
+
 
 
     // Use this for initialization
 
-    void Awake()
+    void Awake() 
     {
         this.myAnimator = GetComponent<Animator>();
         stageId = SceneManager.GetActiveScene().name;
@@ -378,6 +384,12 @@ public class MyoController : MonoBehaviour
                                     StageID.Instance.StageClear(stageId);                                   
                                     nextStageButton.transform.DOLocalMove(new Vector3(0, 0, 0), 2f).SetEase(Ease.InOutQuart);
                                     this.myAnimator.SetTrigger("Jump");
+                                    //nullチェック
+                                    if (OnClearHandler != null)
+                                    {
+                                        //登録された関数を実行
+                                        OnClearHandler.Invoke();
+                                    }
                                 }
                             }));
                         }
@@ -420,6 +432,12 @@ public class MyoController : MonoBehaviour
                                     StageID.Instance.StageClear(stageId);                                    
                                     nextStageButton.transform.DOLocalMove(new Vector3(0, 0, 0), 2f).SetEase(Ease.InOutQuart);
                                     this.myAnimator.SetTrigger("Jump");
+                                    //nullチェック
+                                    if (OnClearHandler != null)
+                                    {
+                                        //登録された関数を実行
+                                        OnClearHandler.Invoke();
+                                    }
                                 }
                             }));
                         }
@@ -459,6 +477,12 @@ public class MyoController : MonoBehaviour
                                     StageID.Instance.StageClear(stageId);                                    
                                     nextStageButton.transform.DOLocalMove(new Vector3(0, 0, 0), 2f).SetEase(Ease.InOutQuart);
                                     this.myAnimator.SetTrigger("Jump");
+                                    //nullチェック
+                                    if (OnClearHandler != null)
+                                    {
+                                        //登録された関数を実行
+                                        OnClearHandler.Invoke();
+                                    }
                                 }
                             }));
                         }
@@ -517,6 +541,12 @@ public class MyoController : MonoBehaviour
                                     StageID.Instance.StageClear(stageId);                                    
                                     nextStageButton.transform.DOLocalMove(new Vector3(0, 0, 0), 2f).SetEase(Ease.InOutQuart);
                                     this.myAnimator.SetTrigger("Jump");
+                                    //nullチェック
+                                    if (OnClearHandler != null)
+                                    {
+                                        //登録された関数を実行
+                                        OnClearHandler.Invoke();
+                                    }
                                 }
                             }));
                         }
@@ -559,6 +589,12 @@ public class MyoController : MonoBehaviour
                                     StageID.Instance.StageClear(stageId);                                    
                                     nextStageButton.transform.DOLocalMove(new Vector3(0, 0, 0), 2f).SetEase(Ease.InOutQuart);
                                     this.myAnimator.SetTrigger("Jump");
+                                    //nullチェック
+                                    if (OnClearHandler != null)
+                                    {
+                                        //登録された関数を実行
+                                        OnClearHandler.Invoke();
+                                    }
                                 }
                             }));
                         }
@@ -598,6 +634,13 @@ public class MyoController : MonoBehaviour
                                     StageID.Instance.StageClear(stageId);                                    
                                     nextStageButton.transform.DOLocalMove(new Vector3(0, 0, 0), 2f).SetEase(Ease.InOutQuart);
                                     this.myAnimator.SetTrigger("Jump");
+                                    //nullチェック
+                                    if (OnClearHandler != null)
+                                    {
+                                        //登録された関数を実行
+                                        OnClearHandler.Invoke();
+                                    }
+
                                 }
                             }));
                         }
