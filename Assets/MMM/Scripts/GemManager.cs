@@ -46,10 +46,9 @@ public class GemManager : SingletonMonoBehaviour<GemManager>
     }
 
     /// <summary>
-    /// クリア判定
+    /// Raises the clear event.
     /// </summary>
-    /// <returns><c>true</c> if this instance is clear; otherwise, <c>false</c>.</returns>
-    public bool IsClear()
+    public void OnClear()
     {
         //nullチェック
         if (OnClearHandler != null)
@@ -57,6 +56,15 @@ public class GemManager : SingletonMonoBehaviour<GemManager>
             //登録された関数を実行
             OnClearHandler.Invoke();
         }
+    }
+
+    /// <summary>
+    /// クリア判定
+    /// </summary>
+    /// <returns><c>true</c> if this instance is clear; otherwise, <c>false</c>.</returns>
+    public bool IsClear()
+    {
+       
         //配列の要素が０になったかどうか
         return _gemList.Count == 0;
     }

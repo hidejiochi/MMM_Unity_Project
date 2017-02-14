@@ -358,7 +358,8 @@ public class MyoController : MonoBehaviour
 
                             StartCoroutine(LateAction(0.5f, () => {
                                 //0.5秒後に処理が行われる
-
+                                //音を鳴らす
+                                PlaySoundGem.Instance.playSoundGem();
                                 //動かしたGemのマス目の情報を消去する
                                 SquareManager.Instance.RemoveGameObject(sqInfo_2.MySquare);
                                 //Gem_1の1マス上のマス目の情報を消去する
@@ -371,10 +372,13 @@ public class MyoController : MonoBehaviour
                                 GemManager.Instance.Remove(g_up2);
                                 //Gemを消している最中判定をfalse
                                 isGemRemoving = false;
+
                                 //StageIDの処理
                                 if (GemManager.Instance.IsClear())
                                 {
-                                    StageID.Instance.StageClear(stageId);                                   
+                                    PlaySoundClear.Instance.playSoundClear();
+                                    GemManager.Instance.OnClear();
+                                    StageID.Instance.StageClear(stageId);                                    
                                     nextStageButton.transform.DOLocalMove(new Vector3(0, 0, 0), 2f).SetEase(Ease.InOutQuart);
                                     this.myAnimator.SetTrigger("Jump");
                                     
@@ -402,6 +406,8 @@ public class MyoController : MonoBehaviour
 
                             StartCoroutine(LateAction(0.5f, () => {
                                 //0.5秒後に処理が行われる
+                                //音を鳴らす
+                                PlaySoundGem.Instance.playSoundGem();
                                 //動かしたGemのマス目の情報を消去する
                                 SquareManager.Instance.RemoveGameObject(sqInfo_2.MySquare);
                                 //Gem_1の1マス上のマス目の情報を消去する
@@ -414,9 +420,12 @@ public class MyoController : MonoBehaviour
                                 GemManager.Instance.Remove(g_Down1);
                                 //Gemを消している最中判定をfalse
                                 isGemRemoving = false;
+
                                 //StageIDの処理
                                 if (GemManager.Instance.IsClear())
                                 {
+                                    PlaySoundClear.Instance.playSoundClear();
+                                    GemManager.Instance.OnClear();
                                     StageID.Instance.StageClear(stageId);                                    
                                     nextStageButton.transform.DOLocalMove(new Vector3(0, 0, 0), 2f).SetEase(Ease.InOutQuart);
                                     this.myAnimator.SetTrigger("Jump");
@@ -445,6 +454,8 @@ public class MyoController : MonoBehaviour
 
                             StartCoroutine(LateAction(0.5f, () => {
                                 //0.5秒後に処理が行われる
+                                //音を鳴らす
+                                PlaySoundGem.Instance.playSoundGem();
                                 SquareManager.Instance.RemoveGameObject(sqInfo_2.MySquare);
                                 SquareManager.Instance.RemoveGameObject(gemSquareDown_1);
                                 SquareManager.Instance.RemoveGameObject(gemSquareDown_2);
@@ -454,9 +465,12 @@ public class MyoController : MonoBehaviour
                                 GemManager.Instance.Remove(g_Down2);
                                 //Gemを消している最中判定をfalse
                                 isGemRemoving = false;
+
                                 //StageIDの処理
                                 if (GemManager.Instance.IsClear())
                                 {
+                                    PlaySoundClear.Instance.playSoundClear();
+                                    GemManager.Instance.OnClear();
                                     StageID.Instance.StageClear(stageId);                                    
                                     nextStageButton.transform.DOLocalMove(new Vector3(0, 0, 0), 2f).SetEase(Ease.InOutQuart);
                                     this.myAnimator.SetTrigger("Jump");
@@ -501,6 +515,8 @@ public class MyoController : MonoBehaviour
 
                             StartCoroutine(LateAction(0.5f, () => {
                                 //0.5秒後に処理が行われる
+                                //音を鳴らす
+                                PlaySoundGem.Instance.playSoundGem();
                                 //動かしたGemのマス目の情報を消去する
                                 SquareManager.Instance.RemoveGameObject(sqInfo_2.MySquare);
                                 //Gem_1の1マス右のマス目の情報を消去する
@@ -513,9 +529,12 @@ public class MyoController : MonoBehaviour
                                 GemManager.Instance.Remove(g_Right2);
                                 //Gemを消している最中判定をfalse
                                 isGemRemoving = false;
+
                                 //StageIDの処理
                                 if (GemManager.Instance.IsClear())
                                 {
+                                    PlaySoundClear.Instance.playSoundClear();
+                                    GemManager.Instance.OnClear();
                                     StageID.Instance.StageClear(stageId);                                    
                                     nextStageButton.transform.DOLocalMove(new Vector3(0, 0, 0), 2f).SetEase(Ease.InOutQuart);
                                     this.myAnimator.SetTrigger("Jump");
@@ -544,6 +563,8 @@ public class MyoController : MonoBehaviour
 
                             StartCoroutine(LateAction(0.5f, () => {
                                 //0.5秒後に処理が行われる
+                                //音を鳴らす
+                                PlaySoundGem.Instance.playSoundGem();
                                 //動かしたGemのマス目の情報を消去する
                                 SquareManager.Instance.RemoveGameObject(sqInfo_2.MySquare);
                                 //Gem_1の1マス右のマス目の情報を消去する
@@ -556,9 +577,12 @@ public class MyoController : MonoBehaviour
                                 GemManager.Instance.Remove(g_Left1);
                                 //Gemを消している最中判定をfalse
                                 isGemRemoving = false;
+
                                 //StageIDの処理
                                 if (GemManager.Instance.IsClear())
                                 {
+                                    PlaySoundClear.Instance.playSoundClear();
+                                    GemManager.Instance.OnClear();
                                     StageID.Instance.StageClear(stageId);                                    
                                     nextStageButton.transform.DOLocalMove(new Vector3(0, 0, 0), 2f).SetEase(Ease.InOutQuart);
                                     this.myAnimator.SetTrigger("Jump");
@@ -587,6 +611,8 @@ public class MyoController : MonoBehaviour
 
                             StartCoroutine(LateAction(0.5f, () => {
                                 //0.5秒後に処理が行われる
+                                //音を鳴らす
+                                PlaySoundGem.Instance.playSoundGem();
                                 SquareManager.Instance.RemoveGameObject(sqInfo_2.MySquare);
                                 SquareManager.Instance.RemoveGameObject(gemSquareLeft_1);
                                 SquareManager.Instance.RemoveGameObject(gemSquareLeft_2);
@@ -596,14 +622,16 @@ public class MyoController : MonoBehaviour
                                 GemManager.Instance.Remove(g_Left2);
                                 //Gemを消している最中判定をfalse
                                 isGemRemoving = false;
+                                
                                 //StageIDの処理
                                 if (GemManager.Instance.IsClear())
                                 {
+                                    PlaySoundClear.Instance.playSoundClear();
+                                    GemManager.Instance.OnClear();
                                     StageID.Instance.StageClear(stageId);                                    
                                     nextStageButton.transform.DOLocalMove(new Vector3(0, 0, 0), 2f).SetEase(Ease.InOutQuart);
                                     this.myAnimator.SetTrigger("Jump");
-                                    
-
+                                                                        
                                 }
                             }));
                         }
