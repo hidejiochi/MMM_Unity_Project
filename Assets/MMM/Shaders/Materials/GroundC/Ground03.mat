@@ -30,7 +30,7 @@ Material:
     - first:
         name: _DetailAlbedoMap
       second:
-        m_Texture: {fileID: 2800000, guid: 141fa2e7c177d6749b0452296de265f5, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9a1c1aa1695aafe499a384cdbf69c00e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -49,13 +49,13 @@ Material:
         name: _EmissionMap
       second:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 12, y: 12}
+        m_Scale: {x: 8, y: 8}
         m_Offset: {x: 0, y: 0}
     - first:
         name: _MainTex
       second:
         m_Texture: {fileID: 2800000, guid: c30be594b0ea93e498750a3e94c17bbf, type: 3}
-        m_Scale: {x: 12, y: 12}
+        m_Scale: {x: 8, y: 8}
         m_Offset: {x: 0, y: 0}
     - first:
         name: _MatCap

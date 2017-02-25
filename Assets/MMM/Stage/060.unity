@@ -1428,16 +1428,16 @@ MonoBehaviour:
   WallPrefab: {fileID: 1889301031726830, guid: cf20ce12e2fe987448f24b71a7e65da4, type: 2}
   SquarePrefab: {fileID: 1845180426427984, guid: 4e00fab00c880b44e8d7124308d945b6,
     type: 2}
-  CrossPrefab: {fileID: 153372, guid: 26043eae3b7793744a411d0c21e16004, type: 2}
-  CubePrefab: {fileID: 190786, guid: c432071c882f9624dad045bb39371ced, type: 2}
-  HeartPrefab: {fileID: 186912, guid: 943b7c1f3fe19bb4da221e54404d0a60, type: 2}
+  CrossPrefab: {fileID: 153372, guid: 472e2e1e5cf9eba4bbc2c9bee0ec7ead, type: 2}
+  CubePrefab: {fileID: 190786, guid: e4d224118668869478a290a713396ce2, type: 2}
+  HeartPrefab: {fileID: 186912, guid: 8163c38c16b388f4e8229a68fa5a2e2a, type: 2}
   PyramidPrefab: {fileID: 112408, guid: eac6739221733ea40982b4106470ffcd, type: 2}
-  PipePrefab: {fileID: 145088, guid: 2b4748502bcfdcc4b9608d49c1b66ab2, type: 2}
+  PipePrefab: {fileID: 145088, guid: 6dd1f3d8b02135f4e98b34b15407c568, type: 2}
   SolidPrefab: {fileID: 134650, guid: 281b95096160d104a9d4b0ca1643bca9, type: 2}
   StarPrefab: {fileID: 190738, guid: ac83c74dfef921b44945dc737680dfcf, type: 2}
-  TorusPrefab: {fileID: 180326, guid: 071aca5a8e8837746b98e5ba9100d1d3, type: 2}
+  TorusPrefab: {fileID: 180326, guid: e04f28af84116034bbc40404911832ac, type: 2}
   MyoPrefab: {fileID: 140702, guid: 1448176860a57c4478189d2e3e3f1618, type: 2}
-  _myoInitialSquare: {x: 5, y: 5}
+  _myoInitialSquare: {x: 4, y: 3}
   _squareStartPosition: {x: -11, y: 0, z: -11}
   _maxSquare: {x: 11, y: 11}
   _squareLength: 2
@@ -1448,12 +1448,12 @@ MonoBehaviour:
   - {x: -1, y: 0, z: 9}
   - {x: 3, y: 0, z: 9}
   - {x: 5, y: 0, z: 9}
-  - {x: -9, y: 0, z: 7}
+  - {x: 1, y: 0, z: -7}
   - {x: 5, y: 0, z: 7}
-  - {x: 9, y: 0, z: 5}
+  - {x: 9, y: 0, z: -9}
   - {x: 3, y: 0, z: 7}
   - {x: 9, y: 0, z: 3}
-  - {x: -5, y: 0, z: 1}
+  - {x: 3, y: 0, z: -7}
   - {x: 1, y: 0, z: 1}
   - {x: 7, y: 0, z: 1}
   - {x: 9, y: 0, z: 1}
@@ -1461,37 +1461,43 @@ MonoBehaviour:
   - {x: -5, y: 0, z: -1}
   - {x: 3, y: 0, z: -1}
   - {x: -5, y: 0, z: -3}
-  - {x: -9, y: 0, z: -5}
+  - {x: -5, y: 0, z: -7}
   - {x: -5, y: 0, z: -5}
   - {x: 5, y: 0, z: -5}
-  - {x: -1, y: 0, z: -7}
+  - {x: -5, y: 0, z: 9}
   - {x: -1, y: 0, z: 1}
-  - {x: 1, y: 0, z: -7}
-  - {x: 3, y: 0, z: -7}
-  - {x: 9, y: 0, z: -9}
-  _crossPositionList: []
+  _crossPositionList:
+  - {x: 7, y: 0, z: 5}
+  - {x: 5, y: 0, z: -3}
+  - {x: 7, y: 0, z: -5}
   _cubePositionList:
   - {x: -3, y: 0, z: 5}
   - {x: 5, y: 0, z: 1}
-  - {x: 7, y: 0, z: -9}
+  - {x: 7, y: 0, z: -7}
   _heartPositionList:
   - {x: -5, y: 0, z: 5}
   - {x: -3, y: 0, z: -3}
   - {x: -3, y: 0, z: -7}
-  _pyramidPositionList: []
-  _pipePositionList: []
-  _solidPositionList:
+  _pyramidPositionList:
+  - {x: -9, y: 0, z: 7}
+  - {x: -9, y: 0, z: -5}
+  - {x: -5, y: 0, z: 1}
+  _pipePositionList:
   - {x: -9, y: 0, z: 1}
   - {x: -7, y: 0, z: 3}
   - {x: -5, y: 0, z: 3}
+  _solidPositionList:
+  - {x: -1, y: 0, z: -3}
+  - {x: 7, y: 0, z: -1}
+  - {x: -1, y: 0, z: -7}
   _starPositionList:
-  - {x: -7, y: 0, z: -7}
-  - {x: -5, y: 0, z: -7}
+  - {x: -7, y: 0, z: -9}
+  - {x: 1, y: 0, z: -9}
   - {x: 5, y: 0, z: -9}
   _torusPositionList:
-  - {x: 7, y: 0, z: 9}
-  - {x: 5, y: 0, z: -3}
-  - {x: 7, y: 0, z: -7}
+  - {x: -1, y: 0, z: -5}
+  - {x: 1, y: 0, z: 5}
+  - {x: 3, y: 0, z: 3}
   _editorParent: {fileID: 0}
 --- !u!4 &1124033411
 Transform:
@@ -2020,7 +2026,7 @@ Prefab:
     - target: {fileID: 2355892, guid: a76fdf26b60049d4a878755996cd8d10, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 60e0ad3ec23c92e4999889fa55128d20, type: 2}
+      objectReference: {fileID: 2100000, guid: 7797c77125dfe0e489d0745582f6802c, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a76fdf26b60049d4a878755996cd8d10, type: 2}
   m_IsPrefabParent: 0

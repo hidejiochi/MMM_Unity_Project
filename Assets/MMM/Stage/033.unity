@@ -232,7 +232,7 @@ Prefab:
     - target: {fileID: 2309798, guid: 5379a000cf8eb624aa16e683b782a739, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: b7305fe9fdf0efb448b8b777fcff8ad3, type: 2}
+      objectReference: {fileID: 2100000, guid: 045f41dbadbc8d34da24b4e57b8c0d90, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5379a000cf8eb624aa16e683b782a739, type: 2}
   m_IsPrefabParent: 0
@@ -1509,7 +1509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e793ef4b8ba9045aacd954f51712b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WallPrefab: {fileID: 1226957751390926, guid: caae9aec050076a48b7e0277d2b57e7e, type: 2}
+  WallPrefab: {fileID: 1817075770832256, guid: 4c32261995cf92640a9b4cb861ab3358, type: 2}
   SquarePrefab: {fileID: 1055219624426132, guid: 8db3be0f0fb67114a80187586e797ae7,
     type: 2}
   CrossPrefab: {fileID: 153372, guid: 26043eae3b7793744a411d0c21e16004, type: 2}
@@ -1532,11 +1532,11 @@ MonoBehaviour:
   - {x: -3, y: 0, z: -7}
   - {x: -3, y: 0, z: -9}
   - {x: -5, y: 0, z: -9}
-  _crossPositionList:
+  _crossPositionList: []
+  _cubePositionList:
   - {x: -3, y: 0, z: 1}
   - {x: -7, y: 0, z: -1}
   - {x: -7, y: 0, z: -3}
-  _cubePositionList: []
   _heartPositionList:
   - {x: -5, y: 0, z: -3}
   - {x: -7, y: 0, z: -5}

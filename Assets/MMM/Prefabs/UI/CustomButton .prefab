@@ -5,13 +5,13 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 224: {fileID: 22426374}
-  - 222: {fileID: 22222858}
-  - 114: {fileID: 11453834}
-  - 114: {fileID: 11459686}
-  - 114: {fileID: 11423828}
+  - component: {fileID: 22426374}
+  - component: {fileID: 22222858}
+  - component: {fileID: 11453834}
+  - component: {fileID: 11459686}
+  - component: {fileID: 11423828}
   m_Layer: 5
   m_Name: 'CustomButton '
   m_TagString: Untagged
@@ -24,12 +24,12 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 224: {fileID: 22482920}
-  - 222: {fileID: 22243896}
-  - 114: {fileID: 11417824}
-  - 114: {fileID: 11407282}
+  - component: {fileID: 22482920}
+  - component: {fileID: 22243896}
+  - component: {fileID: 11417824}
+  - component: {fileID: 11407282}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -116,7 +116,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 9ca126af33568404184f8be1f8fc5b25, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 89a302a41a193194d84ca2933d52799f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -190,6 +190,7 @@ RectTransform:
   - {fileID: 22482920}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -300, y: 300}
@@ -207,6 +208,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 22426374}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}

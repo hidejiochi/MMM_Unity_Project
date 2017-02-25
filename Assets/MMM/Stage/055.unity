@@ -529,7 +529,7 @@ Prefab:
     - target: {fileID: 2338168, guid: 1fdbca77dd1ebd64393d27339411863c, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 045f41dbadbc8d34da24b4e57b8c0d90, type: 2}
+      objectReference: {fileID: 2100000, guid: 60e0ad3ec23c92e4999889fa55128d20, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1fdbca77dd1ebd64393d27339411863c, type: 2}
   m_IsPrefabParent: 0
@@ -1143,15 +1143,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e793ef4b8ba9045aacd954f51712b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WallPrefab: {fileID: 1226957751390926, guid: caae9aec050076a48b7e0277d2b57e7e, type: 2}
-  SquarePrefab: {fileID: 1320817390513836, guid: 6354c05ccef46c046895d2555d1d88b4,
+  WallPrefab: {fileID: 1320817390513836, guid: 6354c05ccef46c046895d2555d1d88b4, type: 2}
+  SquarePrefab: {fileID: 1889301031726830, guid: cf20ce12e2fe987448f24b71a7e65da4,
     type: 2}
-  CrossPrefab: {fileID: 153372, guid: 26043eae3b7793744a411d0c21e16004, type: 2}
+  CrossPrefab: {fileID: 153372, guid: 472e2e1e5cf9eba4bbc2c9bee0ec7ead, type: 2}
   CubePrefab: {fileID: 190786, guid: c432071c882f9624dad045bb39371ced, type: 2}
   HeartPrefab: {fileID: 186912, guid: 943b7c1f3fe19bb4da221e54404d0a60, type: 2}
-  PyramidPrefab: {fileID: 112408, guid: eac6739221733ea40982b4106470ffcd, type: 2}
-  PipePrefab: {fileID: 145088, guid: 2b4748502bcfdcc4b9608d49c1b66ab2, type: 2}
-  SolidPrefab: {fileID: 134650, guid: 281b95096160d104a9d4b0ca1643bca9, type: 2}
+  PyramidPrefab: {fileID: 112408, guid: bfa04534a413cf943b448f90d89d68a2, type: 2}
+  PipePrefab: {fileID: 145088, guid: 6dd1f3d8b02135f4e98b34b15407c568, type: 2}
+  SolidPrefab: {fileID: 134650, guid: 24f35b7e28f973c40b69e15ad4dbbc52, type: 2}
   StarPrefab: {fileID: 190738, guid: ac83c74dfef921b44945dc737680dfcf, type: 2}
   TorusPrefab: {fileID: 180326, guid: 071aca5a8e8837746b98e5ba9100d1d3, type: 2}
   MyoPrefab: {fileID: 140702, guid: 1448176860a57c4478189d2e3e3f1618, type: 2}
@@ -1169,7 +1169,12 @@ MonoBehaviour:
   - {x: -5, y: 0, z: 1}
   - {x: -5, y: 0, z: -1}
   - {x: -3, y: 0, z: -9}
-  _crossPositionList: []
+  - {x: -9, y: 0, z: -1}
+  - {x: -5, y: 0, z: -9}
+  _crossPositionList:
+  - {x: 1, y: 0, z: -1}
+  - {x: -3, y: 0, z: -7}
+  - {x: -5, y: 0, z: -3}
   _cubePositionList: []
   _heartPositionList: []
   _pyramidPositionList:
@@ -1177,13 +1182,10 @@ MonoBehaviour:
   - {x: 1, y: 0, z: -5}
   - {x: -1, y: 0, z: -1}
   _pipePositionList:
-  - {x: -5, y: 0, z: -3}
+  - {x: -3, y: 0, z: -3}
   - {x: -1, y: 0, z: -5}
   - {x: -7, y: 0, z: -7}
-  _solidPositionList:
-  - {x: 1, y: 0, z: -1}
-  - {x: -3, y: 0, z: -7}
-  - {x: -3, y: 0, z: -3}
+  _solidPositionList: []
   _starPositionList: []
   _torusPositionList: []
   _editorParent: {fileID: 0}

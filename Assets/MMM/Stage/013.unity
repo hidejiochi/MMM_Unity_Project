@@ -1156,11 +1156,15 @@ MonoBehaviour:
   StarPrefab: {fileID: 190738, guid: ac83c74dfef921b44945dc737680dfcf, type: 2}
   TorusPrefab: {fileID: 180326, guid: 071aca5a8e8837746b98e5ba9100d1d3, type: 2}
   MyoPrefab: {fileID: 140702, guid: 1448176860a57c4478189d2e3e3f1618, type: 2}
-  _myoInitialSquare: {x: 1, y: 3}
+  _myoInitialSquare: {x: 1, y: 1}
   _squareStartPosition: {x: -11, y: 0, z: -11}
   _maxSquare: {x: 6, y: 6}
   _squareLength: 2
-  _squarePositionList: []
+  _squarePositionList:
+  - {x: -9, y: 0, z: -1}
+  - {x: -9, y: 0, z: -3}
+  - {x: -7, y: 0, z: -1}
+  - {x: -5, y: 0, z: -1}
   _crossPositionList: []
   _cubePositionList:
   - {x: -1, y: 0, z: -9}

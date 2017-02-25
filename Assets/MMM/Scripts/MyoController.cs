@@ -84,10 +84,10 @@ public class MyoController : MonoBehaviour
     public void GameButtonInitialize()
     {
         //ボタンの初期化
-        GameObject.Find("UpButton").GetComponent<MyoControlButton>().Initialize(GetMyUpButtonDown, GetMyUpButtonUp);
-        GameObject.Find("DownButton").GetComponent<MyoControlButton>().Initialize(GetMyDownButtonDown, GetMyDownButtonUp);
-        GameObject.Find("RightButton").GetComponent<MyoControlButton>().Initialize(GetMyRightButtonDown, GetMyRightButtonUp);
-        GameObject.Find("LeftButton").GetComponent<MyoControlButton>().Initialize(GetMyLeftButtonDown, GetMyLeftButtonUp);
+        GameObject.Find("UpButton").GetComponent<MyoControlButton>().Initialize(GetMyUpButtonDown, GetMyUpButtonUp, GetMyUpButtonExit);
+        GameObject.Find("DownButton").GetComponent<MyoControlButton>().Initialize(GetMyDownButtonDown, GetMyDownButtonUp, GetMyDownButtonExit);
+        GameObject.Find("RightButton").GetComponent<MyoControlButton>().Initialize(GetMyRightButtonDown, GetMyRightButtonUp, GetMyRightButtonExit);
+        GameObject.Find("LeftButton").GetComponent<MyoControlButton>().Initialize(GetMyLeftButtonDown, GetMyLeftButtonUp, GetMyLeftButtonExit);
     }
 
     /// <summary>
@@ -159,6 +159,27 @@ public class MyoController : MonoBehaviour
         }
 
     }
+    //===押してたボタンの範囲外に指がいってしまった時===//
+    public void GetMyLeftButtonExit()
+    {
+        this.isLeftButtonDown = false;
+    }
+
+    public void GetMyDownButtonExit()
+    {
+        this.isDownButtonDown = false;
+    }
+
+    public void GetMyRightButtonExit()
+    {
+        this.isRightButtonDown = false;
+    }
+
+    public void GetMyUpButtonExit()
+    {
+        this.isUpButtonDown = false;
+    }
+
     //上ボタンを押し続けた場合の処理
     public void GetMyUpButtonDown()
     {

@@ -1328,7 +1328,7 @@ MonoBehaviour:
   SquarePrefab: {fileID: 1347967292273888, guid: 6aa4491fb9bfe4e4f86e960f35ded7ec,
     type: 2}
   CrossPrefab: {fileID: 153372, guid: 26043eae3b7793744a411d0c21e16004, type: 2}
-  CubePrefab: {fileID: 190786, guid: c432071c882f9624dad045bb39371ced, type: 2}
+  CubePrefab: {fileID: 190786, guid: b554b51035770254c827e0c5c6875bb4, type: 2}
   HeartPrefab: {fileID: 186912, guid: 943b7c1f3fe19bb4da221e54404d0a60, type: 2}
   PyramidPrefab: {fileID: 112408, guid: eac6739221733ea40982b4106470ffcd, type: 2}
   PipePrefab: {fileID: 145088, guid: 2b4748502bcfdcc4b9608d49c1b66ab2, type: 2}
@@ -1864,7 +1864,7 @@ Prefab:
     - target: {fileID: 2307194, guid: 80250ec03f3fde84780355a86df97c40, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 60e0ad3ec23c92e4999889fa55128d20, type: 2}
+      objectReference: {fileID: 2100000, guid: 83b7564e09a299d4aa8f849be138b81a, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 80250ec03f3fde84780355a86df97c40, type: 2}
   m_IsPrefabParent: 0

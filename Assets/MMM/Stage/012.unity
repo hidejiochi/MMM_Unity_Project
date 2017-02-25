@@ -376,7 +376,7 @@ Prefab:
     - target: {fileID: 2300644, guid: 3a7c472de38d2504cacc821d76249c62, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 045f41dbadbc8d34da24b4e57b8c0d90, type: 2}
+      objectReference: {fileID: 2100000, guid: 83b7564e09a299d4aa8f849be138b81a, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3a7c472de38d2504cacc821d76249c62, type: 2}
   m_IsPrefabParent: 0
@@ -1220,7 +1220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WallPrefab: {fileID: 100000, guid: 697f0ebbfc52fa1449763dea4ad887d6, type: 2}
-  SquarePrefab: {fileID: 100000, guid: 89aa927b24519460fbbdcaa54633e40a, type: 2}
+  SquarePrefab: {fileID: 100000, guid: 7b25bacc8376acb4ab491ba2629276d5, type: 2}
   CrossPrefab: {fileID: 153372, guid: 26043eae3b7793744a411d0c21e16004, type: 2}
   CubePrefab: {fileID: 190786, guid: c432071c882f9624dad045bb39371ced, type: 2}
   HeartPrefab: {fileID: 186912, guid: 943b7c1f3fe19bb4da221e54404d0a60, type: 2}
@@ -1235,20 +1235,20 @@ MonoBehaviour:
   _maxSquare: {x: 6, y: 5}
   _squareLength: 2
   _squarePositionList:
-  - {x: -3, y: 0, z: -7}
+  - {x: -1, y: 0, z: -3}
   _crossPositionList: []
   _cubePositionList:
   - {x: -7, y: 0, z: -5}
-  - {x: -5, y: 0, z: -7}
-  - {x: -5, y: 0, z: -9}
-  _heartPositionList:
   - {x: -3, y: 0, z: -5}
-  - {x: -1, y: 0, z: -7}
-  - {x: -3, y: 0, z: -9}
+  - {x: -3, y: 0, z: -7}
+  _heartPositionList: []
   _pyramidPositionList: []
   _pipePositionList: []
   _solidPositionList: []
-  _starPositionList: []
+  _starPositionList:
+  - {x: -5, y: 0, z: -5}
+  - {x: -1, y: 0, z: -7}
+  - {x: -3, y: 0, z: -9}
   _torusPositionList: []
   _editorParent: {fileID: 0}
 --- !u!4 &1124033411

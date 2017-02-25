@@ -598,8 +598,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 597053244}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.1, z: 0}
-  m_LocalScale: {x: 8, y: 1, z: 8}
+  m_LocalPosition: {x: 0, y: -0.1, z: -10}
+  m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -1286,10 +1286,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WallPrefab: {fileID: 1742598520650210, guid: 38131ff289da01c409ac6dda2b8d028c, type: 2}
-  SquarePrefab: {fileID: 1184998928325580, guid: 6d13e653a178b1f4c9bab5fe432b0e5d,
+  SquarePrefab: {fileID: 1231192180022482, guid: c3b69b236c5f05a4b9cea59276387130,
     type: 2}
   CrossPrefab: {fileID: 153372, guid: 26043eae3b7793744a411d0c21e16004, type: 2}
-  CubePrefab: {fileID: 190786, guid: c432071c882f9624dad045bb39371ced, type: 2}
+  CubePrefab: {fileID: 190786, guid: b554b51035770254c827e0c5c6875bb4, type: 2}
   HeartPrefab: {fileID: 186912, guid: 943b7c1f3fe19bb4da221e54404d0a60, type: 2}
   PyramidPrefab: {fileID: 112408, guid: eac6739221733ea40982b4106470ffcd, type: 2}
   PipePrefab: {fileID: 145088, guid: 2b4748502bcfdcc4b9608d49c1b66ab2, type: 2}
@@ -1317,11 +1317,11 @@ MonoBehaviour:
   _pyramidPositionList: []
   _pipePositionList: []
   _solidPositionList: []
-  _starPositionList:
+  _starPositionList: []
+  _torusPositionList:
   - {x: -3, y: 0, z: -5}
   - {x: -5, y: 0, z: -1}
   - {x: -1, y: 0, z: -3}
-  _torusPositionList: []
   _editorParent: {fileID: 0}
 --- !u!4 &1124033411
 Transform:
@@ -2112,7 +2112,7 @@ Prefab:
     - target: {fileID: 2376076, guid: ad7eef15efcac3241831faa43482735b, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9da43df2c57a4304b9d2bd881456db0d, type: 2}
+      objectReference: {fileID: 2100000, guid: 83b7564e09a299d4aa8f849be138b81a, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad7eef15efcac3241831faa43482735b, type: 2}
   m_IsPrefabParent: 0

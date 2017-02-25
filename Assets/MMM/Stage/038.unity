@@ -568,19 +568,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4920268151996852, guid: b9d0b4f9050289d4584c9573e07576d9, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0.34235403
+      value: -0.34235406
       objectReference: {fileID: 0}
     - target: {fileID: 4920268151996852, guid: b9d0b4f9050289d4584c9573e07576d9, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0.61870325
+      value: -0.6187033
       objectReference: {fileID: 0}
     - target: {fileID: 4920268151996852, guid: b9d0b4f9050289d4584c9573e07576d9, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0.61870325
+      value: -0.6187033
       objectReference: {fileID: 0}
     - target: {fileID: 4920268151996852, guid: b9d0b4f9050289d4584c9573e07576d9, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.34235403
+      value: 0.34235406
       objectReference: {fileID: 0}
     - target: {fileID: 4920268151996852, guid: b9d0b4f9050289d4584c9573e07576d9, type: 2}
       propertyPath: m_RootOrder
@@ -956,15 +956,15 @@ MonoBehaviour:
   _cubePositionList: []
   _heartPositionList: []
   _pyramidPositionList: []
-  _pipePositionList:
-  - {x: 1, y: 0, z: -3}
-  - {x: -1, y: 0, z: -5}
-  - {x: -7, y: 0, z: -7}
+  _pipePositionList: []
   _solidPositionList:
   - {x: -3, y: 0, z: -5}
   - {x: 1, y: 0, z: -7}
   - {x: -3, y: 0, z: -1}
-  _starPositionList: []
+  _starPositionList:
+  - {x: 1, y: 0, z: -3}
+  - {x: -1, y: 0, z: -5}
+  - {x: -7, y: 0, z: -7}
   _torusPositionList: []
   _editorParent: {fileID: 0}
 --- !u!4 &1124033411

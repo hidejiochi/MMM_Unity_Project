@@ -1251,9 +1251,9 @@ MonoBehaviour:
   WallPrefab: {fileID: 1582775498002708, guid: e8d5c34058ebf6c4b946202e86c88292, type: 2}
   SquarePrefab: {fileID: 1184998928325580, guid: 6d13e653a178b1f4c9bab5fe432b0e5d,
     type: 2}
-  CrossPrefab: {fileID: 153372, guid: 26043eae3b7793744a411d0c21e16004, type: 2}
+  CrossPrefab: {fileID: 153372, guid: 472e2e1e5cf9eba4bbc2c9bee0ec7ead, type: 2}
   CubePrefab: {fileID: 190786, guid: c432071c882f9624dad045bb39371ced, type: 2}
-  HeartPrefab: {fileID: 186912, guid: 943b7c1f3fe19bb4da221e54404d0a60, type: 2}
+  HeartPrefab: {fileID: 186912, guid: 8163c38c16b388f4e8229a68fa5a2e2a, type: 2}
   PyramidPrefab: {fileID: 112408, guid: eac6739221733ea40982b4106470ffcd, type: 2}
   PipePrefab: {fileID: 145088, guid: 2b4748502bcfdcc4b9608d49c1b66ab2, type: 2}
   SolidPrefab: {fileID: 134650, guid: 281b95096160d104a9d4b0ca1643bca9, type: 2}
@@ -1269,16 +1269,17 @@ MonoBehaviour:
   - {x: 3, y: 0, z: 1}
   - {x: 1, y: 0, z: 1}
   - {x: 3, y: 0, z: -1}
-  - {x: -5, y: 0, z: -3}
+  - {x: 3, y: 0, z: -7}
   - {x: 1, y: 0, z: -1}
   - {x: -7, y: 0, z: -7}
   - {x: -9, y: 0, z: -9}
   - {x: -9, y: 0, z: -7}
   - {x: -7, y: 0, z: -9}
   - {x: 1, y: 0, z: -9}
+  - {x: -9, y: 0, z: -5}
   _crossPositionList:
   - {x: -5, y: 0, z: -1}
-  - {x: -3, y: 0, z: -9}
+  - {x: -3, y: 0, z: -7}
   - {x: 1, y: 0, z: -5}
   _cubePositionList: []
   _heartPositionList:
