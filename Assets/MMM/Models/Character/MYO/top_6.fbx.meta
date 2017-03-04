@@ -19,6 +19,8 @@ ModelImporter:
     100022: //RootNode
     100024: top_6
     100026: top_parts
+    100028: Spine1LeftExtra03
+    100030: Spine1RightExtra03
     400000: Hips
     400002: Reference
     400004: Spine
@@ -33,6 +35,8 @@ ModelImporter:
     400022: //RootNode
     400024: top_6
     400026: top_parts
+    400028: Spine1LeftExtra03
+    400030: Spine1RightExtra03
     2300000: top_6
     3300000: top_6
     4300000: top_6

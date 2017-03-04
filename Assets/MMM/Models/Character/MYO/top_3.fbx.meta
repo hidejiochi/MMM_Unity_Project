@@ -20,6 +20,7 @@ ModelImporter:
     100024: //RootNode
     100026: top_3
     100028: top_parts
+    100030: Spine1FrontExtra03
     400000: Hips
     400002: Reference
     400004: Spine
@@ -35,6 +36,7 @@ ModelImporter:
     400024: //RootNode
     400026: top_3
     400028: top_parts
+    400030: Spine1FrontExtra03
     4300000: top_3
     9500000: //RootNode
     13700000: top_3
@@ -45,7 +47,7 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleRotations: 1
+    resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
@@ -84,6 +86,7 @@ ModelImporter:
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -94,7 +97,10 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
   humanoidOversampling: 1

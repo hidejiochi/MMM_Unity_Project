@@ -1210,7 +1210,8 @@ MonoBehaviour:
   - {x: -1, y: 0, z: -9}
   - {x: -9, y: 0, z: 1}
   - {x: -1, y: 0, z: 1}
-  - {x: -5, y: 0, z: -3}
+  - {x: -5, y: 0, z: -7}
+  - {x: -3, y: 0, z: -3}
   _crossPositionList: []
   _cubePositionList:
   - {x: -3, y: 0, z: -7}
@@ -1220,9 +1221,9 @@ MonoBehaviour:
   _pyramidPositionList: []
   _pipePositionList: []
   _solidPositionList:
-  - {x: -3, y: 0, z: -3}
+  - {x: -5, y: 0, z: -3}
   - {x: -7, y: 0, z: -7}
-  - {x: -7, y: 0, z: -3}
+  - {x: -7, y: 0, z: -1}
   _starPositionList: []
   _torusPositionList: []
   _editorParent: {fileID: 0}
