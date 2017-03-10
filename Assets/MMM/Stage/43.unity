@@ -1328,6 +1328,7 @@ MonoBehaviour:
   - {x: -3, y: 0, z: -5}
   - {x: -9, y: 0, z: -3}
   - {x: -9, y: 0, z: -9}
+  - {x: -7, y: 0, z: -9}
   _crossPositionList: []
   _cubePositionList: []
   _heartPositionList: []

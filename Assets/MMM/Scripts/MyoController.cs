@@ -399,9 +399,10 @@ public class MyoController : MonoBehaviour
                                 {
                                     PlaySoundClear.Instance.playSoundClear();
                                     GemManager.Instance.OnClear();
-                                    StageID.Instance.StageClear(stageId);                                    
-                                    nextStageButton.transform.DOLocalMove(new Vector3(0, 0, 0), 2f).SetEase(Ease.InOutQuart);
+                                    StageID.Instance.StageClear(stageId);
                                     this.myAnimator.SetTrigger("Jump");
+                                    nextStageButton.transform.DOLocalMove(new Vector3(0, 0, 0), 2f).SetEase(Ease.InOutQuart);
+                                    
                                     
                                 }
                             }));
@@ -447,10 +448,10 @@ public class MyoController : MonoBehaviour
                                 {
                                     PlaySoundClear.Instance.playSoundClear();
                                     GemManager.Instance.OnClear();
-                                    StageID.Instance.StageClear(stageId);                                    
-                                    nextStageButton.transform.DOLocalMove(new Vector3(0, 0, 0), 2f).SetEase(Ease.InOutQuart);
+                                    StageID.Instance.StageClear(stageId);
                                     this.myAnimator.SetTrigger("Jump");
-                                    
+                                    nextStageButton.transform.DOLocalMove(new Vector3(0, 0, 0), 2f).SetEase(Ease.InOutQuart);
+
                                 }
                             }));
                         }
@@ -492,10 +493,10 @@ public class MyoController : MonoBehaviour
                                 {
                                     PlaySoundClear.Instance.playSoundClear();
                                     GemManager.Instance.OnClear();
-                                    StageID.Instance.StageClear(stageId);                                    
-                                    nextStageButton.transform.DOLocalMove(new Vector3(0, 0, 0), 2f).SetEase(Ease.InOutQuart);
+                                    StageID.Instance.StageClear(stageId);
                                     this.myAnimator.SetTrigger("Jump");
-                                    
+                                    nextStageButton.transform.DOLocalMove(new Vector3(0, 0, 0), 2f).SetEase(Ease.InOutQuart);
+
                                 }
                             }));
                         }
@@ -556,10 +557,10 @@ public class MyoController : MonoBehaviour
                                 {
                                     PlaySoundClear.Instance.playSoundClear();
                                     GemManager.Instance.OnClear();
-                                    StageID.Instance.StageClear(stageId);                                    
-                                    nextStageButton.transform.DOLocalMove(new Vector3(0, 0, 0), 2f).SetEase(Ease.InOutQuart);
+                                    StageID.Instance.StageClear(stageId);
                                     this.myAnimator.SetTrigger("Jump");
-                                    
+                                    nextStageButton.transform.DOLocalMove(new Vector3(0, 0, 0), 2f).SetEase(Ease.InOutQuart);
+
                                 }
                             }));
                         }
@@ -604,10 +605,10 @@ public class MyoController : MonoBehaviour
                                 {
                                     PlaySoundClear.Instance.playSoundClear();
                                     GemManager.Instance.OnClear();
-                                    StageID.Instance.StageClear(stageId);                                    
-                                    nextStageButton.transform.DOLocalMove(new Vector3(0, 0, 0), 2f).SetEase(Ease.InOutQuart);
+                                    StageID.Instance.StageClear(stageId);
                                     this.myAnimator.SetTrigger("Jump");
-                                    
+                                    nextStageButton.transform.DOLocalMove(new Vector3(0, 0, 0), 2f).SetEase(Ease.InOutQuart);
+
                                 }
                             }));
                         }
@@ -649,10 +650,10 @@ public class MyoController : MonoBehaviour
                                 {
                                     PlaySoundClear.Instance.playSoundClear();
                                     GemManager.Instance.OnClear();
-                                    StageID.Instance.StageClear(stageId);                                    
-                                    nextStageButton.transform.DOLocalMove(new Vector3(0, 0, 0), 2f).SetEase(Ease.InOutQuart);
+                                    StageID.Instance.StageClear(stageId);
                                     this.myAnimator.SetTrigger("Jump");
-                                                                        
+                                    nextStageButton.transform.DOLocalMove(new Vector3(0, 0, 0), 2f).SetEase(Ease.InOutQuart);
+
                                 }
                             }));
                         }

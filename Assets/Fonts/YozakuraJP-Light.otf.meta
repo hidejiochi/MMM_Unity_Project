@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: e3eca53b90bfd6c4c85dfb51239f881b
+timeCreated: 1488907230
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Yozakura JP
+  fontNames:
+  - Yozakura JP
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
