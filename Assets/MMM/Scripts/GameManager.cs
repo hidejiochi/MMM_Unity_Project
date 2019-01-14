@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameManager : SingletonMonoBehaviour<GameManager>
 {
     [SerializeField]
+    public int MaxStageNumber;
+    [SerializeField]
     public int StageNumber;
     // Use this for initialization
     private void Start()

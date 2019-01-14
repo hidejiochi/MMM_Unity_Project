@@ -4,76 +4,56 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Day Sun Low Autumnal
   m_Shader: {fileID: 104, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
+  disabledShaderPasses: []
   m_SavedProperties:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TexEnvs:
-    - first:
-        name: _BackTex
-      second:
+    - _BackTex:
         m_Texture: {fileID: 2800000, guid: a371cabd01f394bf5823240ca2364500, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _DownTex
-      second:
+    - _DownTex:
         m_Texture: {fileID: 2800000, guid: ccb8f2bd3d3b54eaba0b2e28d7e932f6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _FrontTex
-      second:
+    - _FrontTex:
         m_Texture: {fileID: 2800000, guid: a574af27459ae450c8bde57ec487ea34, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _LeftTex
-      second:
+    - _LeftTex:
         m_Texture: {fileID: 2800000, guid: 5a6c1381ca06f46efaac3735be1bc477, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _MainTex
-      second:
+    - _MainTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _RightTex
-      second:
+    - _RightTex:
         m_Texture: {fileID: 2800000, guid: 822b07c7987034d4e8fd99a5941ca69c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _Tex
-      second:
+    - _Tex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _UpTex
-      second:
+    - _UpTex:
         m_Texture: {fileID: 2800000, guid: e49ccaf158e734885b51ba6d9e06451d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - first:
-        name: _Exposure
-      second: 1
-    - first:
-        name: _Rotation
-      second: 7.7100224
+    - _Exposure: 1
+    - _Rotation: 21.240072
     m_Colors:
-    - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
-    - first:
-        name: _Tint
-      second: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Tint: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}

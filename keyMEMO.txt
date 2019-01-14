@@ -1,0 +1,4 @@
+keystore wassword BNR06mCh
+
+Alias   mamam
+Pass    BNR06mCh

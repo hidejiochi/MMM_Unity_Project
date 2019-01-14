@@ -16,6 +16,14 @@ ModelImporter:
     100016: //RootNode
     100018: tail_3
     100020: tail_parts
+    100022: tail_0
+    100024: tail_1
+    100026: tail_2
+    100028: tail_4
+    100030: tail_5
+    100032: tail_6
+    100034: tail_7
+    100036: tail_8
     400000: Hips
     400002: LeftUpLeg
     400004: Reference
@@ -27,9 +35,33 @@ ModelImporter:
     400016: //RootNode
     400018: tail_3
     400020: tail_parts
+    400022: tail_0
+    400024: tail_1
+    400026: tail_2
+    400028: tail_4
+    400030: tail_5
+    400032: tail_6
+    400034: tail_7
+    400036: tail_8
     4300000: tail_3
+    4300002: tail_0
+    4300004: tail_1
+    4300006: tail_2
+    4300008: tail_4
+    4300010: tail_5
+    4300012: tail_6
+    4300014: tail_7
+    4300016: tail_8
     9500000: //RootNode
     13700000: tail_3
+    13700002: tail_0
+    13700004: tail_1
+    13700006: tail_2
+    13700008: tail_4
+    13700010: tail_5
+    13700012: tail_6
+    13700014: tail_7
+    13700016: tail_8
   materials:
     importMaterials: 1
     materialName: 0
@@ -37,7 +69,7 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleRotations: 1
+    resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
@@ -76,6 +108,7 @@ ModelImporter:
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -86,7 +119,10 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
   humanoidOversampling: 1

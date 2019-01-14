@@ -139,9 +139,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 58b647c5b2ec4184e9a07a561cdf0644, type: 3}
+    m_Font: {fileID: 12800000, guid: 540911ad811c2de4d976b7ba7be06e38, type: 3}
     m_FontSize: 300
-    m_FontStyle: 3
+    m_FontStyle: 2
     m_BestFit: 1
     m_MinSize: 1
     m_MaxSize: 300
@@ -223,5 +223,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c51923b5cf924e84499f8c2dd6bc5884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _buttonText: {fileID: 11499610}
   _button: {fileID: 11404220}
   _sceneName: 
